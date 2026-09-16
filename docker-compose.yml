@@ -22,7 +22,7 @@ services:
       context: ./nginx
     restart: unless-stopped
     ports:
-      - "7777:80"
+      - "127.0.0.1:7777:80"
     depends_on:
       - app
     labels:
