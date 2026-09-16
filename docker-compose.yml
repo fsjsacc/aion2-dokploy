@@ -12,7 +12,7 @@ services:
     networks:
       - dokploy-network
 
-  nginx:
+  nginx-proxy:
     build:
       context: ./nginx
     restart: unless-stopped
