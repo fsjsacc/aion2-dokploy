@@ -27,7 +27,6 @@
     "content:check-remote": "node scripts/content/check-remote-sources.mjs",
     "crafting:generate": "node scripts/crafting/generate-catalog.mjs",
     "items:sync": "node scripts/items/sync-official-items.mjs --force",
-    "items:publish": "node scripts/items/publish-supabase-items.mjs",
     "release:r2": "node scripts/production/publish-r2-release.mjs",
     "release:r2:sites": "node scripts/production/publish-sites-r2-release.mjs",
     "release:r2:sites:bootstrap": "node scripts/production/bootstrap-sites-r2-release.mjs",
@@ -41,7 +40,7 @@
     "@aws-sdk/client-s3": "^3.1086.0",
     "drizzle-orm": "0.45.2",
     "lucide-react": "^1.24.0",
-    "maplibre-gl": "^5.24.0",
+    "maplibre-gl": "^6.10.0",
     "next": "16.2.6",
     "react": "19.2.6",
     "react-dom": "19.2.6"

@@ -1,0 +1,3730 @@
+import { E as __toESM, n as require_jsx_runtime, x as require_react } from "../index.js";
+import { t as X } from "./x-Cgr92E5e.js";
+import { a as localizedHref } from "./site-config-EbYJfejA.js";
+import { n as trackEvent } from "./analytics-D_3EN7IN.js";
+import { n as Download, r as Copy, t as Share2 } from "./share-2-MZpbKR6z.js";
+import { t as Link2 } from "./link-2-Bg6OMR-A.js";
+import { t as RefreshCw } from "./refresh-cw-Crqu6vln.js";
+//#region app/class-finder-localization.ts
+var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
+var relatedHrefs = [
+	"/classes/difficulty-comparison/",
+	"/classes/class-choice-guide/",
+	"/classes/base-class-roster/",
+	"/tools/map/"
+];
+relatedHrefs[0], relatedHrefs[1], relatedHrefs[2], relatedHrefs[3], relatedHrefs[0], relatedHrefs[1], relatedHrefs[2], relatedHrefs[3], relatedHrefs[0], relatedHrefs[1], relatedHrefs[2], relatedHrefs[3], relatedHrefs[0], relatedHrefs[1], relatedHrefs[2], relatedHrefs[3], relatedHrefs[0], relatedHrefs[1], relatedHrefs[2], relatedHrefs[3], relatedHrefs[0], relatedHrefs[1], relatedHrefs[2], relatedHrefs[3], relatedHrefs[0], relatedHrefs[1], relatedHrefs[2], relatedHrefs[3];
+var editorialClassFinderUiCopy = {
+	"zh-hans": {
+		kicker: "职业适配",
+		introTitle: "用 6 个选择缩小职业范围",
+		introDescription: "根据操作节奏、战斗距离、队伍责任和容错偏好，找出最值得先了解的三个职业。",
+		duration: "约 2 分钟",
+		questionCount: "6 个问题",
+		privateByDesign: "无需账号",
+		privacy: "进度只保存在当前设备；完成或分享时答案会写入网址片段，但不会创建公开结果页。",
+		start: "开始推荐",
+		resume: "继续上次进度",
+		restart: "重新开始",
+		progress: (current, total) => `第 ${current} 题，共 ${total} 题`,
+		answered: (count, total) => `已回答 ${count} / ${total}`,
+		chooseOne: "选择最接近你的答案",
+		back: "上一题",
+		next: "下一题",
+		seeResults: "查看推荐",
+		resultsKicker: "你的职业适配",
+		resultsTitle: "最适合先了解的三个职业",
+		resultsDescription: "推荐反映玩法偏好，不代表职业强度、版本排名或官方结论。",
+		primaryMatch: "首选",
+		match: "适配度",
+		matchedPreferences: "符合你的偏好",
+		guide: "查看职业攻略",
+		allClasses: "比较全部职业",
+		share: "分享结果",
+		shared: "已打开系统分享",
+		copied: "结果链接已复制",
+		copyFailed: "无法自动复制，请从浏览器地址栏复制链接。",
+		saved: "进度已保存在当前设备",
+		saveFailed: "浏览器阻止了本地存储；本次作答仍可继续。",
+		emptyResults: "答案不足。请完成问卷后查看推荐。",
+		continueQuestions: "继续完成问卷",
+		rankLabel: (rank) => `第 ${rank} 名推荐`
+	},
+	fr: {
+		kicker: "AFFINITÉ DE CLASSE",
+		introTitle: "Réduisez vos choix en 6 décisions",
+		introDescription: "Trouvez trois classes à explorer selon votre rythme, votre portée, votre rôle en groupe et votre tolérance aux erreurs.",
+		duration: "Environ 2 minutes",
+		questionCount: "6 questions",
+		privateByDesign: "Sans compte",
+		privacy: "La progression reste sur cet appareil. Le partage ajoute les réponses au fragment d’URL sans créer de page publique.",
+		start: "Commencer",
+		resume: "Continuer les réponses",
+		restart: "Recommencer",
+		progress: (current, total) => `Question ${current} sur ${total}`,
+		answered: (count, total) => `${count} réponse(s) sur ${total}`,
+		chooseOne: "Choisissez la réponse la plus proche",
+		back: "Retour",
+		next: "Suivant",
+		seeResults: "Voir mes résultats",
+		resultsKicker: "VOTRE AFFINITÉ",
+		resultsTitle: "Trois classes à explorer",
+		resultsDescription: "Le résultat reflète vos préférences, pas la puissance ni une tier list officielle.",
+		primaryMatch: "Meilleur choix",
+		match: "affinité",
+		matchedPreferences: "Pourquoi ce choix",
+		guide: "Voir le guide",
+		allClasses: "Comparer les classes",
+		share: "Partager",
+		shared: "Partage système ouvert",
+		copied: "Lien copié",
+		copyFailed: "Copie automatique impossible. Copiez le lien dans la barre d’adresse.",
+		saved: "Progression enregistrée sur cet appareil",
+		saveFailed: "Le stockage local est bloqué ; vous pouvez continuer cette session.",
+		emptyResults: "Réponses insuffisantes. Terminez le questionnaire.",
+		continueQuestions: "Continuer",
+		rankLabel: (rank) => `Recommandation ${rank}`
+	},
+	de: {
+		kicker: "KLASSENPASSUNG",
+		introTitle: "Grenze deine Auswahl mit 6 Entscheidungen ein",
+		introDescription: "Finde drei Klassen anhand von Tempo, Reichweite, Gruppenrolle und Fehlertoleranz.",
+		duration: "Etwa 2 Minuten",
+		questionCount: "6 Fragen",
+		privateByDesign: "Kein Konto",
+		privacy: "Der Fortschritt bleibt auf diesem Gerät. Beim Teilen stehen Antworten nur im URL-Fragment; es entsteht keine öffentliche Seite.",
+		start: "Klassenfinder starten",
+		resume: "Antworten fortsetzen",
+		restart: "Neu beginnen",
+		progress: (current, total) => `Frage ${current} von ${total}`,
+		answered: (count, total) => `${count} von ${total} beantwortet`,
+		chooseOne: "Wähle die passendste Antwort",
+		back: "Zurück",
+		next: "Weiter",
+		seeResults: "Ergebnisse anzeigen",
+		resultsKicker: "DEINE KLASSENPASSUNG",
+		resultsTitle: "Drei Klassen zum Erkunden",
+		resultsDescription: "Das Ergebnis zeigt Vorlieben, nicht Stärke, Patch-Tiers oder ein offizielles Urteil.",
+		primaryMatch: "Beste Passung",
+		match: "Passung",
+		matchedPreferences: "Warum passend",
+		guide: "Klassenguide öffnen",
+		allClasses: "Alle Klassen vergleichen",
+		share: "Ergebnis teilen",
+		shared: "Systemfreigabe geöffnet",
+		copied: "Ergebnislink kopiert",
+		copyFailed: "Automatisches Kopieren fehlgeschlagen. Kopiere den Link aus der Adressleiste.",
+		saved: "Fortschritt auf diesem Gerät gespeichert",
+		saveFailed: "Lokaler Speicher ist blockiert; diese Sitzung kann fortgesetzt werden.",
+		emptyResults: "Noch nicht genug Antworten. Schließe den Test ab.",
+		continueQuestions: "Fragen fortsetzen",
+		rankLabel: (rank) => `Empfehlung ${rank}`
+	},
+	es: {
+		kicker: "AFINIDAD DE CLASE",
+		introTitle: "Reduce tus opciones con 6 decisiones",
+		introDescription: "Encuentra tres clases según ritmo, alcance, responsabilidad de grupo y tolerancia a errores.",
+		duration: "Unos 2 minutos",
+		questionCount: "6 preguntas",
+		privateByDesign: "Sin cuenta",
+		privacy: "El progreso queda en este dispositivo. Compartir añade respuestas al fragmento de URL, sin crear una página pública.",
+		start: "Iniciar selector",
+		resume: "Continuar respuestas",
+		restart: "Empezar de nuevo",
+		progress: (current, total) => `Pregunta ${current} de ${total}`,
+		answered: (count, total) => `${count} de ${total} respondidas`,
+		chooseOne: "Elige la respuesta más cercana",
+		back: "Atrás",
+		next: "Siguiente",
+		seeResults: "Ver resultados",
+		resultsKicker: "TU AFINIDAD",
+		resultsTitle: "Tres clases para explorar",
+		resultsDescription: "El resultado refleja preferencias, no poder, tier del parche ni una valoración oficial.",
+		primaryMatch: "Mejor opción",
+		match: "afinidad",
+		matchedPreferences: "Por qué encaja",
+		guide: "Ver guía de clase",
+		allClasses: "Comparar clases",
+		share: "Compartir resultados",
+		shared: "Se abrió el menú de compartir",
+		copied: "Enlace copiado",
+		copyFailed: "No se pudo copiar automáticamente. Copia el enlace de la barra de direcciones.",
+		saved: "Progreso guardado en este dispositivo",
+		saveFailed: "El almacenamiento local está bloqueado; puedes continuar esta sesión.",
+		emptyResults: "Aún faltan respuestas. Completa el cuestionario.",
+		continueQuestions: "Continuar preguntas",
+		rankLabel: (rank) => `Recomendación ${rank}`
+	},
+	ja: {
+		kicker: "クラス適性",
+		introTitle: "6つの選択で候補を絞り込む",
+		introDescription: "操作テンポ、戦闘距離、パーティ責任、ミスへの許容度から、先に調べたい3クラスを提案します。",
+		duration: "約2分",
+		questionCount: "6問",
+		privateByDesign: "アカウント不要",
+		privacy: "進行状況はこの端末にのみ保存されます。共有時は回答がURLフラグメントに入りますが、公開結果ページは作られません。",
+		start: "診断を始める",
+		resume: "前回の回答を続ける",
+		restart: "最初から",
+		progress: (current, total) => `${total}問中${current}問目`,
+		answered: (count, total) => `${total}問中${count}問回答`,
+		chooseOne: "最も近い回答を選択",
+		back: "戻る",
+		next: "次へ",
+		seeResults: "結果を見る",
+		resultsKicker: "あなたのクラス適性",
+		resultsTitle: "先に調べたい3つのクラス",
+		resultsDescription: "結果はプレイの好みを示し、クラスの強さや公式Tierを示すものではありません。",
+		primaryMatch: "第1候補",
+		match: "適合度",
+		matchedPreferences: "おすすめの理由",
+		guide: "クラス攻略を見る",
+		allClasses: "全クラスを比較",
+		share: "結果を共有",
+		shared: "共有画面を開きました",
+		copied: "結果リンクをコピーしました",
+		copyFailed: "自動コピーできませんでした。アドレスバーからリンクをコピーしてください。",
+		saved: "この端末に進行状況を保存しました",
+		saveFailed: "ローカル保存が無効です。このセッションは続行できます。",
+		emptyResults: "回答が足りません。質問を完了してください。",
+		continueQuestions: "質問を続ける",
+		rankLabel: (rank) => `おすすめ第${rank}位`
+	},
+	"pt-br": {
+		kicker: "AFINIDADE DE CLASSE",
+		introTitle: "Reduza suas opções em 6 decisões",
+		introDescription: "Encontre três classes pelo ritmo, alcance, responsabilidade no grupo e tolerância a erros.",
+		duration: "Cerca de 2 minutos",
+		questionCount: "6 perguntas",
+		privateByDesign: "Sem conta",
+		privacy: "O progresso fica neste dispositivo. Compartilhar adiciona respostas ao fragmento da URL, sem criar uma página pública.",
+		start: "Iniciar seletor",
+		resume: "Continuar respostas",
+		restart: "Recomeçar",
+		progress: (current, total) => `Pergunta ${current} de ${total}`,
+		answered: (count, total) => `${count} de ${total} respondidas`,
+		chooseOne: "Escolha a resposta mais próxima",
+		back: "Voltar",
+		next: "Avançar",
+		seeResults: "Ver resultados",
+		resultsKicker: "SUA AFINIDADE",
+		resultsTitle: "Três classes para explorar",
+		resultsDescription: "O resultado reflete preferências, não poder, tier do patch ou avaliação oficial.",
+		primaryMatch: "Melhor opção",
+		match: "afinidade",
+		matchedPreferences: "Por que combina",
+		guide: "Ver guia da classe",
+		allClasses: "Comparar classes",
+		share: "Compartilhar",
+		shared: "Compartilhamento do sistema aberto",
+		copied: "Link copiado",
+		copyFailed: "A cópia automática falhou. Copie o link da barra de endereços.",
+		saved: "Progresso salvo neste dispositivo",
+		saveFailed: "O armazenamento local está bloqueado; você ainda pode continuar.",
+		emptyResults: "Ainda faltam respostas. Conclua o questionário.",
+		continueQuestions: "Continuar perguntas",
+		rankLabel: (rank) => `Recomendação ${rank}`
+	},
+	ru: {
+		kicker: "СООТВЕТСТВИЕ КЛАССУ",
+		introTitle: "Сузьте выбор за 6 решений",
+		introDescription: "Найдите три класса по темпу, дистанции, ответственности в группе и терпимости к ошибкам.",
+		duration: "Около 2 минут",
+		questionCount: "6 вопросов",
+		privateByDesign: "Без аккаунта",
+		privacy: "Прогресс хранится на этом устройстве. При публикации ответы добавляются во фрагмент URL без создания публичной страницы.",
+		start: "Начать подбор",
+		resume: "Продолжить ответы",
+		restart: "Начать заново",
+		progress: (current, total) => `Вопрос ${current} из ${total}`,
+		answered: (count, total) => `Отвечено ${count} из ${total}`,
+		chooseOne: "Выберите наиболее близкий ответ",
+		back: "Назад",
+		next: "Далее",
+		seeResults: "Показать результат",
+		resultsKicker: "ВАШЕ СООТВЕТСТВИЕ",
+		resultsTitle: "Три класса для знакомства",
+		resultsDescription: "Результат отражает предпочтения, а не силу, тир патча или официальную оценку.",
+		primaryMatch: "Лучший выбор",
+		match: "соответствие",
+		matchedPreferences: "Почему подходит",
+		guide: "Открыть гайд",
+		allClasses: "Сравнить классы",
+		share: "Поделиться",
+		shared: "Открыто системное меню",
+		copied: "Ссылка скопирована",
+		copyFailed: "Автоматическое копирование не удалось. Скопируйте ссылку из адресной строки.",
+		saved: "Прогресс сохранён на этом устройстве",
+		saveFailed: "Локальное хранилище заблокировано; эту сессию можно продолжить.",
+		emptyResults: "Недостаточно ответов. Завершите опрос.",
+		continueQuestions: "Продолжить",
+		rankLabel: (rank) => `Рекомендация ${rank}`
+	}
+};
+function shareCopy$1(values) {
+	return values;
+}
+var editorialClassFinderShareCopy = {
+	"zh-hans": shareCopy$1({
+		title: "分享职业结果",
+		description: "图片只在当前设备生成，不会上传你的答案。",
+		generating: "正在生成结果图片…",
+		ready: "结果图片已生成",
+		failed: "图片生成失败，但仍可复制结果链接。",
+		retry: "重新生成",
+		shareImage: "分享图片",
+		copyImage: "复制图片",
+		downloadImage: "下载图片",
+		copyLink: "复制结果链接",
+		shared: "已打开图片分享",
+		copiedImage: "结果图片已复制",
+		downloaded: "结果图片已下载",
+		copiedLink: "结果链接已复制",
+		copyFailed: "浏览器无法自动复制，请手动复制下方链接。",
+		close: "关闭分享结果",
+		imageAlt: (name) => `以 ${name} 为首选的 AION2 职业适配结果图片`,
+		resultSummary: "图片中的职业结果"
+	}),
+	fr: shareCopy$1({
+		title: "Partager vos classes",
+		description: "L’image est créée sur cet appareil ; vos réponses ne sont pas envoyées.",
+		generating: "Création de l’image…",
+		ready: "Image prête",
+		failed: "Impossible de créer l’image. Le lien reste disponible.",
+		retry: "Réessayer",
+		shareImage: "Partager l’image",
+		copyImage: "Copier l’image",
+		downloadImage: "Télécharger l’image",
+		copyLink: "Copier le lien",
+		shared: "Partage de l’image ouvert",
+		copiedImage: "Image copiée",
+		downloaded: "Image téléchargée",
+		copiedLink: "Lien copié",
+		copyFailed: "Copie automatique impossible. Copiez le lien ci-dessous.",
+		close: "Fermer les résultats",
+		imageAlt: (name) => `Résultat du sélecteur de classe AION2 avec ${name} en premier choix`,
+		resultSummary: "Classes affichées dans l’image"
+	}),
+	de: shareCopy$1({
+		title: "Klassenempfehlungen teilen",
+		description: "Das Bild wird auf diesem Gerät erstellt; Antworten werden nicht hochgeladen.",
+		generating: "Ergebnisbild wird erstellt…",
+		ready: "Ergebnisbild ist bereit",
+		failed: "Bild konnte nicht erstellt werden. Der Link kann weiterhin kopiert werden.",
+		retry: "Erneut versuchen",
+		shareImage: "Bild teilen",
+		copyImage: "Bild kopieren",
+		downloadImage: "Bild herunterladen",
+		copyLink: "Ergebnislink kopieren",
+		shared: "Bildfreigabe geöffnet",
+		copiedImage: "Bild kopiert",
+		downloaded: "Bild heruntergeladen",
+		copiedLink: "Link kopiert",
+		copyFailed: "Automatisches Kopieren fehlgeschlagen. Kopiere den Link unten.",
+		close: "Ergebnisse schließen",
+		imageAlt: (name) => `AION2-Klassenergebnis mit ${name} als bester Empfehlung`,
+		resultSummary: "Im Bild gezeigte Klassen"
+	}),
+	es: shareCopy$1({
+		title: "Compartir clases recomendadas",
+		description: "La imagen se crea en este dispositivo; las respuestas no se suben.",
+		generating: "Creando imagen…",
+		ready: "Imagen lista",
+		failed: "No se pudo crear la imagen. Aún puedes copiar el enlace.",
+		retry: "Reintentar",
+		shareImage: "Compartir imagen",
+		copyImage: "Copiar imagen",
+		downloadImage: "Descargar imagen",
+		copyLink: "Copiar enlace",
+		shared: "Menú de compartir abierto",
+		copiedImage: "Imagen copiada",
+		downloaded: "Imagen descargada",
+		copiedLink: "Enlace copiado",
+		copyFailed: "La copia automática falló. Copia el enlace inferior.",
+		close: "Cerrar resultados",
+		imageAlt: (name) => `Resultado de clase de AION2 con ${name} como mejor opción`,
+		resultSummary: "Clases mostradas en la imagen"
+	}),
+	ja: shareCopy$1({
+		title: "クラス診断結果を共有",
+		description: "画像はこの端末で生成され、回答はアップロードされません。",
+		generating: "結果画像を生成中…",
+		ready: "結果画像の準備ができました",
+		failed: "画像を生成できませんでした。結果リンクはコピーできます。",
+		retry: "再生成",
+		shareImage: "画像を共有",
+		copyImage: "画像をコピー",
+		downloadImage: "画像を保存",
+		copyLink: "結果リンクをコピー",
+		shared: "画像共有を開きました",
+		copiedImage: "結果画像をコピーしました",
+		downloaded: "結果画像を保存しました",
+		copiedLink: "結果リンクをコピーしました",
+		copyFailed: "自動コピーできませんでした。下のリンクを手動でコピーしてください。",
+		close: "共有結果を閉じる",
+		imageAlt: (name) => `${name}が第1候補のAION2クラス診断結果画像`,
+		resultSummary: "画像に表示されたクラス"
+	}),
+	"pt-br": shareCopy$1({
+		title: "Compartilhar classes recomendadas",
+		description: "A imagem é criada neste dispositivo; suas respostas não são enviadas.",
+		generating: "Criando imagem…",
+		ready: "Imagem pronta",
+		failed: "Não foi possível criar a imagem. O link ainda pode ser copiado.",
+		retry: "Tentar novamente",
+		shareImage: "Compartilhar imagem",
+		copyImage: "Copiar imagem",
+		downloadImage: "Baixar imagem",
+		copyLink: "Copiar link",
+		shared: "Compartilhamento aberto",
+		copiedImage: "Imagem copiada",
+		downloaded: "Imagem baixada",
+		copiedLink: "Link copiado",
+		copyFailed: "A cópia automática falhou. Copie o link abaixo.",
+		close: "Fechar resultados",
+		imageAlt: (name) => `Resultado de classe de AION2 com ${name} como melhor opção`,
+		resultSummary: "Classes exibidas na imagem"
+	}),
+	ru: shareCopy$1({
+		title: "Поделиться подбором классов",
+		description: "Изображение создаётся на этом устройстве; ответы не загружаются.",
+		generating: "Создаём изображение…",
+		ready: "Изображение готово",
+		failed: "Не удалось создать изображение. Ссылку всё ещё можно скопировать.",
+		retry: "Повторить",
+		shareImage: "Поделиться изображением",
+		copyImage: "Копировать изображение",
+		downloadImage: "Скачать изображение",
+		copyLink: "Копировать ссылку",
+		shared: "Открыто меню публикации",
+		copiedImage: "Изображение скопировано",
+		downloaded: "Изображение скачано",
+		copiedLink: "Ссылка скопирована",
+		copyFailed: "Автокопирование не удалось. Скопируйте ссылку ниже.",
+		close: "Закрыть результаты",
+		imageAlt: (name) => `Результат подбора класса AION2: лучший выбор — ${name}`,
+		resultSummary: "Классы на изображении"
+	})
+};
+var editorialClassFinderPosterCopy = {
+	"zh-hans": {
+		eyebrow: "AION2 KINA · 职业适配结果",
+		title: "最适合先了解的三个职业",
+		subtitle: "根据你的玩法偏好生成",
+		primary: "首选",
+		rank: (rank) => `第 ${rank} 名`,
+		match: "适配度",
+		preferences: "符合你的偏好",
+		footer: "结果只反映玩法偏好，不代表职业强度、版本排名或官方结论。"
+	},
+	fr: {
+		eyebrow: "AION2 KINA · AFFINITÉ DE CLASSE",
+		title: "Trois classes à explorer",
+		subtitle: "Résultat basé sur votre style de jeu",
+		primary: "MEILLEUR CHOIX",
+		rank: (rank) => `CHOIX ${rank}`,
+		match: "AFFINITÉ",
+		preferences: "POURQUOI CE CHOIX",
+		footer: "Ce résultat reflète vos préférences, pas la puissance, les tiers ou un verdict officiel."
+	},
+	de: {
+		eyebrow: "AION2 KINA · KLASSENPASSUNG",
+		title: "Drei Klassen zum Erkunden",
+		subtitle: "Aus deinen Spielstil-Vorlieben erstellt",
+		primary: "BESTE PASSUNG",
+		rank: (rank) => `EMPFEHLUNG ${rank}`,
+		match: "PASSUNG",
+		preferences: "WARUM PASSEND",
+		footer: "Das Ergebnis zeigt Vorlieben, nicht Klassenstärke, Patch-Tiers oder ein offizielles Urteil."
+	},
+	es: {
+		eyebrow: "AION2 KINA · AFINIDAD DE CLASE",
+		title: "Tres clases para explorar",
+		subtitle: "Generado según tus preferencias",
+		primary: "MEJOR OPCIÓN",
+		rank: (rank) => `OPCIÓN ${rank}`,
+		match: "AFINIDAD",
+		preferences: "POR QUÉ ENCAJA",
+		footer: "El resultado refleja preferencias, no poder, tiers ni una valoración oficial."
+	},
+	ja: {
+		eyebrow: "AION2 KINA · クラス適性結果",
+		title: "先に調べたい3つのクラス",
+		subtitle: "プレイスタイルの好みから生成",
+		primary: "第1候補",
+		rank: (rank) => `おすすめ第${rank}位`,
+		match: "適合度",
+		preferences: "おすすめの理由",
+		footer: "結果はプレイの好みを示し、クラスの強さや公式Tierを示すものではありません。"
+	},
+	"pt-br": {
+		eyebrow: "AION2 KINA · AFINIDADE DE CLASSE",
+		title: "Três classes para explorar",
+		subtitle: "Gerado conforme suas preferências",
+		primary: "MELHOR OPÇÃO",
+		rank: (rank) => `OPÇÃO ${rank}`,
+		match: "AFINIDADE",
+		preferences: "POR QUE COMBINA",
+		footer: "O resultado reflete preferências, não poder, tiers ou avaliação oficial."
+	},
+	ru: {
+		eyebrow: "AION2 KINA · ПОДБОР КЛАССА",
+		title: "Три класса для знакомства",
+		subtitle: "Создано по вашим игровым предпочтениям",
+		primary: "ЛУЧШИЙ ВЫБОР",
+		rank: (rank) => `ВАРИАНТ ${rank}`,
+		match: "СООТВЕТСТВИЕ",
+		preferences: "ПОЧЕМУ ПОДХОДИТ",
+		footer: "Результат отражает предпочтения, а не силу класса, тир патча или официальную оценку."
+	}
+};
+var questionTitles = {
+	"zh-hans": {
+		contribution: ["你最想在战斗中承担什么贡献？", "不考虑当前经验，选择最吸引你的主要贡献。"],
+		"combat-rhythm": ["你更喜欢哪种战斗节奏？", "这里只比较节奏偏好，不代表职业输出。"],
+		"learning-load": ["你愿意承担哪种学习负担？", "负担更高不等于更强，负担较低也需要练习。"],
+		"preferred-position": ["你希望把注意力放在哪里？", "选择最符合直觉的战场视角。"],
+		"party-responsibility": ["你想承担多少队伍责任？", "责任指决策负担，不代表固定队伍配置。"],
+		"mistake-tolerance": ["你希望如何从失误中练习？", "选择你愿意反复改进的错误类型。"]
+	},
+	fr: {
+		contribution: ["Que voulez-vous surtout apporter au combat ?", "Choisissez la contribution qui vous attire le plus, quelle que soit votre expérience."],
+		"combat-rhythm": ["Quel rythme de combat préférez-vous ?", "Il s’agit d’une préférence de rythme, pas de puissance."],
+		"learning-load": ["Quel effort d’apprentissage acceptez-vous ?", "Une charge plus élevée n’est pas plus forte ; toute classe demande de la pratique."],
+		"preferred-position": ["Où souhaitez-vous porter votre attention ?", "Choisissez la perspective de combat la plus naturelle."],
+		"party-responsibility": ["Quelle responsabilité de groupe souhaitez-vous ?", "La responsabilité décrit les décisions, pas une composition imposée."],
+		"mistake-tolerance": ["Comment voulez-vous apprendre de vos erreurs ?", "Choisissez le type d’erreur que vous acceptez de travailler."]
+	},
+	de: {
+		contribution: ["Was möchtest du im Kampf hauptsächlich beitragen?", "Wähle den Beitrag, der dich unabhängig von deiner Erfahrung anspricht."],
+		"combat-rhythm": ["Welchen Kampfrhythmus bevorzugst du?", "Es geht um Rhythmus, nicht um Klassenleistung."],
+		"learning-load": ["Welche Lernbelastung möchtest du übernehmen?", "Mehr Aufwand bedeutet nicht mehr Stärke; jede Klasse braucht Übung."],
+		"preferred-position": ["Worauf möchtest du deine Aufmerksamkeit richten?", "Wähle die natürlichste Perspektive auf das Schlachtfeld."],
+		"party-responsibility": ["Wie viel Gruppenverantwortung möchtest du?", "Verantwortung beschreibt Entscheidungen, nicht eine feste Gruppenzusammenstellung."],
+		"mistake-tolerance": ["Wie möchtest du aus Fehlern lernen?", "Wähle die Fehlerart, die du wiederholt verbessern möchtest."]
+	},
+	es: {
+		contribution: ["¿Qué quieres aportar principalmente al combate?", "Elige la contribución que más te atraiga, sin importar tu experiencia."],
+		"combat-rhythm": ["¿Qué ritmo de combate prefieres?", "Es una preferencia de ritmo, no una medida de rendimiento."],
+		"learning-load": ["¿Qué carga de aprendizaje aceptas?", "Más carga no significa más poder; todas las clases requieren práctica."],
+		"preferred-position": ["¿Dónde quieres centrar tu atención?", "Elige la perspectiva de combate más natural."],
+		"party-responsibility": ["¿Cuánta responsabilidad de grupo quieres?", "La responsabilidad describe decisiones, no una composición fija."],
+		"mistake-tolerance": ["¿Cómo quieres practicar tras cometer errores?", "Elige el tipo de error que aceptarías mejorar repetidamente."]
+	},
+	ja: {
+		contribution: ["戦闘で最も貢献したいことは？", "現在の経験に関係なく、魅力を感じる主な役割を選んでください。"],
+		"combat-rhythm": ["好みの戦闘テンポは？", "テンポの好みであり、クラス火力の評価ではありません。"],
+		"learning-load": ["どの学習負担なら受け入れられますか？", "負担が高いほど強いわけではなく、低くても練習は必要です。"],
+		"preferred-position": ["どこに注意を向けたいですか？", "最も自然に感じる戦場の視点を選んでください。"],
+		"party-responsibility": ["どの程度パーティ責任を担いたいですか？", "責任は判断負担を表し、固定編成を意味しません。"],
+		"mistake-tolerance": ["ミスを通してどう練習したいですか？", "繰り返し改善したいミスの種類を選んでください。"]
+	},
+	"pt-br": {
+		contribution: ["O que você mais quer oferecer no combate?", "Escolha a contribuição que mais atrai você, independentemente da experiência."],
+		"combat-rhythm": ["Qual ritmo de combate você prefere?", "É uma preferência de ritmo, não uma medida de desempenho."],
+		"learning-load": ["Que carga de aprendizado você aceita?", "Carga maior não significa força maior; todas as classes exigem prática."],
+		"preferred-position": ["Onde você quer concentrar a atenção?", "Escolha a perspectiva de batalha mais natural."],
+		"party-responsibility": ["Quanta responsabilidade no grupo você quer?", "Responsabilidade descreve decisões, não uma composição fixa."],
+		"mistake-tolerance": ["Como você quer praticar após erros?", "Escolha o tipo de erro que aceita melhorar repetidamente."]
+	},
+	ru: {
+		contribution: ["Какой вклад в бой для вас важнее всего?", "Выберите наиболее привлекательную роль независимо от текущего опыта."],
+		"combat-rhythm": ["Какой ритм боя вы предпочитаете?", "Это предпочтение темпа, а не оценка силы класса."],
+		"learning-load": ["Какую сложность обучения вы готовы принять?", "Больше нагрузки не означает больше силы; любой класс требует практики."],
+		"preferred-position": ["На чём вы хотите сосредоточиться?", "Выберите наиболее естественный для вас взгляд на поле боя."],
+		"party-responsibility": ["Сколько ответственности за группу вы хотите?", "Речь о нагрузке решений, а не о фиксированном составе."],
+		"mistake-tolerance": ["Как вы хотите учиться на ошибках?", "Выберите тип ошибок, который готовы разбирать и исправлять."]
+	}
+};
+var optionIds = [
+	"frontline-damage",
+	"protect-allies",
+	"ranged-offence",
+	"restore-allies",
+	"flexible-support",
+	"weaken-and-control",
+	"steady-front-pressure",
+	"decisive-window",
+	"move-at-range",
+	"layered-effects",
+	"react-to-party",
+	"clear-baseline",
+	"precise-execution",
+	"positioning-work",
+	"multiple-states",
+	"team-decisions",
+	"at-the-front",
+	"at-range",
+	"with-the-party",
+	"adapt-as-needed",
+	"own-pressure",
+	"support-when-needed",
+	"lead-and-protect",
+	"healing-priority",
+	"forgiving-baseline",
+	"repeat-precision",
+	"improve-check-order",
+	"review-team-decisions"
+];
+var optionLabelLists = {
+	"zh-hans": [
+		"前线输出",
+		"保护队友",
+		"远程攻击",
+		"维持队友生命",
+		"灵活辅助",
+		"削弱与控制",
+		"持续前线压制",
+		"短时间集中爆发",
+		"移动并保持距离",
+		"叠加并追踪效果",
+		"根据队伍反应",
+		"建立清晰可重复的基础循环",
+		"精准时机与连锁决策",
+		"走位与移动路线",
+		"多层信息与状态",
+		"高责任队伍决策",
+		"位于前线",
+		"保持远程",
+		"围绕队伍核心",
+		"按需要调整",
+		"专注个人压制",
+		"输出并在需要时协助",
+		"带领并保护",
+		"负责治疗优先级",
+		"从更宽容的基础开始",
+		"反复练习进场与执行时机",
+		"改进信息检查顺序",
+		"复盘影响队伍的决策"
+	],
+	fr: [
+		"dégâts en première ligne",
+		"protéger les alliés",
+		"attaque à distance",
+		"maintenir les alliés en vie",
+		"soutien polyvalent",
+		"affaiblir et contrôler",
+		"pression continue au front",
+		"agir dans une courte fenêtre",
+		"bouger et garder la distance",
+		"superposer et suivre les effets",
+		"réagir à l’état du groupe",
+		"construire une base claire et répétable",
+		"timing précis et décisions en chaîne",
+		"positionnement et itinéraires",
+		"informations et états superposés",
+		"décisions d’équipe à forte responsabilité",
+		"en première ligne",
+		"à distance",
+		"autour du cœur du groupe",
+		"s’adapter selon le besoin",
+		"me concentrer sur ma pression",
+		"infliger des dégâts et aider au besoin",
+		"mener et protéger",
+		"gérer les priorités de soin",
+		"commencer avec une base plus tolérante",
+		"répéter l’entrée et le timing d’exécution",
+		"améliorer l’ordre de vérification",
+		"revoir les décisions qui touchent le groupe"
+	],
+	de: [
+		"Schaden an der Front",
+		"Verbündete schützen",
+		"Fernkampfangriff",
+		"Verbündete am Leben halten",
+		"flexible Unterstützung",
+		"schwächen und kontrollieren",
+		"stetiger Druck an der Front",
+		"kurzes Entscheidungsfenster nutzen",
+		"bewegen und Abstand halten",
+		"Effekte schichten und verfolgen",
+		"auf die Gruppe reagieren",
+		"klare wiederholbare Basis aufbauen",
+		"präzises Timing und verkettete Entscheidungen",
+		"Position und Bewegungswege",
+		"mehrere Informationen und Zustände",
+		"Teamentscheidungen mit hoher Verantwortung",
+		"an der Front",
+		"auf Distanz",
+		"im Kern der Gruppe",
+		"nach Bedarf anpassen",
+		"auf eigenen Druck konzentrieren",
+		"Schaden verursachen und bei Bedarf helfen",
+		"führen und schützen",
+		"Heilprioritäten übernehmen",
+		"mit fehlertoleranter Basis beginnen",
+		"Einstieg und Ausführung wiederholen",
+		"Informationsprüfung verbessern",
+		"gruppenrelevante Entscheidungen prüfen"
+	],
+	es: [
+		"daño en primera línea",
+		"proteger a los aliados",
+		"ataque a distancia",
+		"mantener vivos a los aliados",
+		"apoyo flexible",
+		"debilitar y controlar",
+		"presión constante al frente",
+		"actuar en una ventana breve",
+		"moverse y mantener distancia",
+		"acumular y vigilar efectos",
+		"reaccionar al grupo",
+		"crear una base clara y repetible",
+		"tiempo preciso y decisiones encadenadas",
+		"posición y rutas de movimiento",
+		"información y estados superpuestos",
+		"decisiones de grupo de alta responsabilidad",
+		"en primera línea",
+		"a distancia",
+		"alrededor del núcleo del grupo",
+		"adaptarse según sea necesario",
+		"centrarme en mi presión",
+		"hacer daño y ayudar cuando sea necesario",
+		"liderar y proteger",
+		"asumir prioridades de curación",
+		"empezar con una base más tolerante",
+		"repetir entrada y ejecución",
+		"mejorar el orden de comprobación",
+		"revisar decisiones que afectan al grupo"
+	],
+	ja: [
+		"前線でダメージを与える",
+		"味方を守る",
+		"遠距離攻撃",
+		"味方を生存させる",
+		"柔軟な支援",
+		"弱体化と制御",
+		"前線で継続的に圧力をかける",
+		"短い好機に集中する",
+		"移動しながら距離を保つ",
+		"効果を重ねて追跡する",
+		"パーティ状況に反応する",
+		"明確で反復可能な基礎を作る",
+		"正確なタイミングと連続判断",
+		"位置取りと移動ルート",
+		"複数の情報と状態",
+		"責任の大きいチーム判断",
+		"前線",
+		"遠距離",
+		"パーティの中心付近",
+		"必要に応じて適応",
+		"自分の攻撃に集中",
+		"攻撃しつつ必要時に支援",
+		"先導して守る",
+		"回復優先順位を担う",
+		"許容度の高い基礎から始める",
+		"進入と実行タイミングを反復",
+		"情報確認の順序を改善",
+		"パーティに影響する判断を振り返る"
+	],
+	"pt-br": [
+		"dano na linha de frente",
+		"proteger aliados",
+		"ataque à distância",
+		"manter aliados vivos",
+		"suporte flexível",
+		"enfraquecer e controlar",
+		"pressão constante na frente",
+		"agir em uma janela curta",
+		"mover e manter distância",
+		"combinar e acompanhar efeitos",
+		"reagir ao grupo",
+		"criar uma base clara e repetível",
+		"tempo preciso e decisões encadeadas",
+		"posição e rotas de movimento",
+		"informações e estados em camadas",
+		"decisões de equipe de alta responsabilidade",
+		"na linha de frente",
+		"à distância",
+		"ao redor do núcleo do grupo",
+		"adaptar conforme necessário",
+		"focar na minha pressão",
+		"causar dano e ajudar quando necessário",
+		"liderar e proteger",
+		"assumir prioridades de cura",
+		"começar com uma base mais tolerante",
+		"repetir entrada e execução",
+		"melhorar a ordem de verificação",
+		"revisar decisões que afetam o grupo"
+	],
+	ru: [
+		"урон на передовой",
+		"защита союзников",
+		"дальняя атака",
+		"поддержание жизни союзников",
+		"гибкая поддержка",
+		"ослабление и контроль",
+		"постоянное давление на передовой",
+		"действия в коротком окне",
+		"движение с сохранением дистанции",
+		"наложение и отслеживание эффектов",
+		"реакция на состояние группы",
+		"ясная повторяемая основа",
+		"точный тайминг и цепочка решений",
+		"позиционирование и маршруты",
+		"несколько слоёв информации и состояний",
+		"ответственные командные решения",
+		"на передовой",
+		"на дистанции",
+		"рядом с ядром группы",
+		"адаптация по ситуации",
+		"сосредоточиться на своём давлении",
+		"наносить урон и помогать при необходимости",
+		"вести и защищать",
+		"отвечать за приоритет лечения",
+		"начать с более терпимой основы",
+		"повторять вход и момент исполнения",
+		"улучшать порядок проверки информации",
+		"разбирать решения, влияющие на группу"
+	]
+};
+var optionDescription = {
+	"zh-hans": (label) => `这个选择会在推荐中提高“${label}”相关玩法的权重。`,
+	fr: (label) => `Ce choix augmente le poids du style « ${label} » dans la recommandation.`,
+	de: (label) => `Diese Antwort gewichtet den Spielstil „${label}“ in der Empfehlung stärker.`,
+	es: (label) => `Esta opción aumenta el peso del estilo «${label}» en la recomendación.`,
+	ja: (label) => `この回答では「${label}」に関するプレイ傾向の比重が高くなります。`,
+	"pt-br": (label) => `Esta opção aumenta o peso do estilo “${label}” na recomendação.`,
+	ru: (label) => `Этот ответ повышает вес предпочтения «${label}» в рекомендации.`
+};
+function getEditorialQuestionCopy(locale, questionId) {
+	const [title, hint] = questionTitles[locale][questionId];
+	return {
+		title,
+		hint
+	};
+}
+function getEditorialOptionCopy(locale, optionId) {
+	const index = optionIds.indexOf(optionId);
+	const label = index >= 0 ? optionLabelLists[locale][index] : optionIds[0];
+	return {
+		label,
+		description: optionDescription[locale](label)
+	};
+}
+var localizedClassNames = {
+	"zh-hans": {
+		gladiator: ["剑星", "巨剑"],
+		templar: ["守护星", "长剑与盾"],
+		assassin: ["杀星", "双短剑"],
+		ranger: ["弓星", "弓"],
+		sorcerer: ["魔道星", "魔法书"],
+		spiritmaster: ["精灵星", "宝珠"],
+		cleric: ["治愈星", "战锤"],
+		chanter: ["护法星", "法杖"]
+	},
+	fr: {
+		gladiator: ["Gladiateur", "Espadon"],
+		templar: ["Templier", "Épée longue et bouclier"],
+		assassin: ["Assassin", "Doubles dagues"],
+		ranger: ["Rôdeur", "Arc"],
+		sorcerer: ["Sorcier", "Grimoire"],
+		spiritmaster: ["Spiritualiste", "Orbe"],
+		cleric: ["Clerc", "Masse"],
+		chanter: ["Aède", "Bâton"]
+	},
+	de: {
+		gladiator: ["Gladiator", "Großschwert"],
+		templar: ["Templer", "Langschwert und Schild"],
+		assassin: ["Assassine", "Doppeldolche"],
+		ranger: ["Jäger", "Bogen"],
+		sorcerer: ["Zauberer", "Zauberbuch"],
+		spiritmaster: ["Beschwörer", "Sphäre"],
+		cleric: ["Kleriker", "Streitkolben"],
+		chanter: ["Kantor", "Stab"]
+	},
+	es: {
+		gladiator: ["Gladiador", "Mandoble"],
+		templar: ["Templario", "Espada larga y escudo"],
+		assassin: ["Asesino", "Dagas dobles"],
+		ranger: ["Explorador", "Arco"],
+		sorcerer: ["Hechicero", "Grimorio"],
+		spiritmaster: ["Maestro espiritual", "Orbe"],
+		cleric: ["Clérigo", "Maza"],
+		chanter: ["Cantor", "Bastón"]
+	},
+	ja: {
+		gladiator: ["ソード ウイング", "グレートソード"],
+		templar: ["シールド ウイング", "ロングソードとシールド"],
+		assassin: ["シャドウ ウイング", "デュアルダガー"],
+		ranger: ["ボウ ウイング", "ボウ"],
+		sorcerer: ["スペル ウイング", "スペルブック"],
+		spiritmaster: ["スピリット ウイング", "オーブ"],
+		cleric: ["キュア ウイング", "メイス"],
+		chanter: ["チャント ウイング", "スタッフ"]
+	},
+	"pt-br": {
+		gladiator: ["Gladiador", "Espadão"],
+		templar: ["Templário", "Espada longa e escudo"],
+		assassin: ["Assassino", "Adagas duplas"],
+		ranger: ["Patrulheiro", "Arco"],
+		sorcerer: ["Feiticeiro", "Grimório"],
+		spiritmaster: ["Mestre espiritual", "Orbe"],
+		cleric: ["Clérigo", "Maça"],
+		chanter: ["Cantor", "Cajado"]
+	},
+	ru: {
+		gladiator: ["Гладиатор", "Двуручный меч"],
+		templar: ["Храмовник", "Длинный меч и щит"],
+		assassin: ["Убийца", "Парные кинжалы"],
+		ranger: ["Стрелок", "Лук"],
+		sorcerer: ["Чародей", "Книга заклинаний"],
+		spiritmaster: ["Заклинатель", "Сфера"],
+		cleric: ["Целитель", "Булава"],
+		chanter: ["Чантр", "Посох"]
+	}
+};
+var roleKeys = {
+	gladiator: "frontDamage",
+	templar: "tank",
+	assassin: "burst",
+	ranger: "ranged",
+	sorcerer: "magic",
+	spiritmaster: "summon",
+	cleric: "healer",
+	chanter: "support"
+};
+var roleText = {
+	"zh-hans": {
+		frontDamage: ["高攻击、高防御的近战输出，也可承担副坦职责。", "适合喜欢持续前线压制并判断攻防时机的玩家。"],
+		tank: ["负责格挡攻击并保护队友的前线坦克。", "适合喜欢前线站位、保护时机和主要队伍责任的玩家。"],
+		burst: ["利用隐身、快速连段和状态效果进行短窗口压制的精准近战。", "适合愿意练习进场、集中操作、目标选择和安全脱离的玩家。"],
+		ranged: ["围绕站位、时机和战术反应展开的远程攻击职业。", "适合边移动边管理安全距离、视线和攻击窗口的玩家。"],
+		magic: ["以短窗口高魔法伤害为主，并需管理距离和控制。", "适合喜欢远程站位、短爆发窗口和控制决策的玩家。"],
+		summon: ["利用元素精灵、状态效果和持续伤害削弱敌人的召唤职业。", "适合同时管理召唤物、持续效果、目标状态和个人站位的玩家。"],
+		healer: ["维持队友生命与战斗续航的核心治疗。", "适合愿意观察多名队友、保持自身安全并负责治疗优先级的玩家。"],
+		support: ["用真言强化队友，同时提供控制、副治疗和伤害的辅助。", "适合希望承担主要辅助职责并在控制、治疗和输出间切换的玩家。"]
+	},
+	fr: {
+		frontDamage: ["DPS de mêlée offensif et résistant, également capable d’assister le tank.", "Pour les joueurs attirés par une pression constante au front et les décisions attaque-défense."],
+		tank: ["Tank de première ligne qui bloque les attaques et protège les alliés.", "Pour ceux qui veulent gérer le placement, la protection et la responsabilité principale du groupe."],
+		burst: ["Mêlée précise utilisant furtivité, enchaînements rapides et états dans une courte fenêtre.", "Pour ceux qui veulent répéter entrée, exécution, choix de cible et retrait sûr."],
+		ranged: ["Attaquant à distance fondé sur le placement, le timing et la réaction tactique.", "Pour gérer la portée sûre, les lignes de vue et les fenêtres d’attaque en mouvement."],
+		magic: ["DPS magique à distance concentré dans de courtes fenêtres, avec gestion de portée et contrôle.", "Pour les joueurs attirés par le placement à distance, les fenêtres de pression et le contrôle."],
+		summon: ["Invocateur utilisant esprits élémentaires, altérations et dégâts persistants.", "Pour suivre invocation, effets persistants, états de la cible et positionnement."],
+		healer: ["Soigneur principal qui maintient les alliés et l’endurance du groupe.", "Pour lire plusieurs états alliés et gérer les priorités de soin en restant en sécurité."],
+		support: ["Soutien qui renforce le groupe et ajoute contrôle, soins secondaires et dégâts.", "Pour alterner progressivement entre contrôle, soin et dégâts autour d’un rôle de soutien."]
+	},
+	de: {
+		frontDamage: ["Offensive und robuste Nahkampfklasse, die auch als Nebentank dienen kann.", "Für Spieler, die stetigen Frontdruck und Angriffs-Verteidigungs-Entscheidungen mögen."],
+		tank: ["Fronttank, der Angriffe blockt und Verbündete schützt.", "Für Frontpositionierung, Schutz-Timing und zentrale Gruppenverantwortung."],
+		burst: ["Präziser Nahkämpfer mit Tarnung, schnellen Ketten und Zuständen im kurzen Zeitfenster.", "Für Spieler, die Einstieg, komprimierte Ausführung, Zielwahl und Rückzug üben wollen."],
+		ranged: ["Fernangreifer, dessen Spiel von Position, Timing und taktischer Reaktion geprägt ist.", "Für sichere Distanz, Sichtlinien und Angriffsfenster in Bewegung."],
+		magic: ["Fernkampfklasse mit hohem Magieschaden in kurzen Fenstern sowie Reichweiten- und Kontrollmanagement.", "Für Fernposition, kurze Druckfenster und Kontrollentscheidungen."],
+		summon: ["Beschwörer mit Elementargeistern, Zuständen und Schaden über Zeit.", "Für Spieler, die Beschwörung, Effekte, Zielzustände und Position zusammen verfolgen."],
+		healer: ["Zentraler Heiler für Lebenspunkte und Kampfausdauer der Verbündeten.", "Für das Lesen mehrerer Verbündeten-Zustände und verantwortliche Heilprioritäten."],
+		support: ["Unterstützer mit Mantras, Kontrolle, zusätzlicher Heilung und Schaden.", "Für Spieler, die zwischen Kontrolle, Heilung und Schaden wechseln möchten."]
+	},
+	es: {
+		frontDamage: ["Atacante cuerpo a cuerpo ofensivo y resistente que también puede apoyar como tanque.", "Para quien disfruta de presión frontal constante y decisiones de ataque y defensa."],
+		tank: ["Tanque de primera línea que bloquea ataques y protege aliados.", "Para quien quiere posición frontal, protección y responsabilidad principal del grupo."],
+		burst: ["Atacante preciso con sigilo, cadenas rápidas y estados en una ventana breve.", "Para practicar entrada, ejecución concentrada, elección de objetivo y retirada segura."],
+		ranged: ["Atacante a distancia definido por posición, tiempo y respuesta táctica.", "Para gestionar distancia segura, línea de visión y ventanas de ataque al moverse."],
+		magic: ["Atacante mágico a distancia de alto daño en ventanas breves, con gestión de alcance y control.", "Para quien prefiere posición a distancia, presión breve y decisiones de control."],
+		summon: ["Invocador que usa espíritus, estados y daño persistente para debilitar enemigos.", "Para controlar invocación, efectos, estados del objetivo y posición al mismo tiempo."],
+		healer: ["Sanador central que mantiene la salud y resistencia del grupo.", "Para leer estados aliados y asumir prioridades de curación sin descuidar la seguridad."],
+		support: ["Apoyo que fortalece aliados y aporta control, curación secundaria y daño.", "Para alternar entre control, curación y daño desde una función principal de apoyo."]
+	},
+	ja: {
+		frontDamage: ["攻撃力と防御力を備え、サブタンクも担える近接攻撃役です。", "前線で圧力を維持し、攻防の判断を楽しみたい人に向きます。"],
+		tank: ["攻撃を防ぎ、味方を守る前線タンクです。", "前線の位置取り、保護のタイミング、パーティの主責任を担いたい人向けです。"],
+		burst: ["隠密、高速連携、状態効果で短時間に圧力を集中する精密な近接役です。", "進入、集中操作、対象選択、安全な離脱を繰り返し練習したい人向けです。"],
+		ranged: ["位置取り、タイミング、戦術的対応が重要な遠距離攻撃役です。", "移動しながら安全距離、視線、攻撃機会を管理したい人向けです。"],
+		magic: ["短時間の高い魔法ダメージを軸に、射程と制御を管理する遠距離役です。", "遠距離の位置取り、短い攻撃機会、制御判断を好む人向けです。"],
+		summon: ["精霊、状態効果、持続ダメージで敵を弱体化する召喚役です。", "召喚、持続効果、対象状態、自分の位置を同時に管理したい人向けです。"],
+		healer: ["味方の体力と戦闘継続を支える中核ヒーラーです。", "複数の味方を確認し、安全を保ちながら回復優先順位を担いたい人向けです。"],
+		support: ["味方を強化し、制御、副回復、ダメージも行う支援役です。", "主な支援責任を持ちつつ、制御・回復・攻撃を切り替えたい人向けです。"]
+	},
+	"pt-br": {
+		frontDamage: ["Atacante corpo a corpo ofensivo e resistente, capaz de ajudar como tanque.", "Para quem gosta de pressão constante na frente e decisões de ataque e defesa."],
+		tank: ["Tanque de linha de frente que bloqueia ataques e protege aliados.", "Para quem quer posicionamento frontal, tempo de proteção e responsabilidade principal no grupo."],
+		burst: ["Atacante preciso com furtividade, sequências rápidas e estados em uma janela curta.", "Para praticar entrada, execução concentrada, escolha de alvo e saída segura."],
+		ranged: ["Atacante à distância definido por posição, tempo e resposta tática.", "Para gerenciar distância segura, linha de visão e janelas de ataque em movimento."],
+		magic: ["Atacante mágico à distância com alto dano em janelas curtas e gestão de controle.", "Para quem prefere posição distante, pressão curta e decisões de controle."],
+		summon: ["Invocador que usa espíritos, estados e dano contínuo para enfraquecer inimigos.", "Para acompanhar invocação, efeitos, estados do alvo e posição ao mesmo tempo."],
+		healer: ["Curandeiro principal que mantém a vida e resistência do grupo.", "Para ler estados aliados e assumir prioridades de cura sem perder a segurança."],
+		support: ["Suporte que fortalece aliados e oferece controle, cura secundária e dano.", "Para alternar entre controle, cura e dano a partir de uma função principal de suporte."]
+	},
+	ru: {
+		frontDamage: ["Сильный и стойкий боец ближнего боя, способный помогать в роли второго танка.", "Для любителей постоянного давления на передовой и решений между атакой и защитой."],
+		tank: ["Танк передовой, блокирующий атаки и защищающий союзников.", "Для тех, кому нравится позиционирование, момент защиты и главная ответственность за группу."],
+		burst: ["Точный боец ближнего боя со скрытностью, быстрыми цепочками и состояниями в коротком окне.", "Для практики входа, плотного исполнения, выбора цели и безопасного отхода."],
+		ranged: ["Дальний атакующий, зависящий от позиции, тайминга и тактической реакции.", "Для управления безопасной дистанцией, линией обзора и окнами атаки в движении."],
+		magic: ["Дальний магический атакующий с высоким уроном в коротких окнах и управлением контроля.", "Для любителей дальней позиции, коротких окон давления и решений контроля."],
+		summon: ["Призыватель, использующий духов, состояния и периодический урон для ослабления врага.", "Для одновременного контроля призыва, эффектов, состояния цели и своей позиции."],
+		healer: ["Главный лекарь, поддерживающий здоровье и боевую выносливость союзников.", "Для чтения нескольких состояний союзников и выбора приоритетов лечения."],
+		support: ["Поддержка, усиливающая союзников и добавляющая контроль, вторичное лечение и урон.", "Для переключения между контролем, лечением и уроном вокруг основной роли поддержки."]
+	}
+};
+function getEditorialProfileCopy(locale, classId) {
+	const [name, weapon] = localizedClassNames[locale][classId];
+	const [officialRole, summary] = roleText[locale][roleKeys[classId]];
+	return {
+		name,
+		weapon,
+		officialRole,
+		summary
+	};
+}
+var editorialClassFinderDataCopy = {
+	"zh-hans": {
+		kicker: "AION2 互动工具",
+		title: "AION2 职业推荐器",
+		description: "回答六个偏好问题，从八个基础职业中选出三个候选，再前往职业攻略核对实际玩法。",
+		privacy: "无需登录；答案只在浏览器中处理，除非你主动保存或分享。",
+		start: "开始匹配",
+		progress: "完成进度",
+		back: "上一题",
+		next: "下一题",
+		restart: "重新测试",
+		resultsTitle: "你的职业候选",
+		resultsDescription: "结果按偏好匹配排列。请保留两到三个候选并查看攻略。",
+		save: "保存结果",
+		saved: "已保存",
+		share: "分享结果",
+		shared: "分享链接已复制",
+		copyFailed: "无法复制，请手动复制网址。",
+		classesOverview: "查看八大基础职业",
+		guide: "阅读职业攻略",
+		primaryMatch: "最高匹配",
+		matchedPreferences: "匹配偏好",
+		disclaimer: "这是 KINA 按玩法偏好制作的编辑推荐，不是 NC 官方排名，也不代表职业强度、伤害、胜率或 Tier。",
+		methodNote: "职业名称、武器和高层定位依据目前可核对的 NC 资料；偏好维度与权重属于 KINA 编辑模型。",
+		incomplete: "完成全部六题后即可查看三个候选职业。"
+	},
+	fr: {
+		kicker: "OUTIL INTERACTIF AION2",
+		title: "Sélecteur de classe AION2",
+		description: "Répondez à six questions pour retenir trois des huit classes de base, puis consultez leurs guides.",
+		privacy: "Aucune connexion requise ; les réponses restent dans votre navigateur sauf partage.",
+		start: "Commencer",
+		progress: "Progression",
+		back: "Retour",
+		next: "Suivant",
+		restart: "Recommencer",
+		resultsTitle: "Vos classes candidates",
+		resultsDescription: "Les résultats sont triés par affinité. Gardez deux ou trois options et consultez leurs guides.",
+		save: "Enregistrer",
+		saved: "Enregistré",
+		share: "Partager",
+		shared: "Lien copié",
+		copyFailed: "Copie impossible ; copiez l’URL manuellement.",
+		classesOverview: "Voir les huit classes",
+		guide: "Lire le guide",
+		primaryMatch: "Meilleure affinité",
+		matchedPreferences: "Préférences associées",
+		disclaimer: "Ce résultat éditorial KINA n’est ni un classement officiel NC, ni une mesure de puissance, dégâts, victoire ou Tier.",
+		methodNote: "Noms, armes et rôles généraux suivent les données NC vérifiables ; dimensions et poids relèvent du modèle éditorial KINA.",
+		incomplete: "Répondez aux six questions pour voir trois classes."
+	},
+	de: {
+		kicker: "INTERAKTIVES AION2-TOOL",
+		title: "AION2-Klassenfinder",
+		description: "Beantworte sechs Fragen, um drei der acht Basisklassen auszuwählen und ihre Guides zu prüfen.",
+		privacy: "Keine Anmeldung; Antworten bleiben im Browser, sofern du nicht speicherst oder teilst.",
+		start: "Abgleich starten",
+		progress: "Fortschritt",
+		back: "Zurück",
+		next: "Weiter",
+		restart: "Neu testen",
+		resultsTitle: "Deine Klassenauswahl",
+		resultsDescription: "Ergebnisse sind nach Passung sortiert. Behalte zwei oder drei Kandidaten und lies ihre Guides.",
+		save: "Ergebnis speichern",
+		saved: "Gespeichert",
+		share: "Teilen",
+		shared: "Link kopiert",
+		copyFailed: "Kopieren fehlgeschlagen; kopiere die URL manuell.",
+		classesOverview: "Alle acht Klassen ansehen",
+		guide: "Klassenguide lesen",
+		primaryMatch: "Beste Passung",
+		matchedPreferences: "Passende Vorlieben",
+		disclaimer: "Dies ist eine redaktionelle KINA-Empfehlung, kein offizielles NC-Ranking und keine Aussage zu Stärke, Schaden, Siegrate oder Tier.",
+		methodNote: "Namen, Waffen und Rollen folgen prüfbarem NC-Material; Dimensionen und Gewichtung sind das KINA-Modell.",
+		incomplete: "Beantworte alle sechs Fragen, um drei Klassen zu sehen."
+	},
+	es: {
+		kicker: "HERRAMIENTA INTERACTIVA AION2",
+		title: "Selector de clase de AION2",
+		description: "Responde seis preguntas para elegir tres de las ocho clases base y consultar sus guías.",
+		privacy: "No hace falta iniciar sesión; las respuestas quedan en el navegador salvo que guardes o compartas.",
+		start: "Iniciar selección",
+		progress: "Progreso",
+		back: "Atrás",
+		next: "Siguiente",
+		restart: "Repetir",
+		resultsTitle: "Tus clases candidatas",
+		resultsDescription: "Los resultados se ordenan por afinidad. Conserva dos o tres candidatos y lee sus guías.",
+		save: "Guardar resultado",
+		saved: "Guardado",
+		share: "Compartir",
+		shared: "Enlace copiado",
+		copyFailed: "No se pudo copiar; copia la URL manualmente.",
+		classesOverview: "Ver las ocho clases",
+		guide: "Leer guía",
+		primaryMatch: "Mayor afinidad",
+		matchedPreferences: "Preferencias afines",
+		disclaimer: "Esta recomendación editorial de KINA no es un ranking oficial de NC ni mide poder, daño, victorias o Tier.",
+		methodNote: "Nombres, armas y funciones siguen material verificable de NC; dimensiones y pesos son del modelo editorial KINA.",
+		incomplete: "Responde las seis preguntas para ver tres clases."
+	},
+	ja: {
+		kicker: "AION2インタラクティブツール",
+		title: "AION2クラス診断",
+		description: "6つの質問に答えて8つの基本クラスから3候補を選び、攻略で実際のプレイを確認します。",
+		privacy: "ログイン不要。保存または共有しない限り、回答はブラウザ内で処理されます。",
+		start: "診断を始める",
+		progress: "進行状況",
+		back: "戻る",
+		next: "次へ",
+		restart: "再診断",
+		resultsTitle: "あなたのクラス候補",
+		resultsDescription: "結果は適合度順です。2～3候補の攻略を読み、実際のバージョンで確認してください。",
+		save: "結果を保存",
+		saved: "保存済み",
+		share: "結果を共有",
+		shared: "共有リンクをコピーしました",
+		copyFailed: "コピーできません。URLを手動でコピーしてください。",
+		classesOverview: "8つの基本クラスを見る",
+		guide: "クラス攻略を読む",
+		primaryMatch: "最高適合",
+		matchedPreferences: "一致した好み",
+		disclaimer: "KINAの編集上の適性診断であり、NC公式ランキングやクラス性能、ダメージ、勝率、Tierを示すものではありません。",
+		methodNote: "名称、武器、上位役割は確認可能なNC資料に基づき、好みの軸と重み付けはKINA編集モデルです。",
+		incomplete: "6問すべてに答えると3つの候補を表示します。"
+	},
+	"pt-br": {
+		kicker: "FERRAMENTA INTERATIVA AION2",
+		title: "Seletor de classe de AION2",
+		description: "Responda seis perguntas para escolher três das oito classes básicas e consultar seus guias.",
+		privacy: "Sem login; as respostas ficam no navegador, a menos que você salve ou compartilhe.",
+		start: "Iniciar seleção",
+		progress: "Progresso",
+		back: "Voltar",
+		next: "Avançar",
+		restart: "Refazer",
+		resultsTitle: "Suas classes candidatas",
+		resultsDescription: "Os resultados são ordenados por afinidade. Mantenha duas ou três opções e leia seus guias.",
+		save: "Salvar resultado",
+		saved: "Salvo",
+		share: "Compartilhar",
+		shared: "Link copiado",
+		copyFailed: "Não foi possível copiar; copie a URL manualmente.",
+		classesOverview: "Ver as oito classes",
+		guide: "Ler guia",
+		primaryMatch: "Maior afinidade",
+		matchedPreferences: "Preferências compatíveis",
+		disclaimer: "Esta recomendação editorial da KINA não é ranking oficial da NC nem mede poder, dano, vitórias ou Tier.",
+		methodNote: "Nomes, armas e funções seguem material verificável da NC; dimensões e pesos são do modelo editorial KINA.",
+		incomplete: "Responda às seis perguntas para ver três classes."
+	},
+	ru: {
+		kicker: "ИНТЕРАКТИВНЫЙ ИНСТРУМЕНТ AION2",
+		title: "Подбор класса AION2",
+		description: "Ответьте на шесть вопросов, чтобы выбрать три из восьми базовых классов и проверить их гайды.",
+		privacy: "Вход не нужен; ответы остаются в браузере, если вы не сохраняете или не публикуете результат.",
+		start: "Начать подбор",
+		progress: "Прогресс",
+		back: "Назад",
+		next: "Далее",
+		restart: "Пройти заново",
+		resultsTitle: "Ваши кандидаты",
+		resultsDescription: "Результаты отсортированы по соответствию. Оставьте два-три варианта и прочитайте их гайды.",
+		save: "Сохранить",
+		saved: "Сохранено",
+		share: "Поделиться",
+		shared: "Ссылка скопирована",
+		copyFailed: "Не удалось скопировать; скопируйте URL вручную.",
+		classesOverview: "Посмотреть восемь классов",
+		guide: "Читать гайд",
+		primaryMatch: "Лучшее соответствие",
+		matchedPreferences: "Совпавшие предпочтения",
+		disclaimer: "Это редакционная рекомендация KINA, а не официальный рейтинг NC и не оценка силы, урона, побед или Tier.",
+		methodNote: "Названия, оружие и роли следуют проверяемым материалам NC; параметры и веса принадлежат редакционной модели KINA.",
+		incomplete: "Ответьте на все шесть вопросов, чтобы увидеть три класса."
+	}
+};
+var editorialScopeNotes = {
+	"zh-hans": "本工具只涵盖目前可从全球官方名单核对的八个基础职业，不预测全球版平衡、首发强度或未来新增职业。",
+	fr: "Cet outil couvre uniquement les huit classes de base vérifiables dans la liste Global actuelle ; il ne prédit ni l’équilibrage, ni la puissance au lancement, ni les ajouts futurs.",
+	de: "Dieses Tool umfasst nur die acht derzeit für Global bestätigten Basisklassen und sagt weder Balance noch Startstärke oder künftige Klassen voraus.",
+	es: "Esta herramienta solo cubre las ocho clases base verificables de Global; no predice equilibrio, poder de lanzamiento ni clases futuras.",
+	ja: "本ツールは現在Global公式で確認できる8つの基本クラスのみを対象とし、バランス、開始時の強さ、今後の追加は予測しません。",
+	"pt-br": "Esta ferramenta cobre apenas as oito classes básicas verificáveis de Global; não prevê equilíbrio, força no lançamento ou classes futuras.",
+	ru: "Инструмент охватывает только восемь базовых классов, подтверждённых для Global, и не прогнозирует баланс, силу на старте или будущие классы."
+};
+function editorialResultReason(locale, preferences) {
+	const joined = preferences.join(locale === "ja" || locale === "zh-hans" ? "、" : " + ");
+	switch (locale) {
+		case "zh-hans": return `你对“${joined}”的偏好与这个职业的定位较为接近。`;
+		case "fr": return `Vos préférences « ${joined} » correspondent assez bien au profil de cette classe.`;
+		case "de": return `Deine Vorlieben „${joined}“ passen vergleichsweise gut zu diesem Klassenprofil.`;
+		case "es": return `Tus preferencias «${joined}» encajan relativamente bien con el perfil de esta clase.`;
+		case "ja": return `「${joined}」という好みが、このクラスの特徴と比較的よく合います。`;
+		case "pt-br": return `Suas preferências “${joined}” combinam relativamente bem com o perfil desta classe.`;
+		case "ru": return `Ваши предпочтения «${joined}» сравнительно хорошо соответствуют профилю этого класса.`;
+	}
+}
+var classFinderCopy = {
+	"zh-hant": {
+		kicker: "AION2 互動工具",
+		title: "AION2 職業推薦器",
+		description: "回答六個偏好問題，從八個基礎職業中建立三個候選，再前往各職業攻略核對實際玩法。",
+		privacy: "無需登入；答案只在你的瀏覽器中處理，除非你主動儲存或分享。",
+		start: "開始配對",
+		progress: "完成進度",
+		back: "上一題",
+		next: "下一題",
+		restart: "重新測試",
+		resultsTitle: "你的職業候選",
+		resultsDescription: "以下結果按偏好匹配排列。請保留兩至三個候選，閱讀攻略並以實際版本體驗確認。",
+		save: "儲存結果",
+		saved: "已儲存",
+		share: "分享結果",
+		shared: "已複製分享連結",
+		copyFailed: "無法複製，請手動複製網址。",
+		classesOverview: "查看八大基礎職業",
+		guide: "閱讀職業攻略",
+		primaryMatch: "最高匹配",
+		matchedPreferences: "匹配偏好",
+		disclaimer: "這是 KINA 依遊玩偏好製作的編輯推薦，不是 NC 官方排名，也不代表職業強度、傷害、勝率或 Tier。",
+		methodNote: "職業名稱、武器與高層定位依目前可核對的 NC 官方資料；偏好維度、匹配權重與結果解讀屬 KINA 編輯模型。",
+		incomplete: "完成全部六題後即可查看三個候選職業。"
+	},
+	en: {
+		kicker: "AION2 INTERACTIVE TOOL",
+		title: "AION2 class finder",
+		description: "Answer six preference questions to shortlist three of the eight base classes, then check each guide against the version you can play.",
+		privacy: "No sign-in is required. Answers are processed in your browser unless you choose to save or share.",
+		start: "Start matching",
+		progress: "Progress",
+		back: "Back",
+		next: "Next",
+		restart: "Retake",
+		resultsTitle: "Your class shortlist",
+		resultsDescription: "Results are ordered by preference fit. Keep two or three candidates, read their guides, and confirm them in the playable build.",
+		save: "Save result",
+		saved: "Saved",
+		share: "Share result",
+		shared: "Share link copied",
+		copyFailed: "Could not copy. Please copy the URL manually.",
+		classesOverview: "See all eight base classes",
+		guide: "Read class guide",
+		primaryMatch: "Primary match",
+		matchedPreferences: "Matched preferences",
+		disclaimer: "This is a KINA editorial preference match, not an official NC ranking or a statement about class power, damage, win rate, or tier.",
+		methodNote: "Class names, weapons, and high-level roles follow currently verifiable NC material. Preference dimensions, weights, and interpretation are a KINA editorial model.",
+		incomplete: "Answer all six questions to see a three-class shortlist."
+	},
+	ko: {
+		kicker: "AION2 인터랙티브 도구",
+		title: "AION2 직업 추천기",
+		description: "여섯 가지 선호 질문에 답해 기본 8개 직업 중 세 후보를 고르고, 각 직업 공략에서 실제 플레이를 확인하세요.",
+		privacy: "로그인이 필요하지 않습니다. 저장하거나 공유하지 않는 한 답변은 브라우저 안에서 처리됩니다.",
+		start: "추천 시작",
+		progress: "진행도",
+		back: "이전",
+		next: "다음",
+		restart: "다시 하기",
+		resultsTitle: "나의 직업 후보",
+		resultsDescription: "결과는 선호 적합도 순서입니다. 두세 후보의 공략을 읽고 플레이 가능한 버전에서 직접 확인하세요.",
+		save: "결과 저장",
+		saved: "저장됨",
+		share: "결과 공유",
+		shared: "공유 링크를 복사했습니다",
+		copyFailed: "복사할 수 없습니다. 주소를 직접 복사해 주세요.",
+		classesOverview: "기본 8개 직업 보기",
+		guide: "직업 공략 읽기",
+		primaryMatch: "가장 높은 적합도",
+		matchedPreferences: "일치한 선호",
+		disclaimer: "이 결과는 KINA의 편집 선호도 매칭이며 NC 공식 순위가 아닙니다. 직업 성능, 피해량, 승률, 티어를 뜻하지 않습니다.",
+		methodNote: "직업명, 무기, 상위 역할은 현재 확인 가능한 NC 자료를 따릅니다. 선호 차원, 가중치, 결과 해석은 KINA 편집 모델입니다.",
+		incomplete: "여섯 문항을 모두 답하면 세 직업 후보를 볼 수 있습니다."
+	},
+	...editorialClassFinderDataCopy
+};
+var coreClassFinderQuestions = [
+	{
+		id: "contribution",
+		copy: {
+			"zh-hant": {
+				title: "你最想在戰鬥中提供什麼？",
+				hint: "選擇最吸引你的主要貢獻，不必考慮目前熟練度。"
+			},
+			en: {
+				title: "What do you most want to contribute in combat?",
+				hint: "Choose the main contribution that appeals to you, regardless of current experience."
+			},
+			ko: {
+				title: "전투에서 가장 하고 싶은 역할은 무엇인가요?",
+				hint: "현재 숙련도와 관계없이 가장 끌리는 핵심 기여를 고르세요."
+			}
+		},
+		options: [
+			{
+				id: "frontline-damage",
+				copy: {
+					"zh-hant": {
+						label: "前線輸出",
+						description: "貼近戰線，直接向目標施加壓力。"
+					},
+					en: {
+						label: "Front-line damage",
+						description: "Stay close to the line and apply direct pressure."
+					},
+					ko: {
+						label: "전방 공격",
+						description: "전선 가까이에서 대상에게 직접 압박을 가합니다."
+					}
+				},
+				weights: {
+					directDamage: 3,
+					frontline: 4
+				}
+			},
+			{
+				id: "protect-allies",
+				copy: {
+					"zh-hant": {
+						label: "保護隊友",
+						description: "承擔前線責任，阻擋攻擊並維持隊伍安全。"
+					},
+					en: {
+						label: "Protect allies",
+						description: "Take front-line responsibility and keep the party safe."
+					},
+					ko: {
+						label: "아군 보호",
+						description: "전방 책임을 맡아 공격을 막고 파티를 지킵니다."
+					}
+				},
+				weights: {
+					protection: 4,
+					frontline: 2,
+					groupResponsibility: 3
+				}
+			},
+			{
+				id: "ranged-offence",
+				copy: {
+					"zh-hant": {
+						label: "遠程攻擊",
+						description: "運用距離、視線與時機輸出。"
+					},
+					en: {
+						label: "Ranged offence",
+						description: "Deal damage through range, line of sight, and timing."
+					},
+					ko: {
+						label: "원거리 공격",
+						description: "거리, 시야, 타이밍을 활용해 공격합니다."
+					}
+				},
+				weights: {
+					directDamage: 3,
+					rangedPositioning: 4
+				}
+			},
+			{
+				id: "restore-allies",
+				copy: {
+					"zh-hant": {
+						label: "維持隊友生存",
+						description: "以治療與優先級判斷支撐隊伍。"
+					},
+					en: {
+						label: "Keep allies alive",
+						description: "Support the party through healing and priority decisions."
+					},
+					ko: {
+						label: "아군 생존 유지",
+						description: "치유와 우선순위 판단으로 파티를 지탱합니다."
+					}
+				},
+				weights: {
+					healing: 4,
+					teamSupport: 2,
+					groupResponsibility: 3
+				}
+			},
+			{
+				id: "flexible-support",
+				copy: {
+					"zh-hant": {
+						label: "彈性支援",
+						description: "在強化、控制、輔助治療與輸出間調整。"
+					},
+					en: {
+						label: "Flexible support",
+						description: "Shift among buffs, control, secondary healing, and damage."
+					},
+					ko: {
+						label: "유연한 지원",
+						description: "강화, 제어, 보조 치유, 공격 사이를 조절합니다."
+					}
+				},
+				weights: {
+					teamSupport: 4,
+					tacticalControl: 2,
+					healing: 1
+				}
+			},
+			{
+				id: "weaken-and-control",
+				copy: {
+					"zh-hant": {
+						label: "削弱與控場",
+						description: "管理狀態、持續效果或召喚物來改變戰局。"
+					},
+					en: {
+						label: "Weaken and control",
+						description: "Shape the fight through states, persistent effects, or summons."
+					},
+					ko: {
+						label: "약화와 제어",
+						description: "상태, 지속 효과, 소환수를 관리해 전투 흐름을 바꿉니다."
+					}
+				},
+				weights: {
+					stateManagement: 4,
+					tacticalControl: 3
+				}
+			}
+		]
+	},
+	{
+		id: "combat-rhythm",
+		copy: {
+			"zh-hant": {
+				title: "你偏好哪種戰鬥節奏？",
+				hint: "這是節奏偏好，不代表任何職業的輸出高低。"
+			},
+			en: {
+				title: "Which combat rhythm do you prefer?",
+				hint: "This is a rhythm preference, not a statement about class output."
+			},
+			ko: {
+				title: "어떤 전투 흐름을 선호하나요?",
+				hint: "전투 흐름에 대한 선호이며 직업 공격력 비교가 아닙니다."
+			}
+		},
+		options: [
+			{
+				id: "steady-front-pressure",
+				copy: {
+					"zh-hant": {
+						label: "持續前壓",
+						description: "保持接觸並穩定推進戰線。"
+					},
+					en: {
+						label: "Steady front pressure",
+						description: "Maintain contact and press the line consistently."
+					},
+					ko: {
+						label: "지속적인 전방 압박",
+						description: "접촉을 유지하며 전선을 꾸준히 밀어갑니다."
+					}
+				},
+				weights: {
+					frontline: 4,
+					directDamage: 2,
+					shortWindowExecution: -1
+				}
+			},
+			{
+				id: "decisive-window",
+				copy: {
+					"zh-hant": {
+						label: "把握短時間機會",
+						description: "等待時機，再集中操作與壓力。"
+					},
+					en: {
+						label: "Commit in a short window",
+						description: "Wait for an opening, then concentrate execution and pressure."
+					},
+					ko: {
+						label: "짧은 기회 집중",
+						description: "기회를 기다린 뒤 조작과 압박을 집중합니다."
+					}
+				},
+				weights: {
+					shortWindowExecution: 4,
+					executionLoad: 2,
+					directDamage: 2
+				}
+			},
+			{
+				id: "move-at-range",
+				copy: {
+					"zh-hant": {
+						label: "移動並保持距離",
+						description: "在移動、視線與安全距離間尋找輸出時段。"
+					},
+					en: {
+						label: "Move and keep range",
+						description: "Find attack windows through movement, sight lines, and safe range."
+					},
+					ko: {
+						label: "이동하며 거리 유지",
+						description: "이동, 시야, 안전 거리로 공격 시간을 만듭니다."
+					}
+				},
+				weights: {
+					rangedPositioning: 4,
+					positioningLoad: 3
+				}
+			},
+			{
+				id: "layered-effects",
+				copy: {
+					"zh-hant": {
+						label: "疊加並追蹤效果",
+						description: "同時留意目標狀態、持續效果或召喚物。"
+					},
+					en: {
+						label: "Layer and track effects",
+						description: "Watch target states, persistent effects, or summons together."
+					},
+					ko: {
+						label: "효과 누적과 추적",
+						description: "대상 상태, 지속 효과, 소환수를 함께 확인합니다."
+					}
+				},
+				weights: {
+					stateManagement: 4,
+					tacticalControl: 2
+				}
+			},
+			{
+				id: "react-to-party",
+				copy: {
+					"zh-hant": {
+						label: "依隊伍狀況反應",
+						description: "隨隊友風險與戰況改變當下優先級。"
+					},
+					en: {
+						label: "React to the party",
+						description: "Change priorities as ally risk and the fight change."
+					},
+					ko: {
+						label: "파티 상황에 대응",
+						description: "아군 위험과 전투 변화에 맞춰 우선순위를 바꿉니다."
+					}
+				},
+				weights: {
+					groupResponsibility: 3,
+					teamSupport: 3,
+					healing: 1
+				}
+			}
+		]
+	},
+	{
+		id: "learning-load",
+		copy: {
+			"zh-hant": {
+				title: "你願意學習哪一種負擔？",
+				hint: "高負擔不代表更強，低負擔也不表示不需練習。"
+			},
+			en: {
+				title: "Which kind of learning load are you willing to take on?",
+				hint: "A higher load is not stronger, and a lower load still requires practice."
+			},
+			ko: {
+				title: "어떤 학습 부담을 감수할 수 있나요?",
+				hint: "부담이 높다고 강한 것은 아니며, 낮아도 연습은 필요합니다."
+			}
+		},
+		options: [
+			{
+				id: "clear-baseline",
+				copy: {
+					"zh-hant": {
+						label: "先建立清楚、可重複的基礎",
+						description: "希望同時處理的操作、狀態與團隊責任較少。"
+					},
+					en: {
+						label: "Build a clear repeatable baseline",
+						description: "Prefer fewer simultaneous inputs, states, and party duties."
+					},
+					ko: {
+						label: "명확하고 반복 가능한 기초",
+						description: "동시에 처리할 조작, 상태, 파티 책임이 적은 편을 선호합니다."
+					}
+				},
+				weights: {
+					executionLoad: -3,
+					stateManagement: -2,
+					groupResponsibility: -1
+				}
+			},
+			{
+				id: "precise-execution",
+				copy: {
+					"zh-hant": {
+						label: "精準時機與連續決定",
+						description: "願意練習壓縮在短時間內的操作。"
+					},
+					en: {
+						label: "Precise timing and chained decisions",
+						description: "Willing to practise execution compressed into a short window."
+					},
+					ko: {
+						label: "정확한 타이밍과 연속 판단",
+						description: "짧은 시간에 집중되는 조작을 연습할 수 있습니다."
+					}
+				},
+				weights: {
+					executionLoad: 4,
+					shortWindowExecution: 3
+				}
+			},
+			{
+				id: "positioning-work",
+				copy: {
+					"zh-hant": {
+						label: "站位與移動路線",
+						description: "願意持續管理距離、視線與進退時機。"
+					},
+					en: {
+						label: "Position and movement routes",
+						description: "Willing to manage range, sight lines, and engage-disengage timing."
+					},
+					ko: {
+						label: "위치와 이동 경로",
+						description: "거리, 시야, 진입과 이탈 시점을 계속 관리할 수 있습니다."
+					}
+				},
+				weights: {
+					positioningLoad: 4,
+					rangedPositioning: 1,
+					frontline: 1
+				}
+			},
+			{
+				id: "multiple-states",
+				copy: {
+					"zh-hant": {
+						label: "多層資訊與狀態",
+						description: "願意建立固定檢查順序，追蹤多個狀態。"
+					},
+					en: {
+						label: "Layered information and states",
+						description: "Willing to build a check order for several active states."
+					},
+					ko: {
+						label: "여러 정보와 상태",
+						description: "여러 상태를 확인하는 고정 순서를 만들 수 있습니다."
+					}
+				},
+				weights: {
+					stateManagement: 4,
+					tacticalControl: 2
+				}
+			},
+			{
+				id: "team-decisions",
+				copy: {
+					"zh-hant": {
+						label: "高團隊責任的判斷",
+						description: "願意根據全隊狀況決定下一步。"
+					},
+					en: {
+						label: "High-responsibility team decisions",
+						description: "Willing to choose the next action from the party's state."
+					},
+					ko: {
+						label: "책임이 큰 파티 판단",
+						description: "파티 전체 상태를 보고 다음 행동을 결정할 수 있습니다."
+					}
+				},
+				weights: {
+					groupResponsibility: 4,
+					teamSupport: 2
+				}
+			}
+		]
+	},
+	{
+		id: "preferred-position",
+		copy: {
+			"zh-hant": {
+				title: "你想把注意力放在哪個位置？",
+				hint: "選擇你最舒服的戰場視角。"
+			},
+			en: {
+				title: "Where do you want to focus your attention?",
+				hint: "Choose the battlefield perspective that feels most natural."
+			},
+			ko: {
+				title: "어느 위치에 집중하고 싶나요?",
+				hint: "가장 편하게 느껴지는 전장 시점을 고르세요."
+			}
+		},
+		options: [
+			{
+				id: "at-the-front",
+				copy: {
+					"zh-hant": {
+						label: "戰線前方",
+						description: "貼近敵人並直接讀取前線變化。"
+					},
+					en: {
+						label: "At the front",
+						description: "Stay close to enemies and read changes on the line directly."
+					},
+					ko: {
+						label: "전선 앞",
+						description: "적과 가까이에서 전선 변화를 직접 읽습니다."
+					}
+				},
+				weights: {
+					frontline: 4,
+					positioningLoad: 2
+				}
+			},
+			{
+				id: "at-range",
+				copy: {
+					"zh-hant": {
+						label: "安全距離",
+						description: "從遠處管理距離、視線與攻擊時段。"
+					},
+					en: {
+						label: "At range",
+						description: "Manage range, sight lines, and attack windows from a distance."
+					},
+					ko: {
+						label: "안전 거리",
+						description: "먼 거리에서 거리, 시야, 공격 시간을 관리합니다."
+					}
+				},
+				weights: {
+					rangedPositioning: 4,
+					positioningLoad: 2
+				}
+			},
+			{
+				id: "with-the-party",
+				copy: {
+					"zh-hant": {
+						label: "隊伍核心附近",
+						description: "持續觀察隊友，讓支援能及時到位。"
+					},
+					en: {
+						label: "Around the party core",
+						description: "Keep allies in view so support can arrive on time."
+					},
+					ko: {
+						label: "파티 중심 근처",
+						description: "아군을 계속 보며 필요한 지원을 제때 제공합니다."
+					}
+				},
+				weights: {
+					teamSupport: 4,
+					healing: 2,
+					groupResponsibility: 2
+				}
+			},
+			{
+				id: "adapt-as-needed",
+				copy: {
+					"zh-hant": {
+						label: "依戰況調整",
+						description: "願意在前後位置與多種責任間切換。"
+					},
+					en: {
+						label: "Adapt as needed",
+						description: "Willing to shift position and responsibility with the fight."
+					},
+					ko: {
+						label: "상황에 맞춰 조절",
+						description: "전투에 따라 위치와 역할을 바꿀 수 있습니다."
+					}
+				},
+				weights: {
+					teamSupport: 3,
+					tacticalControl: 2,
+					positioningLoad: 2
+				}
+			}
+		]
+	},
+	{
+		id: "party-responsibility",
+		copy: {
+			"zh-hant": {
+				title: "你希望承擔多少團隊責任？",
+				hint: "責任只描述決策負擔，不代表組隊資格或固定隊伍配置。"
+			},
+			en: {
+				title: "How much party responsibility do you want?",
+				hint: "Responsibility describes decision load, not eligibility or a fixed party composition."
+			},
+			ko: {
+				title: "어느 정도의 파티 책임을 원하나요?",
+				hint: "책임은 판단 부담을 뜻하며 고정 조합이나 참가 자격을 뜻하지 않습니다."
+			}
+		},
+		options: [
+			{
+				id: "own-pressure",
+				copy: {
+					"zh-hant": {
+						label: "以自己的攻擊責任為主",
+						description: "希望主要關注目標、站位與自身循環。"
+					},
+					en: {
+						label: "Focus on my own pressure",
+						description: "Primarily watch the target, position, and personal loop."
+					},
+					ko: {
+						label: "내 공격 책임에 집중",
+						description: "대상, 위치, 자신의 흐름을 주로 확인합니다."
+					}
+				},
+				weights: {
+					directDamage: 3,
+					groupResponsibility: -3,
+					teamSupport: -1
+				}
+			},
+			{
+				id: "support-when-needed",
+				copy: {
+					"zh-hant": {
+						label: "輸出為主，必要時支援",
+						description: "保留明確主責，同時願意補上部分隊伍功能。"
+					},
+					en: {
+						label: "Deal damage and assist when needed",
+						description: "Keep a clear primary job while contributing some party utility."
+					},
+					ko: {
+						label: "공격 중심, 필요할 때 지원",
+						description: "주요 역할을 유지하면서 일부 파티 기능을 돕습니다."
+					}
+				},
+				weights: {
+					directDamage: 2,
+					teamSupport: 2,
+					groupResponsibility: 1
+				}
+			},
+			{
+				id: "lead-and-protect",
+				copy: {
+					"zh-hant": {
+						label: "承擔前線與保護責任",
+						description: "願意讓自己的站位與判斷直接影響隊伍安全。"
+					},
+					en: {
+						label: "Lead and protect",
+						description: "Accept that position and judgment directly affect party safety."
+					},
+					ko: {
+						label: "전방 책임과 보호",
+						description: "내 위치와 판단이 파티 안전에 직접 영향을 주는 역할을 맡습니다."
+					}
+				},
+				weights: {
+					protection: 4,
+					groupResponsibility: 4,
+					frontline: 2
+				}
+			},
+			{
+				id: "healing-priority",
+				copy: {
+					"zh-hant": {
+						label: "負責治療優先級",
+						description: "願意持續判斷誰最需要支援並維持自身安全。"
+					},
+					en: {
+						label: "Own healing priorities",
+						description: "Continually decide who needs help most while staying safe."
+					},
+					ko: {
+						label: "치유 우선순위 담당",
+						description: "누가 가장 위험한지 계속 판단하면서 자신의 안전도 유지합니다."
+					}
+				},
+				weights: {
+					healing: 4,
+					groupResponsibility: 4,
+					teamSupport: 2
+				}
+			}
+		]
+	},
+	{
+		id: "mistake-tolerance",
+		copy: {
+			"zh-hant": {
+				title: "面對失誤時，你接受哪種練習方式？",
+				hint: "選擇你願意反覆改善的失誤類型。"
+			},
+			en: {
+				title: "How do you want to practise through mistakes?",
+				hint: "Choose the kind of error you are willing to improve repeatedly."
+			},
+			ko: {
+				title: "실수를 어떤 방식으로 연습하고 싶나요?",
+				hint: "반복해서 개선할 수 있는 실수 유형을 고르세요."
+			}
+		},
+		options: [
+			{
+				id: "forgiving-baseline",
+				copy: {
+					"zh-hant": {
+						label: "先從較寬容的基礎開始",
+						description: "希望先減少短時間操作與多狀態追蹤。"
+					},
+					en: {
+						label: "Start from a more forgiving baseline",
+						description: "First reduce compressed execution and multi-state tracking."
+					},
+					ko: {
+						label: "여유 있는 기초부터 시작",
+						description: "짧은 시간 조작과 여러 상태 추적 부담을 먼저 줄입니다."
+					}
+				},
+				weights: {
+					executionLoad: -4,
+					stateManagement: -2,
+					groupResponsibility: -1
+				}
+			},
+			{
+				id: "repeat-precision",
+				copy: {
+					"zh-hant": {
+						label: "反覆修正進場與操作時機",
+						description: "接受短時間決定與操作失誤需要重新練習。"
+					},
+					en: {
+						label: "Repeat entry and execution timing",
+						description: "Accept retraining decisions and inputs made in a short window."
+					},
+					ko: {
+						label: "진입과 조작 타이밍 반복",
+						description: "짧은 시간의 판단과 조작 실수를 다시 연습할 수 있습니다."
+					}
+				},
+				weights: {
+					executionLoad: 4,
+					shortWindowExecution: 3
+				}
+			},
+			{
+				id: "improve-check-order",
+				copy: {
+					"zh-hant": {
+						label: "改善資訊檢查順序",
+						description: "接受因漏看狀態而調整自己的觀察流程。"
+					},
+					en: {
+						label: "Improve an information check order",
+						description: "Accept changing the observation loop after missing a state."
+					},
+					ko: {
+						label: "정보 확인 순서 개선",
+						description: "상태를 놓쳤을 때 관찰 순서를 조정할 수 있습니다."
+					}
+				},
+				weights: {
+					stateManagement: 4,
+					tacticalControl: 2
+				}
+			},
+			{
+				id: "review-team-decisions",
+				copy: {
+					"zh-hant": {
+						label: "檢討影響隊伍的判斷",
+						description: "接受自己的優先級與站位會直接影響隊友。"
+					},
+					en: {
+						label: "Review decisions that affect the party",
+						description: "Accept that priorities and positioning can directly affect allies."
+					},
+					ko: {
+						label: "파티에 영향을 준 판단 복기",
+						description: "내 우선순위와 위치가 아군에게 직접 영향을 줄 수 있음을 받아들입니다."
+					}
+				},
+				weights: {
+					groupResponsibility: 4,
+					teamSupport: 2,
+					protection: 1
+				}
+			}
+		]
+	}
+];
+var coreClassFinderClassProfiles = [
+	{
+		classId: "gladiator",
+		guideSlug: "gladiator",
+		copy: {
+			"zh-hant": {
+				name: "劍星",
+				weapon: "大劍",
+				officialRole: "高攻防的近戰輸出；官方亦提到可兼任副坦克。",
+				summary: "主要目標清楚，偏好持續前線壓力與攻守判斷的玩家可優先了解。"
+			},
+			en: {
+				name: "Gladiator",
+				weapon: "Greatsword",
+				officialRole: "A high-attack, high-defense melee damage role that NC also describes as capable of sub-tanking.",
+				summary: "Its main objective is clear and may suit players drawn to steady front-line pressure and attack-defence judgment."
+			},
+			ko: {
+				name: "검성",
+				weapon: "대검",
+				officialRole: "높은 공격력과 방어력을 갖춘 근접 딜러이며 서브 탱커 역할도 제시됩니다.",
+				summary: "핵심 목표가 분명하며 지속적인 전방 압박과 공수 판단을 선호한다면 먼저 살펴볼 수 있습니다."
+			}
+		},
+		traits: {
+			directDamage: 4,
+			frontline: 4,
+			rangedPositioning: 0,
+			shortWindowExecution: 2,
+			tacticalControl: 1,
+			stateManagement: 1,
+			protection: 2,
+			healing: 0,
+			teamSupport: 1,
+			positioningLoad: 3,
+			executionLoad: 2,
+			groupResponsibility: 2
+		}
+	},
+	{
+		classId: "templar",
+		guideSlug: "templar",
+		copy: {
+			"zh-hant": {
+				name: "守護星",
+				weapon: "長劍與盾牌",
+				officialRole: "阻擋攻擊、保護隊友的前線坦克。",
+				summary: "適合願意承擔前線站位、保護時機與主要團隊責任的玩家了解。"
+			},
+			en: {
+				name: "Templar",
+				weapon: "Longsword and shield",
+				officialRole: "A front-line tank that blocks attacks and protects allies.",
+				summary: "Worth exploring if you want front-line positioning, protection timing, and primary party responsibility."
+			},
+			ko: {
+				name: "수호성",
+				weapon: "장검과 방패",
+				officialRole: "공격을 차단하고 아군을 보호하는 최전선 탱커입니다.",
+				summary: "전방 위치, 보호 타이밍, 핵심 파티 책임을 맡고 싶다면 살펴볼 만합니다."
+			}
+		},
+		traits: {
+			directDamage: 1,
+			frontline: 4,
+			rangedPositioning: 0,
+			shortWindowExecution: 0,
+			tacticalControl: 2,
+			stateManagement: 1,
+			protection: 4,
+			healing: 0,
+			teamSupport: 3,
+			positioningLoad: 4,
+			executionLoad: 2,
+			groupResponsibility: 4
+		}
+	},
+	{
+		classId: "assassin",
+		guideSlug: "assassin",
+		copy: {
+			"zh-hant": {
+				name: "殺星",
+				weapon: "雙手短劍",
+				officialRole: "以隱身、快速連擊與狀態異常在短時間內壓制目標。",
+				summary: "適合願意反覆練習進場時機、短時間操作、目標選擇與安全撤離的玩家。"
+			},
+			en: {
+				name: "Assassin",
+				weapon: "Dual daggers",
+				officialRole: "A precision melee role using stealth, fast chains, and status effects to pressure a target in a short window.",
+				summary: "May suit players willing to repeat entry timing, compressed execution, target choice, and safe disengagement."
+			},
+			ko: {
+				name: "살성",
+				weapon: "양손 단검",
+				officialRole: "은신, 빠른 연계, 상태 이상으로 짧은 시간 안에 대상을 제압합니다.",
+				summary: "진입 타이밍, 짧은 조작, 대상 선택, 안전한 이탈을 반복 연습하고 싶다면 어울릴 수 있습니다."
+			}
+		},
+		traits: {
+			directDamage: 4,
+			frontline: 3,
+			rangedPositioning: 0,
+			shortWindowExecution: 4,
+			tacticalControl: 2,
+			stateManagement: 2,
+			protection: 0,
+			healing: 0,
+			teamSupport: 0,
+			positioningLoad: 4,
+			executionLoad: 4,
+			groupResponsibility: 1
+		}
+	},
+	{
+		classId: "ranger",
+		guideSlug: "ranger",
+		copy: {
+			"zh-hant": {
+				name: "弓星",
+				weapon: "弓",
+				officialRole: "重視站位、時機與戰術應對的遠距離攻擊職業。",
+				summary: "適合想在移動中管理安全距離、視線與攻擊時段的玩家了解。"
+			},
+			en: {
+				name: "Ranger",
+				weapon: "Bow",
+				officialRole: "A ranged attack role shaped by positioning, timing, and tactical response.",
+				summary: "Worth exploring if you want to manage safe range, sight lines, and attack windows while moving."
+			},
+			ko: {
+				name: "궁성",
+				weapon: "활",
+				officialRole: "원거리 공격과 위치 선정, 타이밍, 전술적 대응을 중시합니다.",
+				summary: "이동하면서 안전 거리, 시야, 공격 시간을 관리하고 싶다면 살펴볼 만합니다."
+			}
+		},
+		traits: {
+			directDamage: 4,
+			frontline: 0,
+			rangedPositioning: 4,
+			shortWindowExecution: 2,
+			tacticalControl: 1,
+			stateManagement: 1,
+			protection: 0,
+			healing: 0,
+			teamSupport: 0,
+			positioningLoad: 4,
+			executionLoad: 2,
+			groupResponsibility: 1
+		}
+	},
+	{
+		classId: "sorcerer",
+		guideSlug: "sorcerer",
+		copy: {
+			"zh-hant": {
+				name: "魔道星",
+				weapon: "魔法書",
+				officialRole: "專注短時間高魔法傷害，並需管理距離與控場的遠程輸出。",
+				summary: "適合喜歡遠程站位、短時間施壓與控場判斷的玩家了解。"
+			},
+			en: {
+				name: "Sorcerer",
+				weapon: "Spellbook",
+				officialRole: "A ranged role focused on high magic damage in a short window, with range and control management required.",
+				summary: "May suit players drawn to ranged positioning, short pressure windows, and control decisions."
+			},
+			ko: {
+				name: "마도성",
+				weapon: "마법서",
+				officialRole: "짧은 시간의 높은 마법 피해에 특화되고 거리와 제어를 관리하는 원거리 딜러입니다.",
+				summary: "원거리 위치, 짧은 압박 시간, 제어 판단을 선호한다면 살펴볼 만합니다."
+			}
+		},
+		traits: {
+			directDamage: 4,
+			frontline: 0,
+			rangedPositioning: 4,
+			shortWindowExecution: 4,
+			tacticalControl: 4,
+			stateManagement: 2,
+			protection: 0,
+			healing: 0,
+			teamSupport: 0,
+			positioningLoad: 4,
+			executionLoad: 3,
+			groupResponsibility: 1
+		}
+	},
+	{
+		classId: "spiritmaster",
+		guideSlug: "spiritmaster",
+		copy: {
+			"zh-hant": {
+				name: "精靈星",
+				weapon: "寶珠",
+				officialRole: "召喚屬性精靈，並以狀態異常與持續傷害削弱敵人。",
+				summary: "適合願意同時追蹤召喚物、持續效果、目標狀態與自身位置的玩家。"
+			},
+			en: {
+				name: "SpiritMaster",
+				weapon: "Orb",
+				officialRole: "A summoner that uses elemental spirits, status effects, and damage over time to weaken enemies.",
+				summary: "May suit players willing to track a summon, persistent effects, target states, and personal position together."
+			},
+			ko: {
+				name: "정령성",
+				weapon: "보주",
+				officialRole: "정령을 소환하고 상태 이상과 지속 피해로 적을 약화합니다.",
+				summary: "소환수, 지속 효과, 대상 상태, 자신의 위치를 함께 확인하고 싶다면 어울릴 수 있습니다."
+			}
+		},
+		traits: {
+			directDamage: 3,
+			frontline: 0,
+			rangedPositioning: 3,
+			shortWindowExecution: 1,
+			tacticalControl: 4,
+			stateManagement: 4,
+			protection: 0,
+			healing: 0,
+			teamSupport: 1,
+			positioningLoad: 3,
+			executionLoad: 3,
+			groupResponsibility: 2
+		}
+	},
+	{
+		classId: "cleric",
+		guideSlug: "cleric",
+		copy: {
+			"zh-hant": {
+				name: "治癒星",
+				weapon: "戰鎚",
+				officialRole: "以回復技能維持隊友生存與戰鬥續航的核心治療者。",
+				summary: "適合願意持續閱讀多人狀態、維持自身安全並承擔治療優先級的玩家。"
+			},
+			en: {
+				name: "Cleric",
+				weapon: "Mace",
+				officialRole: "The core healer that maintains allied health and combat endurance.",
+				summary: "Worth exploring if you want to read several ally states, preserve your own safety, and own healing priorities."
+			},
+			ko: {
+				name: "치유성",
+				weapon: "전곤",
+				officialRole: "회복 스킬로 아군의 생명력과 전투 지속력을 유지하는 핵심 힐러입니다.",
+				summary: "여러 아군 상태를 읽고 자신의 안전을 유지하며 치유 우선순위를 맡고 싶다면 살펴볼 만합니다."
+			}
+		},
+		traits: {
+			directDamage: 1,
+			frontline: 1,
+			rangedPositioning: 2,
+			shortWindowExecution: 0,
+			tacticalControl: 1,
+			stateManagement: 4,
+			protection: 1,
+			healing: 4,
+			teamSupport: 4,
+			positioningLoad: 4,
+			executionLoad: 3,
+			groupResponsibility: 4
+		}
+	},
+	{
+		classId: "chanter",
+		guideSlug: "chanter",
+		copy: {
+			"zh-hant": {
+				name: "護法星",
+				weapon: "法杖",
+				officialRole: "以真言強化隊友，並兼顧控場、輔助治療與輸出。",
+				summary: "適合想保留一項主要支援責任，再逐步切換控制、治療與輸出的玩家。"
+			},
+			en: {
+				name: "Chanter",
+				weapon: "Staff",
+				officialRole: "A support using mantras to strengthen allies while contributing control, secondary healing, and damage.",
+				summary: "May suit players who want one primary support duty while gradually switching among control, healing, and damage."
+			},
+			ko: {
+				name: "호법성",
+				weapon: "법봉",
+				officialRole: "진언으로 아군을 강화하고 제어, 보조 치유, 보조 피해에 기여합니다.",
+				summary: "한 가지 핵심 지원 책임을 두고 제어, 치유, 공격을 단계적으로 전환하고 싶다면 어울릴 수 있습니다."
+			}
+		},
+		traits: {
+			directDamage: 2,
+			frontline: 2,
+			rangedPositioning: 1,
+			shortWindowExecution: 1,
+			tacticalControl: 3,
+			stateManagement: 3,
+			protection: 1,
+			healing: 2,
+			teamSupport: 4,
+			positioningLoad: 3,
+			executionLoad: 2,
+			groupResponsibility: 3
+		}
+	}
+];
+var editorialLocales = [
+	"zh-hans",
+	"fr",
+	"de",
+	"es",
+	"ja",
+	"pt-br",
+	"ru"
+];
+var classFinderQuestions = coreClassFinderQuestions.map((question) => ({
+	...question,
+	copy: {
+		...question.copy,
+		...Object.fromEntries(editorialLocales.map((locale) => [locale, getEditorialQuestionCopy(locale, question.id)]))
+	},
+	options: question.options.map((option) => ({
+		...option,
+		copy: {
+			...option.copy,
+			...Object.fromEntries(editorialLocales.map((locale) => [locale, getEditorialOptionCopy(locale, option.id)]))
+		}
+	}))
+}));
+var classFinderClassProfiles = coreClassFinderClassProfiles.map((profile) => ({
+	...profile,
+	copy: {
+		...profile.copy,
+		...Object.fromEntries(editorialLocales.map((locale) => [locale, getEditorialProfileCopy(locale, profile.classId)]))
+	}
+}));
+var questionOrder = classFinderQuestions.map((question) => question.id);
+var classOrder = new Map(classFinderClassProfiles.map((profile, index) => [profile.classId, index]));
+function findOption(question, optionId) {
+	if (!optionId) return void 0;
+	return question.options.find((option) => option.id === optionId);
+}
+function validSelections(answers) {
+	return classFinderQuestions.flatMap((question) => {
+		const option = findOption(question, answers[question.id]);
+		return option ? [{
+			question,
+			option
+		}] : [];
+	});
+}
+function scoreWeight(trait, weight) {
+	return weight >= 0 ? trait * weight : (4 - trait) * Math.abs(weight);
+}
+function optionMaximum(option) {
+	return Object.values(option.weights).reduce((total, weight) => total + Math.abs(weight ?? 0) * 4, 0);
+}
+function optionScore(profile, option) {
+	return Object.entries(option.weights).reduce((total, [dimension, weight]) => total + scoreWeight(profile.traits[dimension], weight), 0);
+}
+function resultReason(locale, preferences) {
+	if (locale === "zh-hant") return `你的「${preferences.join("」、「")}」偏好與這個職業的定位較相符。`;
+	if (locale === "ko") return `「${preferences.join("」, 「")}」 선호가 이 직업의 역할과 비교적 잘 맞습니다.`;
+	if (locale === "en") return `Your preferences for ${preferences.join(" and ")} align relatively well with this class profile.`;
+	return editorialResultReason(locale, preferences);
+}
+function getClassFinderGuideHref(locale, classId) {
+	return localizedHref(locale, `/classes/${classId}/`);
+}
+/**
+* Produce a stable top-three shortlist.
+*
+* Identical valid answers always produce the same scores and ordering. Ties use
+* the documented eight-class roster order, never randomness. Partial answers
+* are supported for previews; callers can require `getClassFinderProgress().complete`
+* before presenting the final result.
+*/
+function scoreClassFinder(answers, locale) {
+	const selections = validSelections(answers);
+	if (selections.length === 0) return [];
+	const maxScore = selections.reduce((total, { option }) => total + optionMaximum(option), 0);
+	return classFinderClassProfiles.map((profile) => {
+		const perAnswer = selections.map(({ question, option }, questionIndex) => {
+			const maximum = optionMaximum(option);
+			const score = optionScore(profile, option);
+			return {
+				questionIndex,
+				score,
+				ratio: maximum > 0 ? score / maximum : 0,
+				label: option.copy[locale].label,
+				questionId: question.id
+			};
+		});
+		const rawScore = perAnswer.reduce((total, item) => total + item.score, 0);
+		return {
+			profile,
+			rawScore,
+			maxScore,
+			matchPercent: maxScore > 0 ? Math.max(0, Math.min(100, Math.round(rawScore / maxScore * 100))) : 0,
+			matchedPreferences: perAnswer.sort((left, right) => right.ratio - left.ratio || left.questionIndex - right.questionIndex || left.questionId.localeCompare(right.questionId)).slice(0, 2).map((item) => item.label)
+		};
+	}).sort((left, right) => right.rawScore - left.rawScore || (classOrder.get(left.profile.classId) ?? 0) - (classOrder.get(right.profile.classId) ?? 0)).slice(0, 3).map((item, index) => {
+		const copy = item.profile.copy[locale];
+		return {
+			rank: index + 1,
+			classId: item.profile.classId,
+			name: copy.name,
+			weapon: copy.weapon,
+			officialRole: copy.officialRole,
+			summary: copy.summary,
+			guideHref: getClassFinderGuideHref(locale, item.profile.classId),
+			matchPercent: item.matchPercent,
+			rawScore: item.rawScore,
+			maxScore: item.maxScore,
+			matchedPreferences: item.matchedPreferences,
+			reason: resultReason(locale, item.matchedPreferences),
+			disclaimer: classFinderCopy[locale].disclaimer
+		};
+	});
+}
+/** Alias retained for the initial component integration contract. */
+var scoreClassFinderAnswers = scoreClassFinder;
+function serializeClassFinderAnswers(answers) {
+	const params = new URLSearchParams();
+	for (const questionId of questionOrder) {
+		const question = classFinderQuestions.find((item) => item.id === questionId);
+		const option = question && findOption(question, answers[questionId]);
+		if (option) params.set(questionId, option.id);
+	}
+	return params.toString();
+}
+function parseClassFinderAnswers(serialized) {
+	let value = serialized.trim();
+	const queryIndex = value.indexOf("?");
+	if (queryIndex >= 0) value = value.slice(queryIndex + 1);
+	if (value.startsWith("#")) value = value.slice(1);
+	const hashIndex = value.indexOf("#");
+	if (hashIndex >= 0) value = value.slice(0, hashIndex);
+	const params = new URLSearchParams(value);
+	const answers = {};
+	for (const question of classFinderQuestions) {
+		const optionId = params.get(question.id) ?? void 0;
+		if (findOption(question, optionId)) answers[question.id] = optionId;
+	}
+	return answers;
+}
+({ ...editorialScopeNotes });
+var ClassFinder_module_default = {
+	finder: "_finder_1jmvx_1",
+	kicker: "_kicker_1jmvx_32",
+	intro: "_intro_1jmvx_40",
+	introContent: "_introContent_1jmvx_48",
+	resultsHeader: "_resultsHeader_1jmvx_55",
+	question: "_question_1jmvx_56",
+	lede: "_lede_1jmvx_69",
+	facts: "_facts_1jmvx_77",
+	privacy: "_privacy_1jmvx_98",
+	resumeProgress: "_resumeProgress_1jmvx_115",
+	introActions: "_introActions_1jmvx_121",
+	resultActions: "_resultActions_1jmvx_122",
+	questionFooter: "_questionFooter_1jmvx_123",
+	primaryButton: "_primaryButton_1jmvx_133",
+	secondaryButton: "_secondaryButton_1jmvx_134",
+	textButton: "_textButton_1jmvx_135",
+	introGlow: "_introGlow_1jmvx_191",
+	questionStage: "_questionStage_1jmvx_242",
+	questionHeader: "_questionHeader_1jmvx_246",
+	progressLabel: "_progressLabel_1jmvx_253",
+	progress: "_progress_1jmvx_253",
+	stepNumber: "_stepNumber_1jmvx_297",
+	questionHint: "_questionHint_1jmvx_311",
+	options: "_options_1jmvx_318",
+	option: "_option_1jmvx_318",
+	optionIndex: "_optionIndex_1jmvx_354",
+	optionCopy: "_optionCopy_1jmvx_371",
+	optionCheck: "_optionCheck_1jmvx_388",
+	feedback: "_feedback_1jmvx_412",
+	resultFeedback: "_resultFeedback_1jmvx_413",
+	results: "_results_1jmvx_55",
+	resultGrid: "_resultGrid_1jmvx_470",
+	resultCard: "_resultCard_1jmvx_479",
+	resultCardTop: "_resultCardTop_1jmvx_500",
+	rank: "_rank_1jmvx_508",
+	percentage: "_percentage_1jmvx_515",
+	scoreTrack: "_scoreTrack_1jmvx_525",
+	weapon: "_weapon_1jmvx_547",
+	summary: "_summary_1jmvx_555",
+	preferenceBlock: "_preferenceBlock_1jmvx_562",
+	officialRole: "_officialRole_1jmvx_600",
+	guideLink: "_guideLink_1jmvx_607",
+	resultsFooter: "_resultsFooter_1jmvx_625",
+	emptyResults: "_emptyResults_1jmvx_659",
+	visuallyHidden: "_visuallyHidden_1jmvx_675"
+};
+//#endregion
+//#region app/class-finder-poster.ts
+var CLASS_FINDER_ICON_PATHS = {
+	gladiator: "/class-icons/gladiator.png",
+	templar: "/class-icons/templar.png",
+	assassin: "/class-icons/assassin.png",
+	ranger: "/class-icons/ranger.png",
+	sorcerer: "/class-icons/sorcerer.png",
+	spiritmaster: "/class-icons/spiritmaster.png",
+	cleric: "/class-icons/cleric.png",
+	chanter: "/class-icons/chanter.png"
+};
+var posterCopy = {
+	"zh-hant": {
+		eyebrow: "AION2 KINA · 職業適性結果",
+		title: "最適合先了解的三個職業",
+		subtitle: "依據你的玩法偏好生成",
+		primary: "首選",
+		rank: (rank) => `第 ${rank} 名`,
+		match: "適配度",
+		preferences: "符合你的偏好",
+		footer: "結果只反映玩法偏好，不代表職業強度、版本排名或官方結論。"
+	},
+	en: {
+		eyebrow: "AION2 KINA · CLASS MATCH",
+		title: "Three classes to explore first",
+		subtitle: "Generated from your playstyle preferences",
+		primary: "TOP MATCH",
+		rank: (rank) => `MATCH ${rank}`,
+		match: "MATCH",
+		preferences: "WHY IT MATCHES",
+		footer: "This result reflects playstyle preferences, not class power, patch tiers, or an official verdict."
+	},
+	ko: {
+		eyebrow: "AION2 KINA · 직업 적합도 결과",
+		title: "먼저 살펴볼 직업 3개",
+		subtitle: "플레이 취향을 바탕으로 생성된 결과입니다",
+		primary: "최우선 추천",
+		rank: (rank) => `${rank}순위 추천`,
+		match: "적합도",
+		preferences: "추천 이유",
+		footer: "이 결과는 플레이 취향만 반영하며 직업 성능, 패치 티어 또는 공식 평가가 아닙니다."
+	},
+	...editorialClassFinderPosterCopy
+};
+var WIDTH = 1200;
+var HEIGHT = 1500;
+var FONT_STACK = "\"Noto Sans TC\", \"Noto Sans KR\", \"Microsoft JhengHei\", \"Malgun Gothic\", Arial, sans-serif";
+function loadImage(path) {
+	return new Promise((resolve, reject) => {
+		const image = new Image();
+		image.decoding = "async";
+		image.onload = () => resolve(image);
+		image.onerror = () => reject(/* @__PURE__ */ new Error(`Unable to load poster asset: ${path}`));
+		image.src = path;
+	});
+}
+async function loadPosterAssets(recommendations) {
+	const logoPromise = loadImage("/aion2-logo.png");
+	const iconEntries = await Promise.all(recommendations.map(async (result) => [result.classId, await loadImage(CLASS_FINDER_ICON_PATHS[result.classId])]));
+	return {
+		logo: await logoPromise,
+		icons: new Map(iconEntries)
+	};
+}
+function roundedRect(context, x, y, width, height, radius) {
+	context.beginPath();
+	context.roundRect(x, y, width, height, radius);
+}
+function drawContainedImage(context, image, x, y, width, height) {
+	const scale = Math.min(width / image.width, height / image.height);
+	const targetWidth = image.width * scale;
+	const targetHeight = image.height * scale;
+	context.drawImage(image, x + (width - targetWidth) / 2, y + (height - targetHeight) / 2, targetWidth, targetHeight);
+}
+function textSegments(text, locale) {
+	if (typeof Intl.Segmenter === "function") {
+		const segmenter = new Intl.Segmenter(locale, { granularity: "word" });
+		return Array.from(segmenter.segment(text), ({ segment }) => segment);
+	}
+	return Array.from(text);
+}
+function wrapLines(context, text, maxWidth, locale) {
+	const lines = [];
+	let current = "";
+	for (const segment of textSegments(text, locale)) {
+		const candidate = `${current}${segment}`;
+		if (!current || context.measureText(candidate).width <= maxWidth) {
+			current = candidate;
+			continue;
+		}
+		lines.push(current.trim());
+		current = segment.trimStart();
+	}
+	if (current.trim()) lines.push(current.trim());
+	return lines;
+}
+function drawWrappedText(context, text, x, y, maxWidth, lineHeight, locale, maxLines = Number.POSITIVE_INFINITY) {
+	const lines = wrapLines(context, text, maxWidth, locale).slice(0, maxLines);
+	lines.forEach((line, index) => {
+		let output = line;
+		if (index === maxLines - 1 && wrapLines(context, text, maxWidth, locale).length > maxLines) {
+			while (output && context.measureText(`${output}…`).width > maxWidth) output = output.slice(0, -1);
+			output = `${output.trimEnd()}…`;
+		}
+		context.fillText(output, x, y + index * lineHeight);
+	});
+	return lines.length * lineHeight;
+}
+function drawPreferencePills(context, preferences, x, y, maxWidth, locale) {
+	context.font = `600 24px ${FONT_STACK}`;
+	context.fillStyle = "#d9e5f5";
+	let offsetY = y;
+	for (const preference of preferences.slice(0, 2)) {
+		context.fillStyle = "#79d8ff";
+		context.beginPath();
+		context.arc(x + 7, offsetY - 8, 5, 0, Math.PI * 2);
+		context.fill();
+		context.fillStyle = "#d9e5f5";
+		const usedHeight = drawWrappedText(context, preference, x + 24, offsetY, maxWidth - 24, 34, locale, 2);
+		offsetY += Math.max(42, usedHeight + 8);
+	}
+}
+function drawPrimaryResult(context, result, icon, locale) {
+	const copy = posterCopy[locale];
+	const x = 72;
+	const y = 372;
+	const width = 1056;
+	roundedRect(context, x, y, width, 430, 34);
+	context.fillStyle = "#111525";
+	context.fill();
+	context.strokeStyle = "#8a77d9";
+	context.lineWidth = 3;
+	context.stroke();
+	context.fillStyle = "#a997ff";
+	context.fillRect(x, y, width, 7);
+	drawContainedImage(context, icon, x + 48, y + 54, 310, 310);
+	const contentX = x + 408;
+	context.fillStyle = "#b7a8ff";
+	context.font = `800 22px ${FONT_STACK}`;
+	context.fillText(copy.primary, contentX, y + 78);
+	context.fillStyle = "#f7f9ff";
+	context.font = `700 62px ${FONT_STACK}`;
+	context.fillText(result.name, contentX, y + 158);
+	context.fillStyle = "#95a4bb";
+	context.font = `600 25px ${FONT_STACK}`;
+	context.fillText(result.weapon, contentX, y + 205);
+	context.fillStyle = "#f7f9ff";
+	context.font = `800 54px ${FONT_STACK}`;
+	context.fillText(`${Math.round(result.matchPercent)}%`, x + width - 178, y + 82);
+	context.fillStyle = "#95a4bb";
+	context.font = `700 18px ${FONT_STACK}`;
+	context.textAlign = "right";
+	context.fillText(copy.match, x + width - 48, y + 112);
+	context.textAlign = "left";
+	context.fillStyle = "#718099";
+	context.font = `700 18px ${FONT_STACK}`;
+	context.fillText(copy.preferences, contentX, y + 267);
+	drawPreferencePills(context, result.matchedPreferences, contentX, y + 313, width - 456, locale);
+}
+function drawSecondaryResult(context, result, icon, locale, x) {
+	const copy = posterCopy[locale];
+	const y = 832;
+	const width = 516;
+	roundedRect(context, x, y, width, 430, 28);
+	context.fillStyle = "#0d111d";
+	context.fill();
+	context.strokeStyle = "#283247";
+	context.lineWidth = 2;
+	context.stroke();
+	context.fillStyle = "#82dcff";
+	context.font = `800 20px ${FONT_STACK}`;
+	context.fillText(copy.rank(result.rank), x + 32, y + 49);
+	drawContainedImage(context, icon, x + 28, y + 76, 190, 190);
+	context.fillStyle = "#f7f9ff";
+	context.font = `700 43px ${FONT_STACK}`;
+	drawWrappedText(context, result.name, x + 246, y + 132, 236, 50, locale, 2);
+	context.fillStyle = "#95a4bb";
+	context.font = `600 21px ${FONT_STACK}`;
+	context.fillText(result.weapon, x + 246, y + 218);
+	context.fillStyle = "#f7f9ff";
+	context.font = `800 38px ${FONT_STACK}`;
+	context.fillText(`${Math.round(result.matchPercent)}%`, x + 246, y + 269);
+	context.fillStyle = "#718099";
+	context.font = `700 16px ${FONT_STACK}`;
+	context.fillText(copy.match, x + 362, y + 267);
+	context.strokeStyle = "#283247";
+	context.lineWidth = 2;
+	context.beginPath();
+	context.moveTo(x + 32, y + 295);
+	context.lineTo(x + width - 32, y + 295);
+	context.stroke();
+	context.fillStyle = "#718099";
+	context.font = `700 16px ${FONT_STACK}`;
+	context.fillText(copy.preferences, x + 32, y + 333);
+	drawPreferencePills(context, result.matchedPreferences, x + 32, y + 376, width - 64, locale);
+}
+function canvasToBlob(canvas) {
+	return new Promise((resolve, reject) => {
+		canvas.toBlob((blob) => {
+			if (blob) resolve(blob);
+			else reject(/* @__PURE__ */ new Error("The browser could not create the result image."));
+		}, "image/png");
+	});
+}
+async function createClassFinderPoster(locale, recommendations) {
+	if (recommendations.length < 3) throw new Error("Three recommendations are required to create a result image.");
+	if (document.fonts?.ready) await document.fonts.ready;
+	const assets = await loadPosterAssets(recommendations.slice(0, 3));
+	const canvas = document.createElement("canvas");
+	canvas.width = WIDTH;
+	canvas.height = HEIGHT;
+	const context = canvas.getContext("2d");
+	if (!context) throw new Error("Canvas is unavailable in this browser.");
+	const copy = posterCopy[locale];
+	context.fillStyle = "#070a13";
+	context.fillRect(0, 0, WIDTH, HEIGHT);
+	context.fillStyle = "#5cc8ff";
+	context.fillRect(0, 0, WIDTH, 8);
+	drawContainedImage(context, assets.logo, 72, 48, 158, 118);
+	context.fillStyle = "#87ddff";
+	context.font = `800 20px ${FONT_STACK}`;
+	context.fillText(copy.eyebrow, 264, 91);
+	context.fillStyle = "#f7f9ff";
+	context.font = `700 62px ${FONT_STACK}`;
+	context.fillText(copy.title, 72, 238);
+	context.fillStyle = "#96a5bc";
+	context.font = `500 27px ${FONT_STACK}`;
+	context.fillText(copy.subtitle, 72, 294);
+	const primary = recommendations[0];
+	const second = recommendations[1];
+	const third = recommendations[2];
+	drawPrimaryResult(context, primary, assets.icons.get(primary.classId), locale);
+	drawSecondaryResult(context, second, assets.icons.get(second.classId), locale, 72);
+	drawSecondaryResult(context, third, assets.icons.get(third.classId), locale, 612);
+	context.strokeStyle = "#263047";
+	context.lineWidth = 2;
+	context.beginPath();
+	context.moveTo(72, 1321);
+	context.lineTo(1128, 1321);
+	context.stroke();
+	context.fillStyle = "#8795aa";
+	context.font = `500 22px ${FONT_STACK}`;
+	drawWrappedText(context, copy.footer, 72, 1378, 820, 34, locale, 2);
+	context.fillStyle = "#d8e5f4";
+	context.font = `800 22px ${FONT_STACK}`;
+	context.textAlign = "right";
+	context.fillText("aion2kina.com", 1128, 1380);
+	context.textAlign = "left";
+	return {
+		blob: await canvasToBlob(canvas),
+		fileName: `aion2-kina-class-match-${primary.classId}-${locale}.png`,
+		height: HEIGHT,
+		width: WIDTH
+	};
+}
+var ClassFinderShareDialog_module_default = {
+	dialog: "_dialog_19igq_1",
+	panel: "_panel_19igq_20",
+	header: "_header_19igq_28",
+	closeButton: "_closeButton_19igq_58",
+	preview: "_preview_19igq_72",
+	placeholder: "_placeholder_19igq_92",
+	actions: "_actions_19igq_108",
+	loader: "_loader_19igq_124",
+	spin: "_spin_19igq_1",
+	status: "_status_19igq_133",
+	manualLink: "_manualLink_19igq_141",
+	primaryAction: "_primaryAction_19igq_161",
+	visuallyHidden: "_visuallyHidden_19igq_180"
+};
+//#endregion
+//#region app/_components/tools/ClassFinderShareDialog.tsx
+var import_jsx_runtime = require_jsx_runtime();
+var shareCopy = {
+	"zh-hant": {
+		title: "分享你的職業結果",
+		description: "圖片只會在目前裝置產生，不會上傳你的答案。",
+		generating: "正在生成結果圖片…",
+		ready: "結果圖片已生成",
+		failed: "圖片生成失敗，仍可複製結果連結。",
+		retry: "重新生成",
+		shareImage: "分享圖片",
+		copyImage: "複製圖片",
+		downloadImage: "下載圖片",
+		copyLink: "複製結果連結",
+		shared: "已開啟圖片分享",
+		copiedImage: "結果圖片已複製",
+		downloaded: "結果圖片已下載",
+		copiedLink: "結果連結已複製",
+		copyFailed: "瀏覽器無法自動複製，請手動複製下方連結。",
+		close: "關閉分享結果",
+		imageAlt: (name) => `${name} 為首選的 AION2 職業適性結果圖片`,
+		resultSummary: "圖片中的職業結果"
+	},
+	en: {
+		title: "Share your class matches",
+		description: "The image is created on this device. Your answers are not uploaded.",
+		generating: "Creating your result image…",
+		ready: "Result image ready",
+		failed: "The image could not be created. You can still copy the result link.",
+		retry: "Try again",
+		shareImage: "Share image",
+		copyImage: "Copy image",
+		downloadImage: "Download image",
+		copyLink: "Copy result link",
+		shared: "Image sharing opened",
+		copiedImage: "Result image copied",
+		downloaded: "Result image downloaded",
+		copiedLink: "Result link copied",
+		copyFailed: "Automatic copy failed. Copy the link below manually.",
+		close: "Close shared result",
+		imageAlt: (name) => `AION2 class match image with ${name} as the top match`,
+		resultSummary: "Classes shown in the image"
+	},
+	ko: {
+		title: "직업 추천 결과 공유",
+		description: "이미지는 현재 기기에서만 생성되며 답변은 업로드되지 않습니다.",
+		generating: "결과 이미지를 만드는 중…",
+		ready: "결과 이미지가 준비되었습니다",
+		failed: "이미지를 만들지 못했습니다. 결과 링크는 계속 복사할 수 있습니다.",
+		retry: "다시 만들기",
+		shareImage: "이미지 공유",
+		copyImage: "이미지 복사",
+		downloadImage: "이미지 다운로드",
+		copyLink: "결과 링크 복사",
+		shared: "이미지 공유 창을 열었습니다",
+		copiedImage: "결과 이미지를 복사했습니다",
+		downloaded: "결과 이미지를 다운로드했습니다",
+		copiedLink: "결과 링크를 복사했습니다",
+		copyFailed: "자동 복사에 실패했습니다. 아래 링크를 직접 복사해 주세요.",
+		close: "공유 결과 닫기",
+		imageAlt: (name) => `${name}이 최우선 추천인 AION2 직업 적합도 결과 이미지`,
+		resultSummary: "이미지에 표시된 직업 결과"
+	},
+	...editorialClassFinderShareCopy
+};
+var shareKicker = {
+	"zh-hans": "AION2 KINA · 职业适配",
+	en: "AION2 KINA · CLASS MATCH",
+	fr: "AION2 KINA · AFFINITÉ DE CLASSE",
+	de: "AION2 KINA · KLASSENPASSUNG",
+	es: "AION2 KINA · AFINIDAD DE CLASE",
+	ja: "AION2 KINA · クラス適性",
+	"pt-br": "AION2 KINA · AFINIDADE DE CLASSE",
+	ru: "AION2 KINA · ПОДБОР КЛАССА",
+	ko: "AION2 KINA · 직업 적합도",
+	"zh-hant": "AION2 KINA · 職業適性"
+};
+function ClassFinderShareDialog({ locale, onClose, onEvent, open, recommendations, shareUrl }) {
+	const text = shareCopy[locale];
+	const dialogRef = (0, import_react.useRef)(null);
+	const previousFocusRef = (0, import_react.useRef)(null);
+	const generationRef = (0, import_react.useRef)(0);
+	const posterUrlRef = (0, import_react.useRef)("");
+	const [poster, setPoster] = (0, import_react.useState)(null);
+	const [posterUrl, setPosterUrl] = (0, import_react.useState)("");
+	const [posterStatus, setPosterStatus] = (0, import_react.useState)("idle");
+	const [statusMessage, setStatusMessage] = (0, import_react.useState)("");
+	const [manualLink, setManualLink] = (0, import_react.useState)(false);
+	const [canShareFiles, setCanShareFiles] = (0, import_react.useState)(false);
+	function releasePosterUrl() {
+		if (!posterUrlRef.current) return;
+		URL.revokeObjectURL(posterUrlRef.current);
+		posterUrlRef.current = "";
+	}
+	async function generatePoster() {
+		const generation = generationRef.current + 1;
+		generationRef.current = generation;
+		releasePosterUrl();
+		await Promise.resolve();
+		if (generationRef.current !== generation) return;
+		setPosterUrl("");
+		setPoster(null);
+		setPosterStatus("loading");
+		setStatusMessage(text.generating);
+		setCanShareFiles(false);
+		try {
+			const nextPoster = await createClassFinderPoster(locale, recommendations);
+			if (generationRef.current !== generation) return;
+			const nextUrl = URL.createObjectURL(nextPoster.blob);
+			posterUrlRef.current = nextUrl;
+			setPoster(nextPoster);
+			setPosterUrl(nextUrl);
+			setPosterStatus("ready");
+			setStatusMessage(text.ready);
+			const file = new File([nextPoster.blob], nextPoster.fileName, { type: "image/png" });
+			setCanShareFiles(typeof navigator.share === "function" && typeof navigator.canShare === "function" && navigator.canShare({ files: [file] }));
+			onEvent("poster_ready", {
+				primary_class: recommendations[0]?.classId,
+				image_width: nextPoster.width,
+				image_height: nextPoster.height
+			});
+		} catch {
+			if (generationRef.current !== generation) return;
+			setPosterStatus("error");
+			setStatusMessage(text.failed);
+			onEvent("poster_error", { primary_class: recommendations[0]?.classId });
+		}
+	}
+	(0, import_react.useEffect)(() => {
+		const dialog = dialogRef.current;
+		if (!dialog) return;
+		if (open) {
+			if (!dialog.open) {
+				previousFocusRef.current = document.activeElement;
+				dialog.showModal();
+			}
+			queueMicrotask(() => {
+				if (dialogRef.current?.open) generatePoster();
+			});
+			return;
+		}
+		generationRef.current += 1;
+		if (dialog.open) dialog.close();
+		releasePosterUrl();
+		previousFocusRef.current?.focus();
+	}, [
+		locale,
+		open,
+		recommendations
+	]);
+	(0, import_react.useEffect)(() => () => {
+		generationRef.current += 1;
+		if (posterUrlRef.current) URL.revokeObjectURL(posterUrlRef.current);
+	}, []);
+	function closeDialog() {
+		generationRef.current += 1;
+		releasePosterUrl();
+		setPosterUrl("");
+		setPoster(null);
+		setPosterStatus("idle");
+		setStatusMessage("");
+		setManualLink(false);
+		onClose();
+	}
+	function handleBackdropClick(event) {
+		if (event.target === event.currentTarget) closeDialog();
+	}
+	async function shareImage() {
+		if (!poster || !canShareFiles) return;
+		const file = new File([poster.blob], poster.fileName, { type: "image/png" });
+		try {
+			await navigator.share({
+				files: [file],
+				title: text.title,
+				text: recommendations[0]?.name,
+				url: shareUrl
+			});
+			setStatusMessage(text.shared);
+			onEvent("share", {
+				share_method: "poster_web_share",
+				primary_class: recommendations[0]?.classId
+			});
+		} catch (error) {
+			if (error instanceof DOMException && error.name === "AbortError") return;
+			setStatusMessage(text.failed);
+		}
+	}
+	async function copyImage() {
+		if (!poster) return;
+		try {
+			if (typeof ClipboardItem !== "function" || !navigator.clipboard?.write) throw new Error("Image clipboard is unavailable.");
+			await navigator.clipboard.write([new ClipboardItem({ "image/png": poster.blob })]);
+			setStatusMessage(text.copiedImage);
+			onEvent("share", {
+				share_method: "poster_image_copy",
+				primary_class: recommendations[0]?.classId
+			});
+		} catch {
+			downloadImage();
+		}
+	}
+	function downloadImage() {
+		if (!poster || !posterUrl) return;
+		const link = document.createElement("a");
+		link.href = posterUrl;
+		link.download = poster.fileName;
+		link.click();
+		setStatusMessage(text.downloaded);
+		onEvent("poster_download", { primary_class: recommendations[0]?.classId });
+	}
+	async function copyLink() {
+		try {
+			await navigator.clipboard.writeText(shareUrl);
+			setManualLink(false);
+			setStatusMessage(text.copiedLink);
+			onEvent("share", {
+				share_method: "poster_link_copy",
+				primary_class: recommendations[0]?.classId
+			});
+		} catch {
+			setManualLink(true);
+			setStatusMessage(text.copyFailed);
+		}
+	}
+	const primaryName = recommendations[0]?.name ?? "AION2";
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("dialog", {
+		"aria-describedby": "class-finder-share-description",
+		"aria-labelledby": "class-finder-share-title",
+		className: ClassFinderShareDialog_module_default.dialog,
+		onCancel: (event) => {
+			event.preventDefault();
+			closeDialog();
+		},
+		onClick: handleBackdropClick,
+		ref: dialogRef,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			"aria-busy": posterStatus === "loading",
+			className: ClassFinderShareDialog_module_default.panel,
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
+					className: ClassFinderShareDialog_module_default.header,
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: shareKicker[locale] }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							id: "class-finder-share-title",
+							children: text.title
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							id: "class-finder-share-description",
+							children: text.description
+						})
+					] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+						"aria-label": text.close,
+						className: ClassFinderShareDialog_module_default.closeButton,
+						onClick: closeDialog,
+						type: "button",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, {
+							"aria-hidden": "true",
+							size: 20,
+							strokeWidth: 1.7
+						})
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: ClassFinderShareDialog_module_default.preview,
+					"data-status": posterStatus,
+					children: posterUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+						alt: text.imageAlt(primaryName),
+						height: poster?.height,
+						src: posterUrl,
+						width: poster?.width
+					}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: ClassFinderShareDialog_module_default.placeholder,
+						children: [
+							posterStatus === "loading" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: ClassFinderShareDialog_module_default.loader,
+								"aria-hidden": "true"
+							}) : null,
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: posterStatus === "error" ? text.failed : text.generating }),
+							posterStatus === "error" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								onClick: () => void generatePoster(),
+								type: "button",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(RefreshCw, {
+									"aria-hidden": "true",
+									size: 16
+								}), text.retry]
+							}) : null
+						]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+					className: ClassFinderShareDialog_module_default.visuallyHidden,
+					"aria-label": text.resultSummary,
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", { children: recommendations.map((result) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", { children: [
+						result.rank,
+						". ",
+						result.name,
+						", ",
+						Math.round(result.matchPercent),
+						"%"
+					] }, result.classId)) })
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					"aria-live": "polite",
+					className: ClassFinderShareDialog_module_default.status,
+					children: statusMessage
+				}),
+				manualLink ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+					"aria-label": text.copyLink,
+					className: ClassFinderShareDialog_module_default.manualLink,
+					onFocus: (event) => event.currentTarget.select(),
+					readOnly: true,
+					value: shareUrl
+				}) : null,
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("footer", {
+					className: ClassFinderShareDialog_module_default.actions,
+					children: [
+						canShareFiles ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							className: ClassFinderShareDialog_module_default.primaryAction,
+							disabled: !poster,
+							onClick: () => void shareImage(),
+							type: "button",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Share2, {
+								"aria-hidden": "true",
+								size: 17
+							}), text.shareImage]
+						}) : null,
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							disabled: !poster,
+							onClick: () => void copyImage(),
+							type: "button",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, {
+								"aria-hidden": "true",
+								size: 17
+							}), text.copyImage]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							disabled: !poster,
+							onClick: downloadImage,
+							type: "button",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, {
+								"aria-hidden": "true",
+								size: 17
+							}), text.downloadImage]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							onClick: () => void copyLink(),
+							type: "button",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link2, {
+								"aria-hidden": "true",
+								size: 17
+							}), text.copyLink]
+						})
+					]
+				})
+			]
+		})
+	});
+}
+//#endregion
+//#region app/_components/tools/ClassFinder.tsx
+var STORAGE_KEY = "aion2-kina:class-finder:v1";
+var HASH_PREFIX = "#finder=";
+var copy = {
+	"zh-hant": {
+		kicker: "職業適性",
+		introTitle: "用 6 個選擇，縮小你的職業範圍",
+		introDescription: "依照操作節奏、戰鬥距離、隊伍責任與容錯偏好，找出最值得先深入了解的三個職業。",
+		duration: "約 2 分鐘",
+		questionCount: `${classFinderQuestions.length} 個問題`,
+		privateByDesign: "無需帳號",
+		privacy: "你的進度只保存在目前裝置；完成或分享結果時，選項會寫入網址片段，但不會建立公開結果頁。",
+		start: "開始推薦",
+		resume: "繼續上次進度",
+		restart: "重新開始",
+		progress: (current, total) => `第 ${current} 題，共 ${total} 題`,
+		answered: (count, total) => `已回答 ${count} / ${total}`,
+		chooseOne: "選擇最接近你的答案",
+		back: "上一題",
+		next: "下一題",
+		seeResults: "查看推薦",
+		resultsKicker: "你的職業適性",
+		resultsTitle: "最適合先了解的三個職業",
+		resultsDescription: "推薦反映你的遊玩偏好，不代表職業強度、版本排名或官方結論。",
+		primaryMatch: "首選",
+		match: "適配度",
+		matchedPreferences: "符合你的偏好",
+		guide: "查看職業攻略",
+		allClasses: "比較全部職業",
+		share: "分享結果",
+		shared: "已開啟系統分享",
+		copied: "結果連結已複製",
+		copyFailed: "無法自動複製，請從瀏覽器網址列複製連結。",
+		saved: "進度已保存在目前裝置",
+		saveFailed: "瀏覽器封鎖了本機儲存；本次作答仍可繼續。",
+		emptyResults: "還沒有足夠答案。請完成問卷後再查看推薦。",
+		continueQuestions: "繼續完成問卷",
+		rankLabel: (rank) => `第 ${rank} 名推薦`
+	},
+	en: {
+		kicker: "CLASS MATCH",
+		introTitle: "Narrow your class choices in 6 decisions",
+		introDescription: "Match your preferred pace, combat range, party responsibility, and tolerance for mistakes with three classes worth exploring first.",
+		duration: "About 2 minutes",
+		questionCount: `${classFinderQuestions.length} questions`,
+		privateByDesign: "No account",
+		privacy: "Progress stays on this device. Completing or sharing a result adds answers to the URL fragment, but never creates a public result page.",
+		start: "Start class finder",
+		resume: "Continue previous answers",
+		restart: "Start over",
+		progress: (current, total) => `Question ${current} of ${total}`,
+		answered: (count, total) => `${count} of ${total} answered`,
+		chooseOne: "Choose the answer closest to you",
+		back: "Back",
+		next: "Next",
+		seeResults: "See my matches",
+		resultsKicker: "YOUR CLASS MATCH",
+		resultsTitle: "Three classes to explore first",
+		resultsDescription: "Matches reflect your play preferences, not class strength, a patch tier list, or an official verdict.",
+		primaryMatch: "Top match",
+		match: "match",
+		matchedPreferences: "Why it matches",
+		guide: "View class guide",
+		allClasses: "Compare all classes",
+		share: "Share results",
+		shared: "System sharing opened",
+		copied: "Result link copied",
+		copyFailed: "Automatic copy failed. Copy the link from your browser address bar.",
+		saved: "Progress saved on this device",
+		saveFailed: "This browser blocked local storage. You can still finish this session.",
+		emptyResults: "There are not enough answers yet. Finish the questions to see a match.",
+		continueQuestions: "Continue questions",
+		rankLabel: (rank) => `Recommendation ${rank}`
+	},
+	ko: {
+		kicker: "직업 적합도",
+		introTitle: "6가지 선택으로 직업 후보를 좁혀 보세요",
+		introDescription: "선호하는 조작 속도, 전투 거리, 파티 책임과 실수 허용도를 바탕으로 먼저 살펴볼 직업 3개를 추천합니다.",
+		duration: "약 2분",
+		questionCount: `질문 ${classFinderQuestions.length}개`,
+		privateByDesign: "계정 불필요",
+		privacy: "진행 상황은 현재 기기에만 저장됩니다. 완료하거나 공유하면 선택지가 URL 조각에 포함되지만 공개 결과 페이지는 생성하지 않습니다.",
+		start: "직업 추천 시작",
+		resume: "이전 답변 계속하기",
+		restart: "처음부터 다시",
+		progress: (current, total) => `${total}개 중 ${current}번째 질문`,
+		answered: (count, total) => `${total}개 중 ${count}개 답변`,
+		chooseOne: "가장 가까운 답변을 선택하세요",
+		back: "이전",
+		next: "다음",
+		seeResults: "추천 결과 보기",
+		resultsKicker: "나의 직업 적합도",
+		resultsTitle: "먼저 살펴볼 직업 3개",
+		resultsDescription: "추천은 플레이 취향을 반영한 편집 기준이며 직업 성능, 패치 티어 또는 공식 평가가 아닙니다.",
+		primaryMatch: "최우선 추천",
+		match: "적합",
+		matchedPreferences: "추천 이유",
+		guide: "직업 공략 보기",
+		allClasses: "모든 직업 비교",
+		share: "결과 공유",
+		shared: "시스템 공유 창을 열었습니다",
+		copied: "결과 링크를 복사했습니다",
+		copyFailed: "자동 복사에 실패했습니다. 브라우저 주소창에서 링크를 복사해 주세요.",
+		saved: "현재 기기에 진행 상황을 저장했습니다",
+		saveFailed: "브라우저가 로컬 저장을 차단했습니다. 이번 세션은 계속할 수 있습니다.",
+		emptyResults: "답변이 충분하지 않습니다. 질문을 완료한 뒤 결과를 확인해 주세요.",
+		continueQuestions: "질문 계속하기",
+		rankLabel: (rank) => `${rank}순위 추천`
+	},
+	...editorialClassFinderUiCopy
+};
+function pushAnalytics(event, payload = {}) {
+	trackEvent(event, {
+		tool_name: "class_finder",
+		...payload
+	});
+}
+function safeParseAnswers(value) {
+	if (!value) return {};
+	try {
+		return parseClassFinderAnswers(value);
+	} catch {
+		return {};
+	}
+}
+function getBootstrapSnapshot() {
+	if (typeof window === "undefined") return "";
+	try {
+		if (window.location.hash.startsWith(HASH_PREFIX)) {
+			const value = window.location.hash.slice(8);
+			return `hash:${decodeURIComponent(value)}`;
+		}
+		return `storage:${window.localStorage.getItem(STORAGE_KEY) ?? ""}`;
+	} catch {
+		return "";
+	}
+}
+function subscribeToBootstrapState(callback) {
+	const syncStorage = (event) => {
+		if (event.key === STORAGE_KEY) callback();
+	};
+	window.addEventListener("hashchange", callback);
+	window.addEventListener("storage", syncStorage);
+	return () => {
+		window.removeEventListener("hashchange", callback);
+		window.removeEventListener("storage", syncStorage);
+	};
+}
+function answeredQuestionCount(answers) {
+	return classFinderQuestions.reduce((count, question) => count + (answers[question.id] ? 1 : 0), 0);
+}
+function findFirstUnanswered(answers) {
+	const index = classFinderQuestions.findIndex((question) => !answers[question.id]);
+	return index < 0 ? classFinderQuestions.length - 1 : index;
+}
+function clampPercentage(value) {
+	return Math.max(0, Math.min(100, Math.round(value)));
+}
+function ClassFinder({ locale }) {
+	const text = copy[locale];
+	const bootstrapSnapshot = (0, import_react.useSyncExternalStore)(subscribeToBootstrapState, getBootstrapSnapshot, () => "");
+	const bootstrapSource = bootstrapSnapshot.startsWith("hash:") ? "hash" : "storage";
+	const bootstrapAnswers = (0, import_react.useMemo)(() => safeParseAnswers(bootstrapSnapshot.replace(/^(?:hash|storage):/u, "")), [bootstrapSnapshot]);
+	const [sessionAnswers, setSessionAnswers] = (0, import_react.useState)(null);
+	const [requestedStage, setRequestedStage] = (0, import_react.useState)(null);
+	const [questionIndex, setQuestionIndex] = (0, import_react.useState)(0);
+	const [feedback, setFeedback] = (0, import_react.useState)({
+		kind: "neutral",
+		message: ""
+	});
+	const [shareDialogOpen, setShareDialogOpen] = (0, import_react.useState)(false);
+	const [shareUrl, setShareUrl] = (0, import_react.useState)("");
+	const headingRef = (0, import_react.useRef)(null);
+	const resultEventKeyRef = (0, import_react.useRef)("");
+	const saveEventSentRef = (0, import_react.useRef)(false);
+	const answers = sessionAnswers ?? bootstrapAnswers;
+	const completedCount = answeredQuestionCount(answers);
+	const hasCompleteSharedResult = bootstrapSource === "hash" && completedCount === classFinderQuestions.length;
+	const stage = requestedStage ?? (hasCompleteSharedResult ? "results" : "intro");
+	const currentQuestion = classFinderQuestions[questionIndex];
+	const selectedOption = currentQuestion ? answers[currentQuestion.id] : void 0;
+	const recommendations = (0, import_react.useMemo)(() => stage === "results" ? scoreClassFinderAnswers(answers, locale) : [], [
+		answers,
+		locale,
+		stage
+	]);
+	(0, import_react.useEffect)(() => {
+		if (stage !== "intro") headingRef.current?.focus();
+	}, [questionIndex, stage]);
+	(0, import_react.useEffect)(() => {
+		if (stage !== "results" || recommendations.length === 0) return;
+		const eventKey = `${serializeClassFinderAnswers(answers)}:${locale}`;
+		if (resultEventKeyRef.current === eventKey) return;
+		resultEventKeyRef.current = eventKey;
+		pushAnalytics("result_view", {
+			result_count: recommendations.length,
+			primary_class: recommendations[0]?.classId,
+			primary_match_percent: recommendations[0]?.matchPercent,
+			result_source: bootstrapSource === "hash" && requestedStage === null ? "shared_url" : "completed_quiz"
+		});
+	}, [
+		answers,
+		bootstrapSource,
+		locale,
+		recommendations,
+		requestedStage,
+		stage
+	]);
+	function storeAnswers(nextAnswers) {
+		setSessionAnswers(nextAnswers);
+		try {
+			window.localStorage.setItem(STORAGE_KEY, serializeClassFinderAnswers(nextAnswers));
+			setFeedback({
+				kind: "success",
+				message: text.saved
+			});
+			if (!saveEventSentRef.current) {
+				saveEventSentRef.current = true;
+				pushAnalytics("save_local", {
+					answered_count: answeredQuestionCount(nextAnswers),
+					storage_scope: "device"
+				});
+			}
+		} catch {
+			setFeedback({
+				kind: "error",
+				message: text.saveFailed
+			});
+		}
+	}
+	function writeResultFragment(nextAnswers) {
+		const url = new URL(window.location.href);
+		url.hash = `finder=${encodeURIComponent(serializeClassFinderAnswers(nextAnswers))}`;
+		window.history.replaceState(window.history.state, "", url);
+		return url.toString();
+	}
+	function startFinder() {
+		const nextIndex = findFirstUnanswered(answers);
+		pushAnalytics("tool_start", {
+			resumed: completedCount > 0,
+			answered_count: completedCount
+		});
+		if (completedCount === classFinderQuestions.length) {
+			writeResultFragment(answers);
+			setRequestedStage("results");
+			return;
+		}
+		setQuestionIndex(nextIndex);
+		setRequestedStage("questions");
+		setFeedback({
+			kind: "neutral",
+			message: ""
+		});
+	}
+	function selectAnswer(optionId) {
+		if (!currentQuestion) return;
+		storeAnswers({
+			...answers,
+			[currentQuestion.id]: optionId
+		});
+		pushAnalytics("question_answer", {
+			question_id: currentQuestion.id,
+			option_id: optionId,
+			question_step: questionIndex + 1,
+			question_total: classFinderQuestions.length
+		});
+	}
+	function goForward() {
+		if (!selectedOption) return;
+		if (questionIndex >= classFinderQuestions.length - 1) {
+			writeResultFragment(answers);
+			setRequestedStage("results");
+			return;
+		}
+		setQuestionIndex((current) => current + 1);
+		setFeedback({
+			kind: "neutral",
+			message: ""
+		});
+	}
+	function goBack() {
+		if (questionIndex === 0) {
+			setRequestedStage("intro");
+			return;
+		}
+		setQuestionIndex((current) => current - 1);
+		setFeedback({
+			kind: "neutral",
+			message: ""
+		});
+	}
+	function restartFinder() {
+		setShareDialogOpen(false);
+		setSessionAnswers({});
+		setRequestedStage("intro");
+		setQuestionIndex(0);
+		setFeedback({
+			kind: "neutral",
+			message: ""
+		});
+		resultEventKeyRef.current = "";
+		saveEventSentRef.current = false;
+		try {
+			window.localStorage.removeItem(STORAGE_KEY);
+		} catch {}
+		if (window.location.hash.startsWith(HASH_PREFIX)) {
+			const url = new URL(window.location.href);
+			url.hash = "";
+			window.history.replaceState(window.history.state, "", url);
+		}
+	}
+	function shareResults() {
+		const url = writeResultFragment(answers);
+		const primary = recommendations[0];
+		setShareUrl(url);
+		setShareDialogOpen(true);
+		setFeedback({
+			kind: "neutral",
+			message: ""
+		});
+		pushAnalytics("poster_open", {
+			primary_class: primary?.classId,
+			primary_match_percent: primary?.matchPercent
+		});
+	}
+	if (stage === "intro") return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		"aria-labelledby": "class-finder-intro-title",
+		className: `${ClassFinder_module_default.finder} ${ClassFinder_module_default.intro}`,
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: ClassFinder_module_default.introGlow,
+			"aria-hidden": "true",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "01" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "02" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "03" })
+			]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: ClassFinder_module_default.introContent,
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: ClassFinder_module_default.kicker,
+					children: text.kicker
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+					id: "class-finder-intro-title",
+					children: text.introTitle
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: ClassFinder_module_default.lede,
+					children: text.introDescription
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+					className: ClassFinder_module_default.facts,
+					"aria-label": text.privateByDesign,
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: text.duration }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: text.questionCount }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: text.privateByDesign })
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+					className: ClassFinder_module_default.privacy,
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						"aria-hidden": "true",
+						children: "◇"
+					}), text.privacy]
+				}),
+				completedCount > 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: ClassFinder_module_default.resumeProgress,
+					children: text.answered(completedCount, classFinderQuestions.length)
+				}) : null,
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: ClassFinder_module_default.introActions,
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+						className: ClassFinder_module_default.primaryButton,
+						onClick: startFinder,
+						type: "button",
+						children: [completedCount > 0 ? text.resume : text.start, /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"aria-hidden": "true",
+							children: "→"
+						})]
+					}), completedCount > 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+						className: ClassFinder_module_default.textButton,
+						onClick: restartFinder,
+						type: "button",
+						children: text.restart
+					}) : null]
+				})
+			]
+		})]
+	});
+	if (stage === "questions" && currentQuestion) {
+		const questionText = currentQuestion.copy[locale];
+		const progressValue = questionIndex + 1;
+		return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+			"aria-labelledby": "class-finder-question-title",
+			className: `${ClassFinder_module_default.finder} ${ClassFinder_module_default.questionStage}`,
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
+					className: ClassFinder_module_default.questionHeader,
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: ClassFinder_module_default.kicker,
+						children: text.kicker
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: ClassFinder_module_default.progressLabel,
+						children: text.progress(progressValue, classFinderQuestions.length)
+					})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: text.answered(completedCount, classFinderQuestions.length) })]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("progress", {
+					"aria-label": text.progress(progressValue, classFinderQuestions.length),
+					className: ClassFinder_module_default.progress,
+					max: classFinderQuestions.length,
+					value: progressValue
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("fieldset", {
+					className: ClassFinder_module_default.question,
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("legend", {
+							className: ClassFinder_module_default.visuallyHidden,
+							children: questionText.title
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: ClassFinder_module_default.stepNumber,
+							"aria-hidden": "true",
+							children: String(progressValue).padStart(2, "0")
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							id: "class-finder-question-title",
+							ref: headingRef,
+							tabIndex: -1,
+							children: questionText.title
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: ClassFinder_module_default.questionHint,
+							children: questionText.hint || text.chooseOne
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							"aria-labelledby": "class-finder-question-title",
+							className: ClassFinder_module_default.options,
+							role: "group",
+							children: currentQuestion.options.map((option, optionIndex) => {
+								const optionText = option.copy[locale];
+								const selected = selectedOption === option.id;
+								return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									"aria-pressed": selected,
+									className: ClassFinder_module_default.option,
+									onClick: () => selectAnswer(option.id),
+									type: "button",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: ClassFinder_module_default.optionIndex,
+											"aria-hidden": "true",
+											children: String.fromCharCode(65 + optionIndex)
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											className: ClassFinder_module_default.optionCopy,
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: optionText.label }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("small", { children: optionText.description })]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: ClassFinder_module_default.optionCheck,
+											"aria-hidden": "true",
+											children: selected ? "✓" : ""
+										})
+									]
+								}, option.id);
+							})
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: ClassFinder_module_default.questionFooter,
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							className: ClassFinder_module_default.secondaryButton,
+							onClick: goBack,
+							type: "button",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								"aria-hidden": "true",
+								children: "←"
+							}), text.back]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							"aria-live": "polite",
+							className: ClassFinder_module_default.feedback,
+							"data-kind": feedback.kind,
+							children: feedback.message
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							className: ClassFinder_module_default.primaryButton,
+							disabled: !selectedOption,
+							onClick: goForward,
+							type: "button",
+							children: [questionIndex === classFinderQuestions.length - 1 ? text.seeResults : text.next, /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								"aria-hidden": "true",
+								children: "→"
+							})]
+						})
+					]
+				})
+			]
+		});
+	}
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		"aria-labelledby": "class-finder-results-title",
+		className: `${ClassFinder_module_default.finder} ${ClassFinder_module_default.results}`,
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
+				className: ClassFinder_module_default.resultsHeader,
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: ClassFinder_module_default.kicker,
+						children: text.resultsKicker
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						id: "class-finder-results-title",
+						ref: headingRef,
+						tabIndex: -1,
+						children: text.resultsTitle
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: text.resultsDescription })
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: ClassFinder_module_default.resultActions,
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+						className: ClassFinder_module_default.secondaryButton,
+						onClick: shareResults,
+						type: "button",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"aria-hidden": "true",
+							children: "↗"
+						}), text.share]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+						className: ClassFinder_module_default.textButton,
+						onClick: restartFinder,
+						type: "button",
+						children: text.restart
+					})]
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				"aria-live": "polite",
+				className: ClassFinder_module_default.resultFeedback,
+				"data-kind": feedback.kind,
+				children: feedback.message
+			}),
+			recommendations.length > 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {
+				className: ClassFinder_module_default.resultGrid,
+				children: recommendations.map((result) => {
+					const percentage = clampPercentage(result.matchPercent);
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+						className: ClassFinder_module_default.resultCard,
+						"data-rank": result.rank,
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: ClassFinder_module_default.resultCardTop,
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: ClassFinder_module_default.rank,
+									children: result.rank === 1 ? text.primaryMatch : text.rankLabel(result.rank)
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: ClassFinder_module_default.percentage,
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("strong", { children: [percentage, "%"] }),
+										" ",
+										text.match
+									]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: ClassFinder_module_default.scoreTrack,
+								"aria-hidden": "true",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { width: `${percentage}%` } })
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: result.name }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: ClassFinder_module_default.weapon,
+								children: result.weapon
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: ClassFinder_module_default.summary,
+								children: result.summary
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: ClassFinder_module_default.preferenceBlock,
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", { children: text.matchedPreferences }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { children: result.matchedPreferences.map((preference) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: preference }, preference)) })]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: ClassFinder_module_default.officialRole,
+								children: result.officialRole
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+								className: ClassFinder_module_default.guideLink,
+								href: result.guideHref,
+								onClick: () => pushAnalytics("guide_click", {
+									class_id: result.classId,
+									result_rank: result.rank,
+									link_target: "class_guide"
+								}),
+								children: [text.guide, /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"aria-hidden": "true",
+									children: "→"
+								})]
+							})
+						]
+					}, result.classId);
+				})
+			}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: ClassFinder_module_default.emptyResults,
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: text.emptyResults }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+					className: ClassFinder_module_default.primaryButton,
+					onClick: startFinder,
+					type: "button",
+					children: [text.continueQuestions, /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						"aria-hidden": "true",
+						children: "→"
+					})]
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("footer", {
+				className: ClassFinder_module_default.resultsFooter,
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: recommendations[0]?.disclaimer ?? text.resultsDescription }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+					href: localizedHref(locale, "/classes/"),
+					onClick: () => pushAnalytics("guide_click", { link_target: "class_overview" }),
+					children: [text.allClasses, /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						"aria-hidden": "true",
+						children: "→"
+					})]
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ClassFinderShareDialog, {
+				locale,
+				onClose: () => setShareDialogOpen(false),
+				onEvent: pushAnalytics,
+				open: shareDialogOpen,
+				recommendations,
+				shareUrl
+			})
+		]
+	});
+}
+//#endregion
+export { ClassFinder };
