@@ -6,13 +6,8 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --no-audit --no-fund 2>&1 | tail -5
 
-# Copy pre-built dist/
-# Download dist from GitHub Release (avoids git clone timeout on build server)
-RUN curl -sL -o /tmp/dist.zip "https://github.com/fsjsacc/aion2-dokploy/releases/download/v1.0.0/dist.zip" && \
-    apt-get update -qq && apt-get install -y -qq unzip > /dev/null 2>&1 && \
-    unzip -q /tmp/dist.zip -d ./dist/ && \
-    rm /tmp/dist.zip && \
-    apt-get purge -y -qq unzip > /dev/null 2>&1 && apt-get autoremove -y -qq > /dev/null 2>&1
+# Copy pre-built dist/ (synced from source repo before deploy)
+COPY dist/ ./dist/
 
 # Copy init-data (will be copied to volume on first boot)
 COPY init-data/ /app/init-data/
