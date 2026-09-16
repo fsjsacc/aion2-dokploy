@@ -3,7 +3,7 @@
 # - Port 80: occupied by other service (CF handles HTTP→HTTPS redirect at edge)
 # - Port 443: Traefik (Dokploy platform-level, independent container)
 # - SSL: Self-signed cert + CF "Full" mode (CF doesn't validate origin cert)
-# - Future: other sites can add Traefik labels for domain-based routing
+# - Domains: www.aion2kina.com + aion2kina.com (CF Page Rule: aion2kina.com → www redirect)
 
 services:
   app:
@@ -27,7 +27,7 @@ services:
       - app
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.aion2-kina.rule=Host(`www.aion2kina.com`)"
+      - "traefik.http.routers.aion2-kina.rule=Host(`www.aion2kina.com`) || Host(`aion2kina.com`)"
       - "traefik.http.routers.aion2-kina.entrypoints=websecure"
       - "traefik.http.routers.aion2-kina.tls=true"
       - "traefik.http.services.aion2-kina.loadbalancer.server.port=80"
