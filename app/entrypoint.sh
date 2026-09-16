@@ -59,7 +59,18 @@ fi
 # Strip legacy_env from wrangler.json (wrangler 4.x rejects it, vinext still emits it)
 WRANGLER_JSON="/app/dist/server/wrangler.json"
 if [ -f "$WRANGLER_JSON" ]; then
-  node -e "const f='$WRANGLER_JSON';const j=JSON.parse(require('fs').readFileSync(f,'utf8'));if('legacy_env'in j){delete j.legacy_env;require('fs').writeFileSync(f,JSON.stringify(j,null,2));console.log('[entrypoint] Removed legacy_env from wrangler.json')}}"
+  cat > /tmp/fix-wrangler.js << 'FIXEOF'
+const fs = require("fs");
+const f = "/app/dist/server/wrangler.json";
+const j = JSON.parse(fs.readFileSync(f, "utf8"));
+if ("legacy_env" in j) {
+  delete j.legacy_env;
+  fs.writeFileSync(f, JSON.stringify(j, null, 2));
+  console.log("[entrypoint] Removed legacy_env from wrangler.json");
+}
+FIXEOF
+  node /tmp/fix-wrangler.js
+  rm -f /tmp/fix-wrangler.js
 fi
 
 echo "[entrypoint] Starting application..."
