@@ -9,6 +9,10 @@ RUN npm ci --no-audit --no-fund 2>&1 | tail -5
 # Copy pre-built dist/ (synced from source repo before deploy)
 COPY dist/ ./dist/
 
+# Copy map assets (tiles, sprites) — these are pruned from dist/client/ by postbuild
+# but needed for the ASSETS binding to serve them in wrangler dev --local mode
+COPY map-assets/ ./dist/client/map-assets/
+
 # Copy init-data (will be copied to volume on first boot)
 COPY init-data/ /app/init-data/
 
