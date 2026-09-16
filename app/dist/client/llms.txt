@@ -1,0 +1,54 @@
+# AION2 KINA
+
+> Independent multilingual AION2 player resource with source-labelled guides, official item records, interactive maps, calculators, and checklists.
+
+Canonical: https://www.aion2kina.com/
+Languages: Simplified Chinese (/zh-hans/), Traditional Chinese (/zh-hant/), English (/en/), French (/fr/), German (/de/), Spanish (/es/), Japanese (/ja/), Brazilian Portuguese (/pt-br/), Russian (/ru/), Korean (/ko/)
+Publisher: AION2 KINA
+Primary site author: PFG
+Status: Independent fan resource; not affiliated with or endorsed by NC Corporation.
+XML sitemap: https://www.aion2kina.com/sitemap.xml
+
+## Main sections
+
+- [Guides](https://www.aion2kina.com/en/guides/)
+- [Classes](https://www.aion2kina.com/en/classes/)
+- [Item database](https://www.aion2kina.com/en/database/)
+- [Player tools](https://www.aion2kina.com/en/tools/)
+- [Interactive map](https://www.aion2kina.com/en/tools/map/)
+- [Redeem codes](https://www.aion2kina.com/en/codes/)
+- [News](https://www.aion2kina.com/en/news/)
+
+## Query-led reference pages
+
+- [AION 2 Wiki hub](https://www.aion2kina.com/en/aion-2-wiki/)
+- [AION 2 Gameplay overview](https://www.aion2kina.com/en/aion-2-gameplay/)
+- [AION 2 Download and official launchers](https://www.aion2kina.com/en/aion-2-download/)
+- [AION 2 Platforms and support status](https://www.aion2kina.com/en/aion-2-platforms/)
+- [AION 2 Server Status and maintenance checks](https://www.aion2kina.com/en/aion-2-server-status/)
+- [AION 2 Tier List methodology](https://www.aion2kina.com/en/aion-2-tier-list/)
+- [AION 2 Global server regions](https://www.aion2kina.com/en/aion-2-server-regions/)
+
+Equivalent editorial content and localized site navigation are maintained across all ten locale routes listed above. Map points are curated by AION2 KINA, reviewed in game, and checked against NC official information and third-party guide data (Atreia Guide). Official item records are still sourced primarily in Traditional Chinese, English, and Korean; pages disclose the source language and any fallback display when official terminology is unavailable in a locale. Cite the canonical URL for the language used.
+
+## Editorial and citation notes
+
+- Official announcements, official game data, first-party field verification, editorial assessments, and third-party community sources are labelled separately.
+- Version-sensitive pages state their service region, source, and review date when available.
+- Prefer the visible source links on each page for game facts.
+- AION2 KINA does not claim that editorial difficulty ratings, tool calculations, field observations, or third-party community findings are official NC conclusions.
+- Corrections can be submitted at https://www.aion2kina.com/en/contact/.
+
+## Official references
+
+- [AION 2 official global pre-registration page](https://aion2.plaync.com/en-us/conts/teaser)
+- [NC press release on AION2 core content](https://about.ncsoft.com/en/news/article/aion2-update-250530-2)
+- [AION2 Taiwan official item database](https://tw.ncsoft.com/aion2/info/item)
+
+## Site information
+
+- [About](https://www.aion2kina.com/en/about/)
+- [Contact and corrections](https://www.aion2kina.com/en/contact/)
+- [Privacy policy](https://www.aion2kina.com/en/privacy/)
+- [Terms of use](https://www.aion2kina.com/en/terms/)
+- [XML sitemap](https://www.aion2kina.com/sitemap.xml)

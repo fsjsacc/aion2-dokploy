@@ -1,0 +1,1 @@
+import{r as e}from"./rolldown-runtime-S-ySWqyJ.js";import{i as t}from"./framework-B8WyT5R3.js";var n=e(t(),1);function r({href:e}){return(0,n.useEffect)(()=>{window.location.replace(e)},[e]),null}export{r as NotFoundRedirect};

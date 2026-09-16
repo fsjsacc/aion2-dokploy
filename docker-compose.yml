@@ -1,0 +1,26 @@
+services:
+  app:
+    build:
+      context: ./app
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - wrangler-state:/app/dist/server/.wrangler/state/v3
+      - app-data:/app/data
+    mem_limit: 3g
+    memswap_limit: 4g
+
+  nginx:
+    build:
+      context: ./nginx
+    restart: unless-stopped
+    ports:
+      - "7777:80"
+    depends_on:
+      - app
+
+volumes:
+  wrangler-state:
+    driver: local
+  app-data:
+    driver: local

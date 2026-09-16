@@ -1,0 +1,1 @@
+import{r as e}from"./framework-B8WyT5R3.js";import{n as t}from"./analytics-CZoFoCGX.js";var n=e();function r({children:e,eventName:r,eventParams:i,...a}){return(0,n.jsx)(`a`,{...a,onClick:()=>t(r,i),children:e})}export{r as HomeTrackedLink};

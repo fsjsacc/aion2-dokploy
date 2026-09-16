@@ -1,0 +1,802 @@
+{
+  "_AnalyticsLink-BHmMNYMd.js": {
+    "file": "assets/AnalyticsLink-BHmMNYMd.js",
+    "name": "AnalyticsLink",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "_ContentDetail-D96LyXnn.css": {
+    "file": "assets/ContentDetail-D96LyXnn.css",
+    "src": "_ContentDetail-D96LyXnn.css"
+  },
+  "_ContentDetail.module-BY-NsENr.js": {
+    "file": "assets/ContentDetail.module-BY-NsENr.js",
+    "name": "ContentDetail.module",
+    "css": [
+      "assets/ContentDetail-D96LyXnn.css"
+    ]
+  },
+  "_FeedbackReportDialog-A8cJOmWK.js": {
+    "file": "assets/FeedbackReportDialog-A8cJOmWK.js",
+    "name": "FeedbackReportDialog",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_createLucideIcon-CMFDOTkM.js",
+      "_circle-check-odA_2sqi.js",
+      "_x-CwK0Lzgg.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/FeedbackReportDialog-BEhTBraO.css"
+    ]
+  },
+  "_FeedbackReportDialog-BEhTBraO.css": {
+    "file": "assets/FeedbackReportDialog-BEhTBraO.css",
+    "src": "_FeedbackReportDialog-BEhTBraO.css"
+  },
+  "_Icon-qQFp1qJC.js": {
+    "file": "assets/Icon-qQFp1qJC.js",
+    "name": "Icon",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "_SiteThemeContext-DipwXgG4.js": {
+    "file": "assets/SiteThemeContext-DipwXgG4.js",
+    "name": "SiteThemeContext",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "_analytics-CZoFoCGX.js": {
+    "file": "assets/analytics-CZoFoCGX.js",
+    "name": "analytics",
+    "imports": [
+      "_site-config-CNqXL_xA.js"
+    ]
+  },
+  "_checklist-activities-yMgubnYD.js": {
+    "file": "assets/checklist-activities-yMgubnYD.js",
+    "name": "checklist-activities"
+  },
+  "_checklist-store-Rd2v7OSi.js": {
+    "file": "assets/checklist-store-Rd2v7OSi.js",
+    "name": "checklist-store"
+  },
+  "_chevron-down-BHbtqjZL.js": {
+    "file": "assets/chevron-down-BHbtqjZL.js",
+    "name": "chevron-down",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_chevron-left-DZHz659I.js": {
+    "file": "assets/chevron-left-DZHz659I.js",
+    "name": "chevron-left",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_chevron-right-sgnk1bbf.js": {
+    "file": "assets/chevron-right-sgnk1bbf.js",
+    "name": "chevron-right",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_circle-check-odA_2sqi.js": {
+    "file": "assets/circle-check-odA_2sqi.js",
+    "name": "circle-check",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_createLucideIcon-CMFDOTkM.js": {
+    "file": "assets/createLucideIcon-CMFDOTkM.js",
+    "name": "createLucideIcon",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_Icon-qQFp1qJC.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "_earth-OPJLV7VC.js": {
+    "file": "assets/earth-OPJLV7VC.js",
+    "name": "earth",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_external-link-BauUgNq1.js": {
+    "file": "assets/external-link-BauUgNq1.js",
+    "name": "external-link",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_framework-B8WyT5R3.js": {
+    "file": "assets/framework-B8WyT5R3.js",
+    "name": "framework",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js"
+    ]
+  },
+  "_i18n-CoFUaaYv.js": {
+    "file": "assets/i18n-CoFUaaYv.js",
+    "name": "i18n",
+    "imports": [
+      "_site-config-CNqXL_xA.js"
+    ]
+  },
+  "_link-2-vurHjNPY.js": {
+    "file": "assets/link-2-vurHjNPY.js",
+    "name": "link-2",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_loader-circle-V2K0OmwX.js": {
+    "file": "assets/loader-circle-V2K0OmwX.js",
+    "name": "loader-circle",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_navigation-1E82WH8G.js": {
+    "file": "assets/navigation-1E82WH8G.js",
+    "name": "navigation",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-B8WyT5R3.js",
+      "_readonly-url-search-params-BRv7ewS0.js",
+      "_url-utils-BAkPrQqo.js"
+    ]
+  },
+  "_package-search-CQIsQBaB.js": {
+    "file": "assets/package-search-CQIsQBaB.js",
+    "name": "package-search",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_readonly-url-search-params-BRv7ewS0.js": {
+    "file": "assets/readonly-url-search-params-BRv7ewS0.js",
+    "name": "readonly-url-search-params",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "_refresh-cw-BA1voVGC.js": {
+    "file": "assets/refresh-cw-BA1voVGC.js",
+    "name": "refresh-cw",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_rolldown-runtime-S-ySWqyJ.js": {
+    "file": "assets/rolldown-runtime-S-ySWqyJ.js",
+    "name": "rolldown-runtime"
+  },
+  "_rotate-ccw-Bg4-J3UE.js": {
+    "file": "assets/rotate-ccw-Bg4-J3UE.js",
+    "name": "rotate-ccw",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_server-DxdKEQCK.js": {
+    "file": "assets/server-DxdKEQCK.js",
+    "name": "server",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_share-2-DUAsq8b8.js": {
+    "file": "assets/share-2-DUAsq8b8.js",
+    "name": "share-2",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_shield-check-Ba2ekw6a.js": {
+    "file": "assets/shield-check-Ba2ekw6a.js",
+    "name": "shield-check",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_site-config-CNqXL_xA.js": {
+    "file": "assets/site-config-CNqXL_xA.js",
+    "name": "site-config"
+  },
+  "_sliders-horizontal-Dw6vuFId.js": {
+    "file": "assets/sliders-horizontal-Dw6vuFId.js",
+    "name": "sliders-horizontal",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_trash-2-z_gWhoWu.js": {
+    "file": "assets/trash-2-z_gWhoWu.js",
+    "name": "trash-2",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_triangle-alert-CppHVKka.js": {
+    "file": "assets/triangle-alert-CppHVKka.js",
+    "name": "triangle-alert",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "_url-utils-BAkPrQqo.js": {
+    "file": "assets/url-utils-BAkPrQqo.js",
+    "name": "url-utils"
+  },
+  "_x-CwK0Lzgg.js": {
+    "file": "assets/x-CwK0Lzgg.js",
+    "name": "x",
+    "imports": [
+      "_createLucideIcon-CMFDOTkM.js"
+    ]
+  },
+  "app/_components/GlobalStyles.tsx": {
+    "file": "assets/GlobalStyles-Bek6_vxn.js",
+    "name": "GlobalStyles",
+    "src": "app/_components/GlobalStyles.tsx",
+    "isDynamicEntry": true,
+    "css": [
+      "assets/GlobalStyles-x23o9d9V.css"
+    ]
+  },
+  "app/_components/analytics/AnalyticsConsentManager.tsx": {
+    "file": "assets/AnalyticsConsentManager-D19iXsyO.js",
+    "name": "AnalyticsConsentManager",
+    "src": "app/_components/analytics/AnalyticsConsentManager.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_site-config-CNqXL_xA.js",
+      "_createLucideIcon-CMFDOTkM.js",
+      "_shield-check-Ba2ekw6a.js",
+      "_x-CwK0Lzgg.js",
+      "_framework-B8WyT5R3.js",
+      "_navigation-1E82WH8G.js"
+    ],
+    "css": [
+      "assets/AnalyticsConsentManager-7Pm9w4Pa.css"
+    ]
+  },
+  "app/_components/analytics/DeferredAnalyticsConsentManager.tsx": {
+    "file": "assets/DeferredAnalyticsConsentManager-CQW3bm6L.js",
+    "name": "DeferredAnalyticsConsentManager",
+    "src": "app/_components/analytics/DeferredAnalyticsConsentManager.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-B8WyT5R3.js"
+    ],
+    "dynamicImports": [
+      "app/_components/analytics/AnalyticsConsentManager.tsx"
+    ]
+  },
+  "app/_components/codes/CopyCodeButton.tsx": {
+    "file": "assets/CopyCodeButton-DNezh99H.js",
+    "name": "CopyCodeButton",
+    "src": "app/_components/codes/CopyCodeButton.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/CopyCodeButton-BCqsDicv.css"
+    ]
+  },
+  "app/_components/content/ContentFaqList.tsx": {
+    "file": "assets/ContentFaqList-Dr2rM5lc.js",
+    "name": "ContentFaqList",
+    "src": "app/_components/content/ContentFaqList.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ContentDetail.module-BY-NsENr.js",
+      "_analytics-CZoFoCGX.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "app/_components/content/ContentPrimaryAction.tsx": {
+    "file": "assets/ContentPrimaryAction-6MoNpNFf.js",
+    "name": "ContentPrimaryAction",
+    "src": "app/_components/content/ContentPrimaryAction.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ContentDetail.module-BY-NsENr.js",
+      "_analytics-CZoFoCGX.js",
+      "_site-config-CNqXL_xA.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "app/_components/content/ContentSectionLinks.tsx": {
+    "file": "assets/ContentSectionLinks-Cw1aDGiv.js",
+    "name": "ContentSectionLinks",
+    "src": "app/_components/content/ContentSectionLinks.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ContentDetail.module-BY-NsENr.js",
+      "_analytics-CZoFoCGX.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "app/_components/database/ItemCatalog.tsx": {
+    "file": "assets/ItemCatalog-D9rdo6QJ.js",
+    "name": "ItemCatalog",
+    "src": "app/_components/database/ItemCatalog.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_site-config-CNqXL_xA.js",
+      "_createLucideIcon-CMFDOTkM.js",
+      "_chevron-left-DZHz659I.js",
+      "_chevron-right-sgnk1bbf.js",
+      "_rotate-ccw-Bg4-J3UE.js",
+      "_sliders-horizontal-Dw6vuFId.js",
+      "_x-CwK0Lzgg.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/ItemCatalog--hDimIul.css"
+    ]
+  },
+  "app/_components/database/OfficialItemDetail.tsx": {
+    "file": "assets/OfficialItemDetail-CqjRFfsR.js",
+    "name": "OfficialItemDetail",
+    "src": "app/_components/database/OfficialItemDetail.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "app/_components/trust/ProvenancePanel.tsx",
+      "_site-config-CNqXL_xA.js",
+      "_external-link-BauUgNq1.js",
+      "_rotate-ccw-Bg4-J3UE.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/OfficialItemDetail-kmu7ry7Z.css"
+    ]
+  },
+  "app/_components/home/GlobalLaunchCountdown.tsx": {
+    "file": "assets/GlobalLaunchCountdown-CYsny17x.js",
+    "name": "GlobalLaunchCountdown",
+    "src": "app/_components/home/GlobalLaunchCountdown.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_site-config-CNqXL_xA.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/GlobalLaunchCountdown-D-rJMzHa.css"
+    ]
+  },
+  "app/_components/home/HomeChecklistCard.tsx": {
+    "file": "assets/HomeChecklistCard-Cp_riERj.js",
+    "name": "HomeChecklistCard",
+    "src": "app/_components/home/HomeChecklistCard.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_checklist-activities-yMgubnYD.js",
+      "_checklist-store-Rd2v7OSi.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "app/_components/home/HomeInteractiveShell.tsx": {
+    "file": "assets/HomeInteractiveShell-R8fShu3E.js",
+    "name": "HomeInteractiveShell",
+    "src": "app/_components/home/HomeInteractiveShell.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_SiteThemeContext-DipwXgG4.js",
+      "_analytics-CZoFoCGX.js",
+      "_site-config-CNqXL_xA.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "dynamicImports": [
+      "app/_components/home/HomeChecklistCard.tsx"
+    ]
+  },
+  "app/_components/home/HomeThemeSwitcher.tsx": {
+    "file": "assets/HomeThemeSwitcher-CyLxDdZ2.js",
+    "name": "HomeThemeSwitcher",
+    "src": "app/_components/home/HomeThemeSwitcher.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_SiteThemeContext-DipwXgG4.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "app/_components/home/HomeTrackedLink.tsx": {
+    "file": "assets/HomeTrackedLink-DCMTGE9G.js",
+    "name": "HomeTrackedLink",
+    "src": "app/_components/home/HomeTrackedLink.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_analytics-CZoFoCGX.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "app/_components/site/NotFoundRedirect.tsx": {
+    "file": "assets/NotFoundRedirect-yFRWLFeA.js",
+    "name": "NotFoundRedirect",
+    "src": "app/_components/site/NotFoundRedirect.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "app/_components/site/SiteShell.tsx": {
+    "file": "assets/SiteShell-nMHJ6t5g.js",
+    "name": "SiteShell",
+    "src": "app/_components/site/SiteShell.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_SiteThemeContext-DipwXgG4.js",
+      "_analytics-CZoFoCGX.js",
+      "_site-config-CNqXL_xA.js",
+      "_framework-B8WyT5R3.js",
+      "node_modules/vinext/dist/shims/link.js",
+      "_navigation-1E82WH8G.js"
+    ],
+    "css": [
+      "assets/SiteShell-DxesE_zF.css"
+    ]
+  },
+  "app/_components/tools/ClassFinder.tsx": {
+    "file": "assets/ClassFinder-kmISUuR_.js",
+    "name": "ClassFinder",
+    "src": "app/_components/tools/ClassFinder.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_site-config-CNqXL_xA.js",
+      "_share-2-DUAsq8b8.js",
+      "_link-2-vurHjNPY.js",
+      "_refresh-cw-BA1voVGC.js",
+      "_x-CwK0Lzgg.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/ClassFinder-Dw-fx0HY.css"
+    ]
+  },
+  "app/_components/tools/CraftingDirectory.tsx": {
+    "file": "assets/CraftingDirectory-DwZ4jECj.js",
+    "name": "CraftingDirectory",
+    "src": "app/_components/tools/CraftingDirectory.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_site-config-CNqXL_xA.js",
+      "_chevron-left-DZHz659I.js",
+      "_chevron-right-sgnk1bbf.js",
+      "_package-search-CQIsQBaB.js",
+      "_rotate-ccw-Bg4-J3UE.js",
+      "_sliders-horizontal-Dw6vuFId.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/CraftingDirectory-Cf1AUtkr.css"
+    ]
+  },
+  "app/_components/tools/CraftingRecipeCalculator.tsx": {
+    "file": "assets/CraftingRecipeCalculator-CCctwxuO.js",
+    "name": "CraftingRecipeCalculator",
+    "src": "app/_components/tools/CraftingRecipeCalculator.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_site-config-CNqXL_xA.js",
+      "_createLucideIcon-CMFDOTkM.js",
+      "_package-search-CQIsQBaB.js",
+      "_rotate-ccw-Bg4-J3UE.js",
+      "_x-CwK0Lzgg.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/CraftingRecipeCalculator-B4pZZXQD.css"
+    ]
+  },
+  "app/_components/tools/DailyChecklist.tsx": {
+    "file": "assets/DailyChecklist-6Yj46Yxz.js",
+    "name": "DailyChecklist",
+    "src": "app/_components/tools/DailyChecklist.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_checklist-activities-yMgubnYD.js",
+      "_checklist-store-Rd2v7OSi.js",
+      "_site-config-CNqXL_xA.js",
+      "_createLucideIcon-CMFDOTkM.js",
+      "_server-DxdKEQCK.js",
+      "_chevron-down-BHbtqjZL.js",
+      "_external-link-BauUgNq1.js",
+      "_trash-2-z_gWhoWu.js",
+      "_x-CwK0Lzgg.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/DailyChecklist-COrd4Rih.css"
+    ]
+  },
+  "app/_components/tools/EventTimer.tsx": {
+    "file": "assets/EventTimer-DYVoXI2N.js",
+    "name": "EventTimer",
+    "src": "app/_components/tools/EventTimer.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_site-config-CNqXL_xA.js",
+      "_createLucideIcon-CMFDOTkM.js",
+      "_server-DxdKEQCK.js",
+      "_external-link-BauUgNq1.js",
+      "_earth-OPJLV7VC.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/EventTimer-Di2joMXV.css"
+    ]
+  },
+  "app/_components/tools/MaterialCalculator.tsx": {
+    "file": "assets/MaterialCalculator-DkuWXWmD.js",
+    "name": "MaterialCalculator",
+    "src": "app/_components/tools/MaterialCalculator.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_site-config-CNqXL_xA.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/MaterialCalculator-CV7LRB0Q.css"
+    ]
+  },
+  "app/_components/tools/ToolDirectory.tsx": {
+    "file": "assets/ToolDirectory-BT3NIbwe.js",
+    "name": "ToolDirectory",
+    "src": "app/_components/tools/ToolDirectory.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_site-config-CNqXL_xA.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "css": [
+      "assets/ToolDirectory-CVSOPvEO.css"
+    ]
+  },
+  "app/_components/trust/ProvenancePanel.tsx": {
+    "file": "assets/ProvenancePanel-Ck_Th0md.js",
+    "name": "ProvenancePanel",
+    "src": "app/_components/trust/ProvenancePanel.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_FeedbackReportDialog-A8cJOmWK.js",
+      "_AnalyticsLink-BHmMNYMd.js",
+      "_site-config-CNqXL_xA.js",
+      "_createLucideIcon-CMFDOTkM.js",
+      "_external-link-BauUgNq1.js",
+      "_shield-check-Ba2ekw6a.js",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "app/admin/AdminDashboard.tsx": {
+    "file": "assets/AdminDashboard-xBkknfVe.js",
+    "name": "AdminDashboard",
+    "src": "app/admin/AdminDashboard.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_createLucideIcon-CMFDOTkM.js",
+      "_chevron-right-sgnk1bbf.js",
+      "_circle-check-odA_2sqi.js",
+      "_external-link-BauUgNq1.js",
+      "_earth-OPJLV7VC.js",
+      "_link-2-vurHjNPY.js",
+      "_loader-circle-V2K0OmwX.js",
+      "_refresh-cw-BA1voVGC.js",
+      "_triangle-alert-CppHVKka.js",
+      "_sliders-horizontal-Dw6vuFId.js",
+      "_shield-check-Ba2ekw6a.js",
+      "_trash-2-z_gWhoWu.js",
+      "_x-CwK0Lzgg.js",
+      "_framework-B8WyT5R3.js",
+      "node_modules/vinext/dist/shims/link.js"
+    ],
+    "css": [
+      "assets/AdminDashboard-g_ey6XHS.css"
+    ]
+  },
+  "app/admin/login/AdminEmailLogin.tsx": {
+    "file": "assets/AdminEmailLogin-D7SlisQJ.js",
+    "name": "AdminEmailLogin",
+    "src": "app/admin/login/AdminEmailLogin.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_analytics-CZoFoCGX.js",
+      "_createLucideIcon-CMFDOTkM.js",
+      "_loader-circle-V2K0OmwX.js",
+      "_shield-check-Ba2ekw6a.js",
+      "_framework-B8WyT5R3.js",
+      "node_modules/vinext/dist/shims/link.js"
+    ],
+    "css": [
+      "assets/AdminEmailLogin-w_Lc9F2P.css"
+    ]
+  },
+  "app/map-app/InteractiveMap.tsx": {
+    "file": "assets/InteractiveMap-2kS_nCSq.js",
+    "name": "InteractiveMap",
+    "src": "app/map-app/InteractiveMap.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_analytics-CZoFoCGX.js",
+      "_checklist-store-Rd2v7OSi.js",
+      "_i18n-CoFUaaYv.js",
+      "_createLucideIcon-CMFDOTkM.js",
+      "_chevron-down-BHbtqjZL.js",
+      "_chevron-left-DZHz659I.js",
+      "_chevron-right-sgnk1bbf.js",
+      "_share-2-DUAsq8b8.js",
+      "_loader-circle-V2K0OmwX.js",
+      "_refresh-cw-BA1voVGC.js",
+      "_triangle-alert-CppHVKka.js",
+      "_trash-2-z_gWhoWu.js",
+      "_x-CwK0Lzgg.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "dynamicImports": [
+      "node_modules/maplibre-gl/dist/maplibre-gl.js"
+    ]
+  },
+  "app/map-app/MapExperience.tsx": {
+    "file": "assets/MapExperience-D_AVFEhI.js",
+    "name": "MapExperience",
+    "src": "app/map-app/MapExperience.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_analytics-CZoFoCGX.js",
+      "_i18n-CoFUaaYv.js",
+      "_framework-B8WyT5R3.js"
+    ],
+    "dynamicImports": [
+      "app/map-app/InteractiveMap.tsx"
+    ],
+    "css": [
+      "assets/MapExperience-D4aHVRlP.css"
+    ]
+  },
+  "node_modules/maplibre-gl/dist/maplibre-gl.js": {
+    "file": "assets/maplibre-gl-BaBEctMY.js",
+    "name": "maplibre-gl",
+    "src": "node_modules/maplibre-gl/dist/maplibre-gl.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js"
+    ]
+  },
+  "node_modules/vinext/dist/shims/layout-segment-context.js": {
+    "file": "assets/layout-segment-context-BsNAdHEn.js",
+    "name": "layout-segment-context",
+    "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "node_modules/vinext/dist/shims/link.js": {
+    "file": "assets/link-DddfLAUA.js",
+    "name": "link",
+    "src": "node_modules/vinext/dist/shims/link.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-B8WyT5R3.js",
+      "_readonly-url-search-params-BRv7ewS0.js",
+      "_url-utils-BAkPrQqo.js"
+    ],
+    "dynamicImports": [
+      "node_modules/vinext/dist/shims/router.js"
+    ]
+  },
+  "node_modules/vinext/dist/shims/router.js": {
+    "file": "assets/router-D-vNZjxi.js",
+    "name": "router",
+    "src": "node_modules/vinext/dist/shims/router.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-B8WyT5R3.js",
+      "node_modules/vinext/dist/shims/link.js",
+      "_url-utils-BAkPrQqo.js"
+    ],
+    "dynamicImports": [
+      "_framework-B8WyT5R3.js"
+    ]
+  },
+  "virtual:vinext-app-browser-entry": {
+    "file": "assets/index-Bi4nMJkC.js",
+    "name": "index",
+    "src": "virtual:vinext-app-browser-entry",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-B8WyT5R3.js",
+      "_readonly-url-search-params-BRv7ewS0.js",
+      "_url-utils-BAkPrQqo.js"
+    ],
+    "dynamicImports": [
+      "app/admin/AdminDashboard.tsx",
+      "app/_components/GlobalStyles.tsx",
+      "app/_components/tools/CraftingRecipeCalculator.tsx",
+      "node_modules/vinext/dist/shims/layout-segment-context.js",
+      "_Icon-qQFp1qJC.js",
+      "app/admin/login/AdminEmailLogin.tsx",
+      "_AnalyticsLink-BHmMNYMd.js",
+      "app/_components/trust/ProvenancePanel.tsx",
+      "app/_components/content/ContentSectionLinks.tsx",
+      "app/_components/site/SiteShell.tsx",
+      "virtual:vinext-app-browser-entry",
+      "app/_components/codes/CopyCodeButton.tsx",
+      "app/_components/analytics/DeferredAnalyticsConsentManager.tsx",
+      "app/_components/content/ContentFaqList.tsx",
+      "app/_components/home/HomeThemeSwitcher.tsx",
+      "app/_components/tools/ToolDirectory.tsx",
+      "app/_components/database/OfficialItemDetail.tsx",
+      "app/_components/database/ItemCatalog.tsx",
+      "app/map-app/MapExperience.tsx",
+      "app/_components/tools/EventTimer.tsx",
+      "app/_components/content/ContentPrimaryAction.tsx",
+      "app/_components/tools/ClassFinder.tsx",
+      "node_modules/vinext/dist/shims/link.js",
+      "app/_components/site/NotFoundRedirect.tsx",
+      "app/_components/home/HomeInteractiveShell.tsx",
+      "app/_components/home/HomeTrackedLink.tsx",
+      "_FeedbackReportDialog-A8cJOmWK.js",
+      "app/_components/tools/DailyChecklist.tsx",
+      "app/_components/tools/CraftingDirectory.tsx",
+      "app/_components/tools/MaterialCalculator.tsx",
+      "app/_components/home/GlobalLaunchCountdown.tsx"
+    ]
+  }
+}
