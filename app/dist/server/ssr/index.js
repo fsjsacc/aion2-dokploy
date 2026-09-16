@@ -11771,7 +11771,7 @@ var client_references_default = {
 		} };
 	},
 	"b142e7968e0b": async () => {
-		const m = await import("./assets/EventTimer-Cj5NT2zj.js");
+		const m = await import("./assets/EventTimer-CxoZd-m_.js");
 		return { get "EventTimer"() {
 			return m["EventTimer"];
 		} };

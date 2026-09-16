@@ -90,77 +90,77 @@ var EVENT_TIMER_SOURCES = {
 		label: "AION2 Taiwan update — Spacetime Rift schedule",
 		publisher: "NC Taiwan",
 		url: "https://tw.ncsoft.com/aion2/board/update/view?articleId=692f4c48e81e402e6da16915",
-		verifiedAt: "2026-07-24"
+		verifiedAt: "2026-09-16"
 	},
 	krSpacetimeRift: {
 		id: "kr-spacetime-rift",
 		label: "아이온2 업데이트 — 시공의 균열 일정",
 		publisher: "NCSOFT",
 		url: "https://aion2.plaync.com/ko-kr/board/update/view?articleId=692f3e3834e7dd2024fd53a4",
-		verifiedAt: "2026-07-31"
+		verifiedAt: "2026-09-16"
 	},
 	krSpacetimeRiftWindow: {
 		id: "kr-spacetime-rift-window",
 		label: "아이온2 업데이트 — 시공의 균열 포탈 10분 유지",
 		publisher: "NCSOFT",
 		url: "https://aion2.plaync.com/ko-kr/board/update/view?articleId=692603b8d60365665a2fdaa9",
-		verifiedAt: "2026-07-31"
+		verifiedAt: "2026-09-16"
 	},
 	twAbyssSchedule: {
 		id: "tw-abyss-schedule",
 		label: "AION2 Taiwan update — Abyss schedules",
 		publisher: "NC Taiwan",
 		url: "https://tw.ncsoft.com/aion2/board/update/view?articleId=6a31a438754f8e55c506f818",
-		verifiedAt: "2026-07-31"
+		verifiedAt: "2026-09-16"
 	},
 	krAbyssSchedule: {
 		id: "kr-abyss-schedule",
 		label: "아이온2 업데이트 — 어비스 그룹별 일정",
 		publisher: "NCSOFT",
 		url: "https://aion2.plaync.com/ko-kr/board/update/view?articleId=6a31a438acb6f821e1a76c27",
-		verifiedAt: "2026-07-31"
+		verifiedAt: "2026-09-16"
 	},
 	twAbyssBosses: {
 		id: "tw-abyss-bosses",
 		label: "AION2 Taiwan update — Abyss bosses and Shugo Festa",
 		publisher: "NC Taiwan",
 		url: "https://tw.ncsoft.com/aion2/board/update/view?articleId=69e7d24d6bea861b7fd195aa",
-		verifiedAt: "2026-07-31"
+		verifiedAt: "2026-09-16"
 	},
 	krAbyssBosses: {
 		id: "kr-abyss-bosses",
 		label: "아이온2 업데이트 — 어비스 보스와 슈고 페스타",
 		publisher: "NCSOFT",
 		url: "https://aion2.plaync.com/ko-kr/board/update/view?articleId=69e7d0384b054450af1110c4",
-		verifiedAt: "2026-07-31"
+		verifiedAt: "2026-09-16"
 	},
 	twAbyssGuide: {
 		id: "tw-abyss-guide",
 		label: "AION2 official guide — Abyss content",
 		publisher: "NC Taiwan",
 		url: "https://tw.ncsoft.com/aion2/guidebook/view?title=%E6%B7%B1%E6%B7%B5%E5%85%A7%E5%AE%B9",
-		verifiedAt: "2026-07-31"
+		verifiedAt: "2026-09-16"
 	},
 	krAbyssGuide: {
 		id: "kr-abyss-guide",
 		label: "아이온2 공식 가이드 — 어비스",
 		publisher: "NCSOFT",
 		url: "https://aion2.plaync.com/ko-kr/guidebook/view?title=%EC%96%B4%EB%B9%84%EC%8A%A4",
-		verifiedAt: "2026-07-31"
+		verifiedAt: "2026-09-16"
 	},
 	twLiveActivities: {
 		id: "tw-live-activities",
 		label: "AION2 Taiwan 4/8 update — live activity schedules",
 		publisher: "NC Taiwan",
 		url: "https://tw.ncsoft.com/aion2/board/update/view?articleId=69d55b385428ae5b4ea04aa3",
-		verifiedAt: "2026-08-03"
+		verifiedAt: "2026-09-16"
 	},
 	krLiveActivities: {
 		id: "kr-live-activities",
 		label: "아이온2 4/8 업데이트 — 라이브 이벤트 시간표",
 		publisher: "NCSOFT",
 		url: "https://aion2.plaync.com/ko-kr/board/update/view?articleId=69d55b381e8a8c5fcd9b44a7",
-		verifiedAt: "2026-08-03"
+		verifiedAt: "2026-09-16"
 	}
 };
 var SPACETIME_RIFT_TIMES = [
@@ -194,7 +194,7 @@ var EVENT_TIMER_ENTRIES = [
 			"krSpacetimeRift",
 			"krSpacetimeRiftWindow"
 		],
-		verifiedAt: "2026-07-31",
+		verifiedAt: "2026-09-16",
 		mapLinks: [{
 			mapSlug: "verteron",
 			filterSubtype: "rift"
@@ -239,7 +239,7 @@ var EVENT_TIMER_ENTRIES = [
 			"twAbyssGuide",
 			"krAbyssGuide"
 		],
-		verifiedAt: "2026-07-31",
+		verifiedAt: "2026-09-16",
 		mapLinks: [{ mapSlug: "abyss-rift-zone" }],
 		usesKoreaAbyssGroupOffset: true
 	},
@@ -257,7 +257,7 @@ var EVENT_TIMER_ENTRIES = [
 			}
 		},
 		sourceIds: ["twAbyssBosses", "krAbyssBosses"],
-		verifiedAt: "2026-08-01",
+		verifiedAt: "2026-09-16",
 		hasDerivedSlots: true
 	},
 	{
@@ -274,7 +274,7 @@ var EVENT_TIMER_ENTRIES = [
 			}
 		},
 		sourceIds: ["twLiveActivities", "krLiveActivities"],
-		verifiedAt: "2026-08-01",
+		verifiedAt: "2026-09-16",
 		hasDerivedSlots: true
 	},
 	{
@@ -291,7 +291,7 @@ var EVENT_TIMER_ENTRIES = [
 			}
 		},
 		sourceIds: ["twLiveActivities", "krLiveActivities"],
-		verifiedAt: "2026-08-01",
+		verifiedAt: "2026-09-16",
 		activeWindowMinutesByStart: {
 			tw: {
 				660: 180,
@@ -334,7 +334,7 @@ var EVENT_TIMER_ENTRIES = [
 			"twAbyssGuide",
 			"krAbyssGuide"
 		],
-		verifiedAt: "2026-07-31",
+		verifiedAt: "2026-09-16",
 		mapLinks: [{ mapSlug: "chaotic-lower-reshanta" }, { mapSlug: "chaotic-middle-reshanta" }],
 		usesKoreaAbyssGroupOffset: true
 	},
@@ -369,7 +369,7 @@ var EVENT_TIMER_ENTRIES = [
 			"twAbyssBosses",
 			"krAbyssBosses"
 		],
-		verifiedAt: "2026-07-31",
+		verifiedAt: "2026-09-16",
 		mapLinks: [{
 			mapSlug: "chaotic-lower-reshanta",
 			filterSubtype: "boss"
@@ -414,7 +414,7 @@ var EVENT_TIMER_ENTRIES = [
 			"twAbyssBosses",
 			"krAbyssBosses"
 		],
-		verifiedAt: "2026-07-31",
+		verifiedAt: "2026-09-16",
 		mapLinks: [{
 			mapSlug: "chaotic-lower-reshanta",
 			filterSubtype: "boss"
