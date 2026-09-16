@@ -9,8 +9,6 @@ services:
       - app-data:/app/data
     mem_limit: 3g
     memswap_limit: 4g
-    networks:
-      - dokploy-network
 
   nginx-proxy:
     build:
@@ -37,15 +35,9 @@ services:
       - "traefik.http.routers.aion2-kina.tls=true"
       - "traefik.http.routers.aion2-kina.tls.certresolver=letsencrypt"
       - "traefik.http.services.aion2-kina.loadbalancer.server.port=80"
-    networks:
-      - dokploy-network
 
 volumes:
   wrangler-state:
     driver: local
   app-data:
     driver: local
-
-networks:
-  dokploy-network:
-    external: true
