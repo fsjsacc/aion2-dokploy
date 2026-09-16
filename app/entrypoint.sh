@@ -42,5 +42,19 @@ if [ -d "$INIT_DATA" ] && [ ! -f "$DATA_DIR/crafting/.initialized" ]; then
   touch "$DATA_DIR/.initialized"
 fi
 
+# Generate .dev.vars for wrangler (Worker secrets not in process.env)
+DEV_VARS="/app/dist/server/.dev.vars"
+if [ -n "$ADMIN_AUTH_SECRET" ] || [ -n "$ADMIN_PASSWORD_HASH" ]; then
+  echo "[entrypoint] Generating .dev.vars for Worker secrets..."
+  : > "$DEV_VARS"
+  for var in ADMIN_AUTH_SECRET ADMIN_PASSWORD_HASH ANALYTICS_PSEUDONYM_KEY ANALYTICS_IP_ENCRYPTION_KEY SITE_URL NEXT_PUBLIC_SITE_URL X_LOCAL_EXPLORER WRANGLER_WRITE_LOGS ADMIN_API_KEY KEEP_LOCAL_MAP_ASSETS; do
+    eval "val=\$$var"
+    if [ -n "$val" ]; then
+      echo "${var}=${val}" >> "$DEV_VARS"
+    fi
+  done
+  echo "[entrypoint] .dev.vars created ($(wc -l < "$DEV_VARS") vars)"
+fi
+
 echo "[entrypoint] Starting application..."
 exec "$@"
