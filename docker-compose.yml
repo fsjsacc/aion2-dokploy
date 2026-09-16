@@ -20,8 +20,25 @@ services:
       - app
     labels:
       - "traefik.enable=true"
+      # HTTP→HTTPS redirect middleware
+      - "traefik.http.middlewares.aion2-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.aion2-https-redirect.redirectscheme.permanent=true"
+      # HTTP router: redirect all to HTTPS (low priority)
+      - "traefik.http.routers.aion2-kina-http.rule=Host(`compose-aion2kina.2-25-206-13.sslip.io`) || Host(`aion2-kina.2-25-206-13.sslip.io`) || Host(`kina.aion2kina.com`)"
+      - "traefik.http.routers.aion2-kina-http.entrypoints=web"
+      - "traefik.http.routers.aion2-kina-http.middlewares=aion2-https-redirect"
+      - "traefik.http.routers.aion2-kina-http.priority=10"
+      # HTTP ACME challenge bypass (high priority, no redirect)
+      - "traefik.http.routers.aion2-kina-acme.rule=(Host(`compose-aion2kina.2-25-206-13.sslip.io`) || Host(`aion2-kina.2-25-206-13.sslip.io`) || Host(`kina.aion2kina.com`)) && PathPrefix(`/.well-known/acme-challenge/`)"
+      - "traefik.http.routers.aion2-kina-acme.entrypoints=web"
+      - "traefik.http.routers.aion2-kina-acme.priority=100"
+      - "traefik.http.routers.aion2-kina-acme.service=aion2-kina"
+      # HTTPS router with Let's Encrypt cert
       - "traefik.http.routers.aion2-kina.rule=Host(`compose-aion2kina.2-25-206-13.sslip.io`) || Host(`aion2-kina.2-25-206-13.sslip.io`) || Host(`kina.aion2kina.com`)"
-      - "traefik.http.routers.aion2-kina.entrypoints=web"
+      - "traefik.http.routers.aion2-kina.entrypoints=websecure"
+      - "traefik.http.routers.aion2-kina.tls=true"
+      - "traefik.http.routers.aion2-kina.tls.certresolver=letsencrypt"
+      # Backend service
       - "traefik.http.services.aion2-kina.loadbalancer.server.port=80"
 
 volumes:
