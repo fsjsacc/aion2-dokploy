@@ -1,3 +1,10 @@
+# AION2-KINA Docker Compose — Dokploy (2.25.206.13)
+# Architecture: CF 橙云 → Traefik (443, websecure) → nginx-proxy → app
+# - Port 80: occupied by other service (CF handles HTTP→HTTPS redirect at edge)
+# - Port 443: Traefik (Dokploy platform-level, independent container)
+# - SSL: Self-signed cert + CF "Full" mode (CF doesn't validate origin cert)
+# - Future: other sites can add Traefik labels for domain-based routing
+
 services:
   app:
     build:
@@ -20,20 +27,9 @@ services:
       - app
     labels:
       - "traefik.enable=true"
-      - "traefik.http.middlewares.aion2-https-redirect.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.aion2-https-redirect.redirectscheme.permanent=true"
-      - "traefik.http.routers.aion2-kina-http.rule=Host(`compose-aion2kina.2-25-206-13.sslip.io`) || Host(`aion2-kina.2-25-206-13.sslip.io`) || Host(`kina.aion2kina.com`)"
-      - "traefik.http.routers.aion2-kina-http.entrypoints=web"
-      - "traefik.http.routers.aion2-kina-http.middlewares=aion2-https-redirect"
-      - "traefik.http.routers.aion2-kina-http.priority=10"
-      - "traefik.http.routers.aion2-kina-acme.rule=(Host(`compose-aion2kina.2-25-206-13.sslip.io`) || Host(`aion2-kina.2-25-206-13.sslip.io`) || Host(`kina.aion2kina.com`)) && PathPrefix(`/.well-known/acme-challenge/`)"
-      - "traefik.http.routers.aion2-kina-acme.entrypoints=web"
-      - "traefik.http.routers.aion2-kina-acme.priority=100"
-      - "traefik.http.routers.aion2-kina-acme.service=aion2-kina"
-      - "traefik.http.routers.aion2-kina.rule=Host(`compose-aion2kina.2-25-206-13.sslip.io`) || Host(`aion2-kina.2-25-206-13.sslip.io`) || Host(`kina.aion2kina.com`)"
+      - "traefik.http.routers.aion2-kina.rule=Host(`www.aion2kina.com`)"
       - "traefik.http.routers.aion2-kina.entrypoints=websecure"
       - "traefik.http.routers.aion2-kina.tls=true"
-      - "traefik.http.routers.aion2-kina.tls.certresolver=letsencrypt"
       - "traefik.http.services.aion2-kina.loadbalancer.server.port=80"
 
 volumes:
