@@ -20,7 +20,7 @@ services:
       - app
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.aion2-kina.rule=Host(`aion2-kina.2-25-206-13.sslip.io`) || Host(`kina.aion2kina.com`)"
+      - "traefik.http.routers.aion2-kina.rule=Host(`compose-aion2kina.2-25-206-13.sslip.io`) || Host(`aion2-kina.2-25-206-13.sslip.io`) || Host(`kina.aion2kina.com`)"
       - "traefik.http.routers.aion2-kina.entrypoints=web"
       - "traefik.http.services.aion2-kina.loadbalancer.server.port=80"
 
