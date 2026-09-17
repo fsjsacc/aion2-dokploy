@@ -3,6 +3,8 @@
 # - Single container — Traefik labels directly on app container
 # - SSL: Self-signed cert + CF "Full" mode (CF doesn't validate origin cert)
 # - Domains: www.aion2kina.com + aion2kina.com (CF Page Rule: aion2kina.com → www redirect)
+# - Sprite headers: Traefik middleware adds cross-origin-resource-policy for MapLibre GL JS markers
+#   (wrangler dev ASSETS binding serves /sprites/ directly, bypassing Worker handler)
 
 services:
   app:
@@ -26,9 +28,20 @@ services:
       retries: 3
     labels:
       - "traefik.enable=true"
+      # Main router — all requests except /sprites/
       - "traefik.http.routers.aion2-kina.rule=Host(`www.aion2kina.com`) || Host(`aion2kina.com`)"
       - "traefik.http.routers.aion2-kina.entrypoints=websecure"
       - "traefik.http.routers.aion2-kina.tls=true"
+      - "traefik.http.routers.aion2-kina.service=aion2-kina"
+      # Sprite router — /sprites/ path with security headers for MapLibre GL JS
+      - "traefik.http.middlewares.sprite-headers.headers.customResponseHeaders.cross-origin-resource-policy=same-origin"
+      - "traefik.http.middlewares.sprite-headers.headers.customResponseHeaders.x-content-type-options=nosniff"
+      - "traefik.http.routers.sprite.rule=Host(`www.aion2kina.com`) && PathPrefix(`/sprites/`)"
+      - "traefik.http.routers.sprite.entrypoints=websecure"
+      - "traefik.http.routers.sprite.tls=true"
+      - "traefik.http.routers.sprite.middlewares=sprite-headers"
+      - "traefik.http.routers.sprite.service=aion2-kina"
+      # Shared service
       - "traefik.http.services.aion2-kina.loadbalancer.server.port=3001"
 
 volumes:
