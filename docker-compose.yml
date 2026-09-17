@@ -1,7 +1,6 @@
 # AION2-KINA Docker Compose — Dokploy (2.25.206.13)
-# Architecture: CF 橙云 → Traefik (443, websecure) → nginx-proxy → app
-# - Port 80: occupied by other service (CF handles HTTP→HTTPS redirect at edge)
-# - Port 443: Traefik (Dokploy platform-level, independent container)
+# Architecture: CF 橙云 → Traefik (443, websecure) → app:3001
+# - Single container — Traefik labels directly on app container
 # - SSL: Self-signed cert + CF "Full" mode (CF doesn't validate origin cert)
 # - Domains: www.aion2kina.com + aion2kina.com (CF Page Rule: aion2kina.com → www redirect)
 
@@ -11,26 +10,26 @@ services:
       context: ./app
     restart: unless-stopped
     env_file: .env
+    environment:
+      # ️ ASSETS binding directory — wrangler dev resolves assets.directory from project root (/app),
+      # not from wrangler.json location. "../client" → "/client" (404). Override with absolute path.
+      ASSETS: /app/dist/client
     volumes:
       - wrangler-state:/app/dist/server/.wrangler/state/v3
       - app-data:/app/data
     mem_limit: 3g
     memswap_limit: 4g
-
-  nginx-proxy:
-    build:
-      context: ./nginx
-    restart: unless-stopped
-    ports:
-      - "127.0.0.1:7777:80"
-    depends_on:
-      - app
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.aion2-kina.rule=Host(`www.aion2kina.com`) || Host(`aion2kina.com`)"
       - "traefik.http.routers.aion2-kina.entrypoints=websecure"
       - "traefik.http.routers.aion2-kina.tls=true"
-      - "traefik.http.services.aion2-kina.loadbalancer.server.port=80"
+      - "traefik.http.services.aion2-kina.loadbalancer.server.port=3001"
 
 volumes:
   wrangler-state:

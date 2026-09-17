@@ -56,5 +56,28 @@ if [ -n "$ADMIN_AUTH_SECRET" ] || [ -n "$ADMIN_PASSWORD_HASH" ]; then
   echo "[entrypoint] .dev.vars created ($(wc -l < "$DEV_VARS") vars)"
 fi
 
+# Strip legacy_env from wrangler.json (wrangler 4.x rejects it, vinext still emits it)
+# Also fix assets.directory to absolute path (wrangler dev resolves it from WORKDIR /app,
+# not from wrangler.json location /app/dist/server/ — so "../client" becomes "/client" → 404)
+WRANGLER_JSON="/app/dist/server/wrangler.json"
+if [ -f "$WRANGLER_JSON" ]; then
+  cat > /tmp/fix-wrangler.js << 'FIXEOF'
+const fs = require("fs");
+const f = "/app/dist/server/wrangler.json";
+const j = JSON.parse(fs.readFileSync(f, "utf8"));
+if ("legacy_env" in j) {
+  delete j.legacy_env;
+  console.log("[entrypoint] Removed legacy_env from wrangler.json");
+}
+if (j.assets && j.assets.directory && j.assets.directory !== "/app/dist/client") {
+  j.assets.directory = "/app/dist/client";
+  console.log("[entrypoint] Fixed assets.directory to /app/dist/client (was " + JSON.stringify(j.assets.directory) + ")");
+}
+fs.writeFileSync(f, JSON.stringify(j, null, 2));
+FIXEOF
+  node /tmp/fix-wrangler.js
+  rm -f /tmp/fix-wrangler.js
+fi
+
 echo "[entrypoint] Starting application..."
 exec "$@"
