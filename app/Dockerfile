@@ -44,4 +44,4 @@ HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
   CMD node -e "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})" || exit 1
 
 ENTRYPOINT ["/app/entrypoint.sh"]
-CMD ["npx", "wrangler", "dev", "dist/server/index.js", "--local", "--port", "3001", "--ip", "0.0.0.0"]
+CMD ["npx", "wrangler", "dev", "dist/server/index.js", "--local", "--port", "3001", "--ip", "0.0.0.0", "--config", "dist/server/wrangler.json"]
