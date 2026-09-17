@@ -23,8 +23,8 @@ RUN chmod +x /app/entrypoint.sh
 # Create directories
 RUN mkdir -p dist/server/.wrangler/state/v3 dist/server/.wrangler/tmp data
 
-# Fix wrangler.json assets.directory at build time
-# (wrangler dev resolves assets.directory from project root, not from wrangler.json location)
+# Fix wrangler.json assets.directory at build time (2026-09-17 18:30 rebuild)
+# wrangler dev resolves assets.directory from project root (WORKDIR), not from wrangler.json location
 RUN node -e "\
   const fs = require('fs'); \
   const f = '/app/dist/server/wrangler.json'; \
