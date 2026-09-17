@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install dependencies
 COPY package.json package-lock.json ./
-RUN echo "REBUILD_20260917_2025" && npm ci --no-audit --no-fund 2>&1 | tail -5
+RUN echo "REBUILD_20260917_1230" && npm ci --no-audit --no-fund 2>&1 | tail -5
 
 # Copy pre-built dist/ (synced from source repo before deploy)
 COPY dist/ ./dist/
