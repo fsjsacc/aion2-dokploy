@@ -10,6 +10,10 @@ services:
       context: ./app
     restart: unless-stopped
     env_file: .env
+    environment:
+      # ️ ASSETS binding directory — wrangler dev resolves assets.directory from project root (/app),
+      # not from wrangler.json location. "../client" → "/client" (404). Override with absolute path.
+      ASSETS: /app/dist/client
     volumes:
       - wrangler-state:/app/dist/server/.wrangler/state/v3
       - app-data:/app/data

@@ -1,10 +1,10 @@
-FROM node:22.14-bookworm-slim
+FROM node:22-bookworm-slim
 
 WORKDIR /app
 
 # Install dependencies
 COPY package.json package-lock.json ./
-RUN echo "REBUILD_20260917_1230" && npm ci --no-audit --no-fund 2>&1 | tail -5
+RUN echo "REBUILD_20260917_1835" && npm ci --no-audit --no-fund 2>&1 | tail -5
 
 # Copy pre-built dist/ (synced from source repo before deploy)
 COPY dist/ ./dist/
@@ -44,4 +44,4 @@ HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
   CMD node -e "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})" || exit 1
 
 ENTRYPOINT ["/app/entrypoint.sh"]
-CMD ["npx", "wrangler", "dev", "dist/server/index.js", "--port", "3001", "--ip", "0.0.0.0", "--config", "dist/server/wrangler.json"]
+CMD ["npx", "wrangler", "dev", "dist/server/index.js", "--local", "--port", "3001", "--ip", "0.0.0.0", "--config", "dist/server/wrangler.json"]
