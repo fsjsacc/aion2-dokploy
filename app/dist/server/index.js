@@ -1,4 +1,4 @@
-globalThis.__VINEXT_LAZY_CHUNKS__ = ["assets/AnalyticsLink-BHmMNYMd.js","assets/ContentDetail.module-BY-NsENr.js","assets/FeedbackReportDialog-A8cJOmWK.js","assets/Icon-qQFp1qJC.js","assets/SiteThemeContext-DipwXgG4.js","assets/analytics-CZoFoCGX.js","assets/checklist-activities-yMgubnYD.js","assets/checklist-store-Rd2v7OSi.js","assets/chevron-down-BHbtqjZL.js","assets/chevron-left-DZHz659I.js","assets/chevron-right-sgnk1bbf.js","assets/circle-check-odA_2sqi.js","assets/createLucideIcon-CMFDOTkM.js","assets/earth-OPJLV7VC.js","assets/external-link-BauUgNq1.js","assets/i18n-CoFUaaYv.js","assets/link-2-vurHjNPY.js","assets/loader-circle-V2K0OmwX.js","assets/navigation-1E82WH8G.js","assets/package-search-CQIsQBaB.js","assets/refresh-cw-BA1voVGC.js","assets/rotate-ccw-Bg4-J3UE.js","assets/server-DxdKEQCK.js","assets/share-2-DUAsq8b8.js","assets/shield-check-Ba2ekw6a.js","assets/site-config-CNqXL_xA.js","assets/sliders-horizontal-Dw6vuFId.js","assets/trash-2-z_gWhoWu.js","assets/triangle-alert-CppHVKka.js","assets/x-CwK0Lzgg.js","assets/GlobalStyles-Bek6_vxn.js","assets/AnalyticsConsentManager-D19iXsyO.js","assets/DeferredAnalyticsConsentManager-DjQtoDaC.js","assets/CopyCodeButton-DNezh99H.js","assets/ContentFaqList-Dr2rM5lc.js","assets/ContentPrimaryAction-6MoNpNFf.js","assets/ContentSectionLinks-Cw1aDGiv.js","assets/ItemCatalog-D9rdo6QJ.js","assets/OfficialItemDetail-CqjRFfsR.js","assets/GlobalLaunchCountdown-CYsny17x.js","assets/HomeChecklistCard-Cp_riERj.js","assets/HomeInteractiveShell-Cp_kuqVx.js","assets/HomeThemeSwitcher-CyLxDdZ2.js","assets/HomeTrackedLink-DCMTGE9G.js","assets/NotFoundRedirect-yFRWLFeA.js","assets/SiteShell-2f4W78ko.js","assets/ClassFinder-kmISUuR_.js","assets/CraftingDirectory-DwZ4jECj.js","assets/CraftingRecipeCalculator-CCctwxuO.js","assets/DailyChecklist-6Yj46Yxz.js","assets/EventTimer-CAXDq--l.js","assets/MaterialCalculator-DkuWXWmD.js","assets/ToolDirectory-BT3NIbwe.js","assets/ProvenancePanel-Ck_Th0md.js","assets/AdminDashboard-CS4AZVdV.js","assets/AdminEmailLogin-DU-0P0Pt.js","assets/InteractiveMap-DK0KtIJ_.js","assets/MapExperience-BoBIx8Bj.js","assets/maplibre-gl-D8Bhx75W.js","assets/layout-segment-context-OMT_hB3y.js","assets/link-Dl70StM0.js","assets/router-D4XFPsLi.js"];
+globalThis.__VINEXT_LAZY_CHUNKS__ = ["assets/AnalyticsLink-BHmMNYMd.js","assets/ContentDetail.module-BY-NsENr.js","assets/FeedbackReportDialog-A8cJOmWK.js","assets/Icon-qQFp1qJC.js","assets/SiteThemeContext-DipwXgG4.js","assets/analytics-CZoFoCGX.js","assets/checklist-activities-yMgubnYD.js","assets/checklist-store-Rd2v7OSi.js","assets/chevron-down-BHbtqjZL.js","assets/chevron-left-DZHz659I.js","assets/chevron-right-sgnk1bbf.js","assets/circle-check-odA_2sqi.js","assets/createLucideIcon-CMFDOTkM.js","assets/earth-OPJLV7VC.js","assets/external-link-BauUgNq1.js","assets/i18n-CoFUaaYv.js","assets/link-2-vurHjNPY.js","assets/loader-circle-V2K0OmwX.js","assets/navigation-1E82WH8G.js","assets/package-search-CQIsQBaB.js","assets/refresh-cw-BA1voVGC.js","assets/rotate-ccw-Bg4-J3UE.js","assets/server-DxdKEQCK.js","assets/share-2-DUAsq8b8.js","assets/shield-check-Ba2ekw6a.js","assets/site-config-CNqXL_xA.js","assets/sliders-horizontal-Dw6vuFId.js","assets/trash-2-z_gWhoWu.js","assets/triangle-alert-CppHVKka.js","assets/x-CwK0Lzgg.js","assets/GlobalStyles-Bek6_vxn.js","assets/AnalyticsConsentManager-D19iXsyO.js","assets/DeferredAnalyticsConsentManager-BwsQYTUQ.js","assets/CopyCodeButton-DNezh99H.js","assets/ContentFaqList-Dr2rM5lc.js","assets/ContentPrimaryAction-6MoNpNFf.js","assets/ContentSectionLinks-Cw1aDGiv.js","assets/ItemCatalog-D9rdo6QJ.js","assets/OfficialItemDetail-CqjRFfsR.js","assets/GlobalLaunchCountdown-CYsny17x.js","assets/HomeChecklistCard-Cp_riERj.js","assets/HomeInteractiveShell-BV9bOehl.js","assets/HomeThemeSwitcher-CyLxDdZ2.js","assets/HomeTrackedLink-DCMTGE9G.js","assets/NotFoundRedirect-yFRWLFeA.js","assets/SiteShell-hVfN9QUn.js","assets/ClassFinder-kmISUuR_.js","assets/CraftingDirectory-DwZ4jECj.js","assets/CraftingRecipeCalculator-CCctwxuO.js","assets/DailyChecklist-6Yj46Yxz.js","assets/EventTimer-CAXDq--l.js","assets/MaterialCalculator-DkuWXWmD.js","assets/ToolDirectory-BT3NIbwe.js","assets/ProvenancePanel-Ck_Th0md.js","assets/AdminDashboard-D6Job0eO.js","assets/AdminEmailLogin-Dhha1JaR.js","assets/InteractiveMap-0vGyPO4y.js","assets/MapExperience-B66VGeTn.js","assets/maplibre-gl-D8Bhx75W.js","assets/layout-segment-context-EiCk9eYg.js","assets/link-DeIY42Mx.js","assets/router-DsP72Lmx.js"];
 import * as __viteRscAsyncHooks from "node:async_hooks";
 import { AsyncLocalStorage as AsyncLocalStorage$1 } from "node:async_hooks";
 import assetsManifest from "./__vite_rsc_assets_manifest.js";
@@ -5886,7 +5886,7 @@ function getAndClearPendingCookies() {
 var DRAFT_MODE_COOKIE = "__prerender_bypass";
 (/* @__PURE__ */ new Date(0)).toUTCString();
 function getDraftSecret() {
-	return "8f854ee1-4d74-49c9-b519-626f656c3238";
+	return "fca76b5d-1fb1-4da4-b4ca-04260312b76c";
 }
 /**
 * Get any Set-Cookie header generated by draftMode().enable()/disable().
@@ -7799,7 +7799,7 @@ var NextURL = class NextURL {
 	* Matches the Next.js API: `request.nextUrl.buildId`.
 	*/
 	get buildId() {
-		return "70130c30-10fb-4d8b-9d37-3285f7e80d3b";
+		return "eb3df7a3-f861-4d1d-b245-61fef78832e6";
 	}
 };
 var RequestCookies = class {
@@ -12921,7 +12921,7 @@ function buildCacheKey(prefix, pathname, suffix) {
 * The suffix mirrors Next.js's separate on-disk app artifacts while keeping the
 * Cloudflare KV key under its 512-byte limit for long pathnames.
 */
-function appIsrCacheKey(pathname, suffix, buildId = "70130c30-10fb-4d8b-9d37-3285f7e80d3b") {
+function appIsrCacheKey(pathname, suffix, buildId = "eb3df7a3-f861-4d1d-b245-61fef78832e6") {
 	return buildCacheKey(buildId ? `app:${buildId}` : "app", pathname, suffix);
 }
 function appIsrHtmlKey(pathname) {
@@ -13250,7 +13250,7 @@ function createAppPageArtifactCompatibility(element, routePattern) {
 			routePattern,
 			rootBoundaryId
 		}),
-		deploymentVersion: "70130c30-10fb-4d8b-9d37-3285f7e80d3b",
+		deploymentVersion: "eb3df7a3-f861-4d1d-b245-61fef78832e6",
 		rootBoundaryId
 	});
 }
@@ -217358,9 +217358,9 @@ var worker_entry_default = { async fetch(request, env, ctx) {
 			headers: { "cache-control": "no-store" }
 		});
 		const mapOrigin = env?.MAP_ORIGIN;
-		if (!mapOrigin) return new Response("Map asset not found and upstream is not configured", {
-			status: 404,
-			headers: { "cache-control": "public, max-age=300" }
+		if (!mapOrigin) return new Response("Map upstream is not configured", {
+			status: 502,
+			headers: { "cache-control": "no-store" }
 		});
 		const upstreamUrl = mapUpstreamUrl(mapOrigin, assetPath, url.search);
 		if (!upstreamUrl) return new Response("Map upstream is unavailable", { status: 502 });
@@ -217399,28 +217399,6 @@ var worker_entry_default = { async fetch(request, env, ctx) {
 				})).response();
 			}
 		}, [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES]);
-	}
-	if (env?.ASSETS && (request.method === "GET" || request.method === "HEAD") && url.pathname.startsWith("/_sprites/")) {
-		const rewrittenUrl = new URL(request.url);
-		rewrittenUrl.pathname = url.pathname.replace("/_sprites/", "/sprites/");
-		const asset = await env.ASSETS.fetch(new Request(rewrittenUrl, request));
-		if (!asset.ok) return new Response("Sprite not found", {
-			status: 404,
-			headers: {
-				"cache-control": "public, max-age=300",
-				"cross-origin-resource-policy": "same-origin",
-				"x-content-type-options": "nosniff"
-			}
-		});
-		const assetHeaders = new Headers(asset.headers);
-		assetHeaders.set("cache-control", "public, max-age=86400, stale-while-revalidate=604800");
-		assetHeaders.set("cross-origin-resource-policy", "same-origin");
-		assetHeaders.set("x-content-type-options", "nosniff");
-		return new Response(request.method === "HEAD" ? null : asset.body, {
-			status: asset.status,
-			statusText: asset.statusText,
-			headers: assetHeaders
-		});
 	}
 	if (env?.ASSETS && (request.method === "GET" || request.method === "HEAD") && isStaticAssetPath(url.pathname)) {
 		const asset = await env.ASSETS.fetch(request);
