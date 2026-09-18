@@ -1,10 +1,24 @@
 # AION2-KINA Docker Compose — Dokploy (2.25.206.13)
-# Architecture: CF 橙云 → Traefik (443, websecure) → app:3001
-# - Single container — Traefik labels directly on app container
+# Architecture: CF 橙云 → Traefik (443, websecure) → nginx:80 → app:3001
+# - Two containers: nginx (reverse proxy + sprite headers) + app (wrangler dev)
 # - SSL: Self-signed cert + CF "Full" mode (CF doesn't validate origin cert)
 # - Domains: www.aion2kina.com + aion2kina.com (CF Page Rule: aion2kina.com → www redirect)
+# - Sprite headers: nginx adds cross-origin-resource-policy for MapLibre GL JS markers
 
 services:
+  nginx:
+    build:
+      context: ./nginx
+    restart: unless-stopped
+    depends_on:
+      - app
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.aion2-kina.rule=Host(`www.aion2kina.com`) || Host(`aion2kina.com`)"
+      - "traefik.http.routers.aion2-kina.entrypoints=websecure"
+      - "traefik.http.routers.aion2-kina.tls=true"
+      - "traefik.http.services.aion2-kina.loadbalancer.server.port=80"
+
   app:
     build:
       context: ./app
@@ -24,12 +38,6 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.aion2-kina.rule=Host(`www.aion2kina.com`) || Host(`aion2kina.com`)"
-      - "traefik.http.routers.aion2-kina.entrypoints=websecure"
-      - "traefik.http.routers.aion2-kina.tls=true"
-      - "traefik.http.services.aion2-kina.loadbalancer.server.port=3001"
 
 volumes:
   wrangler-state:
