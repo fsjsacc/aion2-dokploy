@@ -192,7 +192,7 @@ var INTERACTIVE_MARKER_LAYERS = [
 	MARKER_LABEL_LAYER,
 	MARKER_LAYER
 ];
-var FALLBACK_SPRITE_URL = "/_sprites/aion2";
+var FALLBACK_SPRITE_URL = "/sprites/aion2";
 var MAX_MERCATOR_LATITUDE = 85.0511287798066;
 var MAX_ZOOM_OVERSCALE = .5;
 var MARKER_ICON_SCALE = 1.5;
@@ -423,7 +423,7 @@ function hasWebGLSupport() {
 	}
 }
 function mapSpriteUrl(mapInfo) {
-	return `/_sprites/maps/${mapInfo.slug}`;
+	return `/sprites/maps/${mapInfo.slug}`;
 }
 async function verifySpriteAtlas(spriteUrl, signal) {
 	const resolutionSuffix = window.devicePixelRatio > 1 ? "@2x" : "";
@@ -2048,6 +2048,15 @@ function readStoredStringSet(key) {
 		return null;
 	}
 }
+/**
+* Marker filters treat an empty stored set as "no valid preference". Persisting
+* an empty filter list would otherwise hide every marker with no way to recover,
+* so it must never win over the map's default filter selection.
+*/
+function readStoredFilterSubtypes(key) {
+	const parsed = readStoredStringSet(key);
+	return parsed && parsed.size > 0 ? parsed : null;
+}
 function writeStoredStringSet(key, value) {
 	try {
 		window.localStorage.setItem(key, JSON.stringify([...value]));
@@ -2630,10 +2639,10 @@ function InteractiveMap({ initialServerLocale = DEFAULT_LOCALE, initialMapName =
 	(0, import_react.useEffect)(() => {
 		if (!selectedMap) return;
 		const allowed = new Set(allSubtypeNamesForMap);
-		const stored = readStoredStringSet(`${FILTER_STORAGE_PREFIX}:${selectedMap.name}`);
+		const stored = readStoredFilterSubtypes(`${FILTER_STORAGE_PREFIX}:${selectedMap.name}`);
 		let next = activeUrlSubtype ? new Set([activeUrlSubtype]) : stored ? new Set([...stored].filter((subtypeName) => allowed.has(subtypeName))) : new Set(categoriesForMap.filter((category) => category.name === "location").flatMap((category) => category.subtypes.map((subtype) => subtype.name)));
 		if (!activeUrlSubtype && stored === null && selectedMap.type === "abyss" && allowed.has("monolithMaterial")) next.add("monolithMaterial");
-		if (!activeUrlSubtype && stored === null && next.size === 0 && allSubtypeNamesForMap.length > 0) next = new Set(categoriesForMap[0]?.subtypes.map((subtype) => subtype.name) ?? []);
+		if (!activeUrlSubtype && next.size === 0 && allSubtypeNamesForMap.length > 0) next = new Set(categoriesForMap[0]?.subtypes.map((subtype) => subtype.name) ?? []);
 		const pendingRouteIds = pendingSharedRouteIdsRef.current;
 		const hasPendingSharedState = pendingSharedPointIdRef.current !== null || pendingRouteIds !== null;
 		const frame = requestAnimationFrame(() => {
@@ -2651,6 +2660,7 @@ function InteractiveMap({ initialServerLocale = DEFAULT_LOCALE, initialMapName =
 	]);
 	(0, import_react.useEffect)(() => {
 		if (!selectedMap || filterMapName !== selectedMap.name || activeUrlSubtype) return;
+		if (selectedSubtypes.size === 0) return;
 		writeStoredStringSet(`${FILTER_STORAGE_PREFIX}:${selectedMap.name}`, selectedSubtypes);
 	}, [
 		activeUrlSubtype,

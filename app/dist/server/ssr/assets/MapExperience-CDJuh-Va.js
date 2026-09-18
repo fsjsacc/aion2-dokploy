@@ -7,7 +7,7 @@ var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 //#region app/map-app/MapExperience.tsx
 var import_jsx_runtime = require_jsx_runtime();
 var InteractiveMap = (0, import_react.lazy)(async () => {
-	return { default: (await import("./InteractiveMap-CZ6U5v0j.js")).InteractiveMap };
+	return { default: (await import("./InteractiveMap-Bm-BqnfM.js")).InteractiveMap };
 });
 var activationCopy = {
 	"zh-Hant": {
