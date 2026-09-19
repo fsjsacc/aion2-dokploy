@@ -1,0 +1,45 @@
+# AION2-KINA Test Environment
+# 用于部署前验证，域名: test.aion2kina.com
+# 流程: 部署测试 → 验证通过 → 部署生产 → 停止测试
+
+services:
+  nginx-test:
+    build:
+      context: ./nginx
+    container_name: aion2-kina-nginx-test
+    restart: unless-stopped
+    depends_on:
+      - app-test
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.aion2-kina-test.rule=Host(`test.aion2kina.com`)"
+      - "traefik.http.routers.aion2-kina-test.entrypoints=websecure"
+      - "traefik.http.routers.aion2-kina-test.tls=true"
+      - "traefik.http.services.aion2-kina-test.loadbalancer.server.port=80"
+
+  app-test:
+    build:
+      context: ./app
+    container_name: aion2-kina-app-test
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      ASSETS: /app/dist/client
+      NODE_ENV: test
+    volumes:
+      - wrangler-state-test:/app/dist/server/.wrangler/state/v3
+      - app-data-test:/app/data
+    mem_limit: 3g
+    memswap_limit: 4g
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+volumes:
+  wrangler-state-test:
+    driver: local
+  app-data-test:
+    driver: local

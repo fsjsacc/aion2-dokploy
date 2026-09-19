@@ -11765,7 +11765,7 @@ var client_references_default = {
 		} };
 	},
 	"b09b5ce28012": async () => {
-		const m = await import("./assets/MapExperience-CDJuh-Va.js");
+		const m = await import("./assets/MapExperience-Za1t0X0A.js");
 		return { get "MapExperience"() {
 			return m["MapExperience"];
 		} };
