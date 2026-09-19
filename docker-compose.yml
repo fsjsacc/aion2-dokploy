@@ -29,8 +29,8 @@ services:
       # not from wrangler.json location. "../client" → "/client" (404). Override with absolute path.
       ASSETS: /app/dist/client
     volumes:
-      - wrangler-state:/app/dist/server/.wrangler/state/v3
-      - app-data:/app/data
+      - wrangler-state-v2:/app/dist/server/.wrangler/state/v3
+      - app-data-v2:/app/data
     mem_limit: 3g
     memswap_limit: 4g
     healthcheck:
@@ -40,7 +40,7 @@ services:
       retries: 3
 
 volumes:
-  wrangler-state:
+  wrangler-state-v2:
     driver: local
-  app-data:
+  app-data-v2:
     driver: local

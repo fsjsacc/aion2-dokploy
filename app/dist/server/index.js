@@ -1,4 +1,4 @@
-globalThis.__VINEXT_LAZY_CHUNKS__ = ["assets/AnalyticsLink-BHmMNYMd.js","assets/ContentDetail.module-BY-NsENr.js","assets/FeedbackReportDialog-A8cJOmWK.js","assets/Icon-qQFp1qJC.js","assets/SiteThemeContext-DipwXgG4.js","assets/analytics-CZoFoCGX.js","assets/checklist-activities-yMgubnYD.js","assets/checklist-store-Rd2v7OSi.js","assets/chevron-down-BHbtqjZL.js","assets/chevron-left-DZHz659I.js","assets/chevron-right-sgnk1bbf.js","assets/circle-check-odA_2sqi.js","assets/createLucideIcon-CMFDOTkM.js","assets/earth-OPJLV7VC.js","assets/external-link-BauUgNq1.js","assets/i18n-CoFUaaYv.js","assets/link-2-vurHjNPY.js","assets/loader-circle-V2K0OmwX.js","assets/navigation-1E82WH8G.js","assets/package-search-CQIsQBaB.js","assets/refresh-cw-BA1voVGC.js","assets/rotate-ccw-Bg4-J3UE.js","assets/server-DxdKEQCK.js","assets/share-2-DUAsq8b8.js","assets/shield-check-Ba2ekw6a.js","assets/site-config-CNqXL_xA.js","assets/sliders-horizontal-Dw6vuFId.js","assets/trash-2-z_gWhoWu.js","assets/triangle-alert-CppHVKka.js","assets/x-CwK0Lzgg.js","assets/GlobalStyles-Bek6_vxn.js","assets/AnalyticsConsentManager-D19iXsyO.js","assets/DeferredAnalyticsConsentManager-BwsQYTUQ.js","assets/CopyCodeButton-DNezh99H.js","assets/ContentFaqList-Dr2rM5lc.js","assets/ContentPrimaryAction-6MoNpNFf.js","assets/ContentSectionLinks-Cw1aDGiv.js","assets/ItemCatalog-D9rdo6QJ.js","assets/OfficialItemDetail-CqjRFfsR.js","assets/GlobalLaunchCountdown-CYsny17x.js","assets/HomeChecklistCard-Cp_riERj.js","assets/HomeInteractiveShell-BV9bOehl.js","assets/HomeThemeSwitcher-CyLxDdZ2.js","assets/HomeTrackedLink-DCMTGE9G.js","assets/NotFoundRedirect-yFRWLFeA.js","assets/SiteShell-hVfN9QUn.js","assets/ClassFinder-kmISUuR_.js","assets/CraftingDirectory-DwZ4jECj.js","assets/CraftingRecipeCalculator-CCctwxuO.js","assets/DailyChecklist-6Yj46Yxz.js","assets/EventTimer-CAXDq--l.js","assets/MaterialCalculator-DkuWXWmD.js","assets/ToolDirectory-BT3NIbwe.js","assets/ProvenancePanel-Ck_Th0md.js","assets/AdminDashboard-D6Job0eO.js","assets/AdminEmailLogin-Dhha1JaR.js","assets/InteractiveMap-0vGyPO4y.js","assets/MapExperience-B66VGeTn.js","assets/maplibre-gl-D8Bhx75W.js","assets/layout-segment-context-EiCk9eYg.js","assets/link-DeIY42Mx.js","assets/router-DsP72Lmx.js"];
+globalThis.__VINEXT_LAZY_CHUNKS__ = ["assets/AnalyticsLink-BHmMNYMd.js","assets/ContentDetail.module-BY-NsENr.js","assets/FeedbackReportDialog-A8cJOmWK.js","assets/Icon-qQFp1qJC.js","assets/SiteThemeContext-DipwXgG4.js","assets/analytics-CZoFoCGX.js","assets/checklist-activities-yMgubnYD.js","assets/checklist-store-Rd2v7OSi.js","assets/chevron-down-BHbtqjZL.js","assets/chevron-left-DZHz659I.js","assets/chevron-right-sgnk1bbf.js","assets/circle-check-odA_2sqi.js","assets/createLucideIcon-CMFDOTkM.js","assets/earth-OPJLV7VC.js","assets/external-link-BauUgNq1.js","assets/i18n-CoFUaaYv.js","assets/link-2-vurHjNPY.js","assets/loader-circle-V2K0OmwX.js","assets/navigation-1E82WH8G.js","assets/package-search-CQIsQBaB.js","assets/refresh-cw-BA1voVGC.js","assets/rotate-ccw-Bg4-J3UE.js","assets/server-DxdKEQCK.js","assets/share-2-DUAsq8b8.js","assets/shield-check-Ba2ekw6a.js","assets/site-config-CNqXL_xA.js","assets/sliders-horizontal-Dw6vuFId.js","assets/trash-2-z_gWhoWu.js","assets/triangle-alert-CppHVKka.js","assets/x-CwK0Lzgg.js","assets/GlobalStyles-Bek6_vxn.js","assets/AnalyticsConsentManager-D19iXsyO.js","assets/DeferredAnalyticsConsentManager-kvdHPGh3.js","assets/CopyCodeButton-DNezh99H.js","assets/ContentFaqList-Dr2rM5lc.js","assets/ContentPrimaryAction-6MoNpNFf.js","assets/ContentSectionLinks-Cw1aDGiv.js","assets/ItemCatalog-D9rdo6QJ.js","assets/OfficialItemDetail-CqjRFfsR.js","assets/GlobalLaunchCountdown-CYsny17x.js","assets/HomeChecklistCard-Cp_riERj.js","assets/HomeInteractiveShell-ZUfJhYa_.js","assets/HomeThemeSwitcher-CyLxDdZ2.js","assets/HomeTrackedLink-DCMTGE9G.js","assets/NotFoundRedirect-yFRWLFeA.js","assets/SiteShell-DmG6ghCk.js","assets/ClassFinder-kmISUuR_.js","assets/CraftingDirectory-DwZ4jECj.js","assets/CraftingRecipeCalculator-CCctwxuO.js","assets/DailyChecklist-6Yj46Yxz.js","assets/EventTimer-CAXDq--l.js","assets/MaterialCalculator-DkuWXWmD.js","assets/ToolDirectory-BT3NIbwe.js","assets/ProvenancePanel-Ck_Th0md.js","assets/AdminDashboard-DNeXaiqN.js","assets/AdminEmailLogin-B5fjefnd.js","assets/InteractiveMap-CvtwPCGP.js","assets/MapExperience-_-mrnULQ.js","assets/maplibre-gl-BaBEctMY.js","assets/layout-segment-context-BCJkrrqF.js","assets/link-B_8GL2Ku.js","assets/router-DzNfEFsK.js"];
 import * as __viteRscAsyncHooks from "node:async_hooks";
 import { AsyncLocalStorage as AsyncLocalStorage$1 } from "node:async_hooks";
 import assetsManifest from "./__vite_rsc_assets_manifest.js";
@@ -5886,7 +5886,7 @@ function getAndClearPendingCookies() {
 var DRAFT_MODE_COOKIE = "__prerender_bypass";
 (/* @__PURE__ */ new Date(0)).toUTCString();
 function getDraftSecret() {
-	return "78a59cfd-cf2f-4cc7-91e6-5b1d5bc72cda";
+	return "3fab189d-a1e5-4334-af37-5242189d4b6d";
 }
 /**
 * Get any Set-Cookie header generated by draftMode().enable()/disable().
@@ -7799,7 +7799,7 @@ var NextURL = class NextURL {
 	* Matches the Next.js API: `request.nextUrl.buildId`.
 	*/
 	get buildId() {
-		return "557c8766-1cbb-4045-a002-881d9d4efe3c";
+		return "4317133e-36fe-4df0-ba72-0c380e518e46";
 	}
 };
 var RequestCookies = class {
@@ -12921,7 +12921,7 @@ function buildCacheKey(prefix, pathname, suffix) {
 * The suffix mirrors Next.js's separate on-disk app artifacts while keeping the
 * Cloudflare KV key under its 512-byte limit for long pathnames.
 */
-function appIsrCacheKey(pathname, suffix, buildId = "557c8766-1cbb-4045-a002-881d9d4efe3c") {
+function appIsrCacheKey(pathname, suffix, buildId = "4317133e-36fe-4df0-ba72-0c380e518e46") {
 	return buildCacheKey(buildId ? `app:${buildId}` : "app", pathname, suffix);
 }
 function appIsrHtmlKey(pathname) {
@@ -13250,7 +13250,7 @@ function createAppPageArtifactCompatibility(element, routePattern) {
 			routePattern,
 			rootBoundaryId
 		}),
-		deploymentVersion: "557c8766-1cbb-4045-a002-881d9d4efe3c",
+		deploymentVersion: "4317133e-36fe-4df0-ba72-0c380e518e46",
 		rootBoundaryId
 	});
 }
