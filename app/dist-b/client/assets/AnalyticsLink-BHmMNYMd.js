@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-S-ySWqyJ.js";import{r as t}from"./framework-B8WyT5R3.js";import{n}from"./analytics-CZoFoCGX.js";var r=e({AnalyticsLink:()=>a}),i=t();function a({eventName:e,payload:t={},onClick:r,...a}){return(0,i.jsx)(`a`,{...a,onClick:i=>{n(e,t),r?.(i)}})}export{r as n,a as t};

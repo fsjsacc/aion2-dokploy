@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 3,
+  "versionKey": "sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf",
+  "sourceBuild": "89ce3984d569ff1a03ee6311d064231211212981",
+  "assetFileCount": 2660,
+  "assetDigest": "sha256-e9673bffcc8242f7f6364f6f55cdebba9254d2e68cc41eb79b59d8d3cff10542",
+  "files": [
+    {
+      "path": "data/aion2-map-data.json",
+      "visibility": "source-only",
+      "bytes": 1956897,
+      "sha256": "64b5b9947a7ed74f551a1c1fb3048059053fce203fca787e3928e56a2790f7fc"
+    },
+    {
+      "path": "data/aion2-map-i18n.json",
+      "visibility": "source-only",
+      "bytes": 1328217,
+      "sha256": "6d71bd74ac8e582894b9cd0cafc925ac9112a024543a64fd2b94082e031ddbfa"
+    },
+    {
+      "path": "policy/map-seo-publication.json",
+      "visibility": "source-only",
+      "bytes": 7854,
+      "sha256": "2f106703f7a22855c5f67d02f745fcdc7004913c58b4637cdb0d5ef505e03a2d"
+    }
+  ],
+  "publicationPolicy": {
+    "path": "policy/map-seo-publication.json",
+    "visibility": "source-only",
+    "bytes": 7854,
+    "sha256": "2f106703f7a22855c5f67d02f745fcdc7004913c58b4637cdb0d5ef505e03a2d"
+  },
+  "locales": [
+    "zh-Hant",
+    "en",
+    "ko"
+  ],
+  "stats": {
+    "mapCount": 10,
+    "poiCount": 4508,
+    "uniquePoiCount": 4508,
+    "regionCount": 53,
+    "localizedMapCountByLocale": {
+      "zh-Hant": 10,
+      "en": 10,
+      "ko": 10
+    },
+    "localizedPoiCountByLocale": {
+      "zh-Hant": 4508,
+      "en": 4508,
+      "ko": 4508
+    }
+  },
+  "maps": [
+    {
+      "key": "World_L_A",
+      "slug": "verteron",
+      "markerCount": 1830,
+      "regionCount": 27,
+      "tileMinZoom": 0,
+      "tileMaxZoom": 4
+    },
+    {
+      "key": "World_D_A",
+      "slug": "altgard",
+      "markerCount": 1469,
+      "regionCount": 26,
+      "tileMinZoom": 0,
+      "tileMaxZoom": 4
+    },
+    {
+      "key": "World_L_B",
+      "slug": "eltnen",
+      "markerCount": 725,
+      "regionCount": 0,
+      "tileMinZoom": 0,
+      "tileMaxZoom": 4
+    },
+    {
+      "key": "World_D_B",
+      "slug": "morheim",
+      "markerCount": 0,
+      "regionCount": 0,
+      "tileMinZoom": 0,
+      "tileMaxZoom": 4
+    },
+    {
+      "key": "World_L_Starter",
+      "slug": "poeta",
+      "markerCount": 0,
+      "regionCount": 0,
+      "tileMinZoom": 0,
+      "tileMaxZoom": 3
+    },
+    {
+      "key": "World_D_Starter",
+      "slug": "ishalgen",
+      "markerCount": 0,
+      "regionCount": 0,
+      "tileMinZoom": 0,
+      "tileMaxZoom": 4
+    },
+    {
+      "key": "Abyss_Reshanta_A",
+      "slug": "chaotic-lower-reshanta",
+      "markerCount": 346,
+      "regionCount": 0,
+      "tileMinZoom": 0,
+      "tileMaxZoom": 3
+    },
+    {
+      "key": "Abyss_Reshanta_B",
+      "slug": "chaotic-middle-reshanta",
+      "markerCount": 135,
+      "regionCount": 0,
+      "tileMinZoom": 0,
+      "tileMaxZoom": 2
+    },
+    {
+      "key": "Abyss_Reshanta_C",
+      "slug": "chaotic-upper-reshanta",
+      "markerCount": 3,
+      "regionCount": 0,
+      "tileMinZoom": 0,
+      "tileMaxZoom": 2
+    },
+    {
+      "key": "ReforgedAbyss",
+      "slug": "abyss-rift-zone",
+      "markerCount": 0,
+      "regionCount": 0,
+      "tileMinZoom": 0,
+      "tileMaxZoom": 5
+    }
+  ],
+  "runtimeBundles": {
+    "schemaVersion": 4,
+    "basePath": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf",
+    "entries": {
+      "zh-Hant": {
+        "World_L_A": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/zh-Hant/verteron.json",
+          "bytes": 1154170,
+          "sha256": "37c5ba6d5b4611d1179e34f2899a73d52f48622221d58d81a0b51ed2c67e4fb0"
+        },
+        "World_D_A": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/zh-Hant/altgard.json",
+          "bytes": 950289,
+          "sha256": "30a861623b6930800fb56fc8fc12cf28949f6f988067f89778636f296efecd45"
+        },
+        "World_L_B": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/zh-Hant/eltnen.json",
+          "bytes": 437467,
+          "sha256": "9015ddf0c9b3b8584a6c6179bd32a466772a6788a531b039a474319235f9f146"
+        },
+        "World_D_B": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/zh-Hant/morheim.json",
+          "bytes": 20950,
+          "sha256": "43e6e2a22b1a62ade9fa39a7489d3339ae2e2ee4184a04979938f59ca1858d51"
+        },
+        "World_L_Starter": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/zh-Hant/poeta.json",
+          "bytes": 20954,
+          "sha256": "0db09d61a52159d2657457eac13243dbdb3699b3755bd2eef3e4df7f6197f06d"
+        },
+        "World_D_Starter": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/zh-Hant/ishalgen.json",
+          "bytes": 20957,
+          "sha256": "788f690a3b2aa1ebcd320379edc8e886926ecfbdf62ba504e4939ea412ec2584"
+        },
+        "Abyss_Reshanta_A": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/zh-Hant/chaotic-lower-reshanta.json",
+          "bytes": 239911,
+          "sha256": "6bbad4593b2db2461693085479d9e534c3450b10d41423dd917012276093bbaf"
+        },
+        "Abyss_Reshanta_B": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/zh-Hant/chaotic-middle-reshanta.json",
+          "bytes": 108972,
+          "sha256": "906ac547a6fe9a4303ec422eb1dfc5b3b8340464c874f3ccfd55eb43c24ea437"
+        },
+        "Abyss_Reshanta_C": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/zh-Hant/chaotic-upper-reshanta.json",
+          "bytes": 22831,
+          "sha256": "e11a6b1759c4e462e31eb674ef37c38f1f2e69f66a38bef173afa6156be38b25"
+        },
+        "ReforgedAbyss": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/zh-Hant/abyss-rift-zone.json",
+          "bytes": 20962,
+          "sha256": "cb3736d42ebbd4542b5b771724dc3afd4aba49ab35a82bd830f5ea43cca36103"
+        }
+      },
+      "en": {
+        "World_L_A": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/en/verteron.json",
+          "bytes": 1154737,
+          "sha256": "b33197efbff8991f46b4d804fb85009efcceeb15c4b06a70a1f586c390e70edb"
+        },
+        "World_D_A": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/en/altgard.json",
+          "bytes": 949426,
+          "sha256": "675ceca19e330fa514db851b911a20742b8b3f224e81bf89aee9a42b9000f516"
+        },
+        "World_L_B": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/en/eltnen.json",
+          "bytes": 437657,
+          "sha256": "c30d48a6a46a8ebb51efe3bac7d73e1f821e6a3ee6946b7cac8fe5282dda3a23"
+        },
+        "World_D_B": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/en/morheim.json",
+          "bytes": 20818,
+          "sha256": "3d49e1c0517fd40d27b2d7aff6b926e6ed746d5ee5d07ff8e74d2ce016d20b59"
+        },
+        "World_L_Starter": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/en/poeta.json",
+          "bytes": 20822,
+          "sha256": "eaf59cc21d40d5cbf53c554b3886068a94f54481e27b339314cc115dce0d63a3"
+        },
+        "World_D_Starter": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/en/ishalgen.json",
+          "bytes": 20825,
+          "sha256": "bfbba856a7a400557789de879c596eaaf398947282adeb24fe49178164297064"
+        },
+        "Abyss_Reshanta_A": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/en/chaotic-lower-reshanta.json",
+          "bytes": 239681,
+          "sha256": "05463074931ccfc89ec2bc3f98efafb88720fb96e68b72f3cca5b2fc3ac00437"
+        },
+        "Abyss_Reshanta_B": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/en/chaotic-middle-reshanta.json",
+          "bytes": 109270,
+          "sha256": "de129e7d8426311dba2dc1adde8fc18a83a76e37cbfe3e1c217d553b935bf432"
+        },
+        "Abyss_Reshanta_C": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/en/chaotic-upper-reshanta.json",
+          "bytes": 22715,
+          "sha256": "666d6830390b6aa6e46fa4055b7989aa5d21727b835e3ccc2b09c640e599594a"
+        },
+        "ReforgedAbyss": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/en/abyss-rift-zone.json",
+          "bytes": 20830,
+          "sha256": "3bda525202b7e02f5572bd4f3f310ea6400348903dd05f3ec8c11d7a4bf1b180"
+        }
+      },
+      "ko": {
+        "World_L_A": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/ko/verteron.json",
+          "bytes": 1164753,
+          "sha256": "10e21d840694621d2887c91512c0665c01c2363e46601dabd71e8c24849ef12b"
+        },
+        "World_D_A": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/ko/altgard.json",
+          "bytes": 957943,
+          "sha256": "b5563045dad00bf4db861afbaa87cdff0f39c7879d945f2274171878fad13ca7"
+        },
+        "World_L_B": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/ko/eltnen.json",
+          "bytes": 443163,
+          "sha256": "47a261c6ba39ac3243b91460af4dfb1ea1cb5a0c55ba70c0559703abfd5bffef"
+        },
+        "World_D_B": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/ko/morheim.json",
+          "bytes": 21010,
+          "sha256": "110629099ab376912368b9471df0c0850a1aac98c0950b60e52bfa1060177c98"
+        },
+        "World_L_Starter": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/ko/poeta.json",
+          "bytes": 21014,
+          "sha256": "e1a923674bab2950895bad5047677d3953cd0a41cee83bcc12c2617854a3f16c"
+        },
+        "World_D_Starter": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/ko/ishalgen.json",
+          "bytes": 21017,
+          "sha256": "bb823ceb0738112ee49b9a3976e5ee58c83acfd7b703ed90e037caeeac5e6cb5"
+        },
+        "Abyss_Reshanta_A": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/ko/chaotic-lower-reshanta.json",
+          "bytes": 241301,
+          "sha256": "b6e90da73e1a6da54283e9992f1152953eb3b43dcc983c087e114d3a499223be"
+        },
+        "Abyss_Reshanta_B": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/ko/chaotic-middle-reshanta.json",
+          "bytes": 110032,
+          "sha256": "4bf44eb901fae963f404b240a6cceeda1832b771a1209b4f71cf4f8108b94961"
+        },
+        "Abyss_Reshanta_C": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/ko/chaotic-upper-reshanta.json",
+          "bytes": 22935,
+          "sha256": "35941cd65fae65277a461b16da6b33250394f055a978b74ef2a6c0a7f09c1c25"
+        },
+        "ReforgedAbyss": {
+          "path": "bundles/sha256-6dc89321e8cf5f287ae91ef15ba912b04fc087a5e3d1ee9234febf52800df2bf/ko/abyss-rift-zone.json",
+          "bytes": 21022,
+          "sha256": "c1bd09c452a07e8887f7b61a24b087346cd5ca5c798e6ccb7bb35a8ebcea999b"
+        }
+      }
+    }
+  },
+  "validation": {
+    "minimums": {
+      "mapCount": 10,
+      "poiCount": 4508,
+      "regionCount": 53
+    },
+    "maximumDropRatio": 0.1,
+    "assets": {
+      "assetFileCount": 2660,
+      "assetDigest": "sha256-e9673bffcc8242f7f6364f6f55cdebba9254d2e68cc41eb79b59d8d3cff10542",
+      "iconCount": 516,
+      "categoryIconCount": 36,
+      "markerIconCount": 515,
+      "markerOnlyIconCount": 480,
+      "tileSetCount": 10,
+      "tileAnchorCount": 45,
+      "tileFileCount": 2144
+    }
+  }
+}

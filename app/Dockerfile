@@ -6,8 +6,10 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN echo "REBUILD_20260918_0001" && npm ci --no-audit --no-fund 2>&1 | tail -5
 
-# Copy pre-built dist/ (synced from source repo before deploy)
-COPY dist/ ./dist/
+# 槽位由 SLOT_DIST 决定：一次部署只改非 live 槽的 dist，
+# 另一槽镜像 id 不变 ⇒ compose 不会重建它（09-21 在 kina-test 实测）。
+ARG SLOT_DIST=dist-a
+COPY ${SLOT_DIST}/ ./dist/
 
 # Copy map assets (tiles, sprites) — these are pruned from dist/client/ by postbuild
 # but needed for the ASSETS binding to serve them in wrangler dev --local mode
@@ -40,7 +42,7 @@ RUN node -e "\
 
 EXPOSE 3001
 
-HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 --start-period=300s \
   CMD node -e "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})" || exit 1
 
 ENTRYPOINT ["/app/entrypoint.sh"]

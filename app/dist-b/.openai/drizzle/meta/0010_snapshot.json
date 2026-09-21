@@ -1,0 +1,828 @@
+{
+  "id": "79463cd0-a2bb-41ea-a1d7-e1bb9471e6fd",
+  "prevId": "25b32cb3-b221-40b1-906c-09c44a46da52",
+  "version": "6",
+  "dialect": "sqlite",
+  "tables": {
+    "analytics_daily": {
+      "name": "analytics_daily",
+      "columns": {
+        "day": {
+          "name": "day",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "event_name": {
+          "name": "event_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "locale": {
+          "name": "locale",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "service": {
+          "name": "service",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "surface": {
+          "name": "surface",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "target_kind": {
+          "name": "target_kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "target_key": {
+          "name": "target_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "count": {
+          "name": "count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "analytics_daily_event_day_idx": {
+          "name": "analytics_daily_event_day_idx",
+          "columns": [
+            "event_name",
+            "day"
+          ],
+          "isUnique": false
+        },
+        "analytics_daily_surface_day_idx": {
+          "name": "analytics_daily_surface_day_idx",
+          "columns": [
+            "surface",
+            "day"
+          ],
+          "isUnique": false
+        },
+        "analytics_daily_target_day_idx": {
+          "name": "analytics_daily_target_day_idx",
+          "columns": [
+            "target_kind",
+            "target_key",
+            "day"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "analytics_daily_dimensions_pk": {
+          "columns": [
+            "day",
+            "event_name",
+            "locale",
+            "service",
+            "surface",
+            "target_kind",
+            "target_key"
+          ],
+          "name": "analytics_daily_dimensions_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "analytics_daily_day_check": {
+          "name": "analytics_daily_day_check",
+          "value": "\n        length(\"analytics_daily\".\"day\") = 10\n        and \"analytics_daily\".\"day\" glob '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'\n      "
+        },
+        "analytics_daily_event_name_check": {
+          "name": "analytics_daily_event_name_check",
+          "value": "\n        length(\"analytics_daily\".\"event_name\") between 1 and 64\n        and \"analytics_daily\".\"event_name\" not glob '*[^a-z0-9_]*'\n      "
+        },
+        "analytics_daily_locale_check": {
+          "name": "analytics_daily_locale_check",
+          "value": "\"analytics_daily\".\"locale\" in ('zh-hans', 'en', 'fr', 'de', 'es', 'ja', 'pt-br', 'ru', 'ko', 'zh-hant', 'unknown')"
+        },
+        "analytics_daily_service_check": {
+          "name": "analytics_daily_service_check",
+          "value": "\"analytics_daily\".\"service\" in ('kr-tw-live', 'global', 'unknown', 'other')"
+        },
+        "analytics_daily_surface_check": {
+          "name": "analytics_daily_surface_check",
+          "value": "\"analytics_daily\".\"surface\" in ('unknown', 'home', 'home-hero', 'home-core-entry', 'home-directory', 'faction-gate', 'content-hub', 'content-detail', 'map-seo', 'interactive-map', 'daily-checklist', 'class-finder', 'material-calculator', 'correction-report', 'not-found')"
+        },
+        "analytics_daily_target_kind_check": {
+          "name": "analytics_daily_target_kind_check",
+          "value": "\"analytics_daily\".\"target_kind\" in ('none', 'content', 'item', 'map', 'tool')"
+        },
+        "analytics_daily_target_key_check": {
+          "name": "analytics_daily_target_key_check",
+          "value": "\n        length(\"analytics_daily\".\"target_key\") between 1 and 160\n        and \"analytics_daily\".\"target_key\" not glob '*[^a-z0-9._:/-]*'\n        and (\n          (\"analytics_daily\".\"target_kind\" = 'none' and \"analytics_daily\".\"target_key\" = 'none')\n          or (\"analytics_daily\".\"target_kind\" <> 'none' and \"analytics_daily\".\"target_key\" <> 'none')\n        )\n      "
+        },
+        "analytics_daily_counter_check": {
+          "name": "analytics_daily_counter_check",
+          "value": "\"analytics_daily\".\"count\" >= 1 and \"analytics_daily\".\"updated_at\" >= 1"
+        }
+      }
+    },
+    "analytics_ingest_windows": {
+      "name": "analytics_ingest_windows",
+      "columns": {
+        "bucket_hash": {
+          "name": "bucket_hash",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "window_start": {
+          "name": "window_start",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "request_count": {
+          "name": "request_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "analytics_ingest_windows_expires_idx": {
+          "name": "analytics_ingest_windows_expires_idx",
+          "columns": [
+            "expires_at"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "analytics_ingest_windows_hash_check": {
+          "name": "analytics_ingest_windows_hash_check",
+          "value": "\n        length(\"analytics_ingest_windows\".\"bucket_hash\") = 64\n        and \"analytics_ingest_windows\".\"bucket_hash\" not glob '*[^0-9a-f]*'\n      "
+        },
+        "analytics_ingest_windows_counter_check": {
+          "name": "analytics_ingest_windows_counter_check",
+          "value": "\n        \"analytics_ingest_windows\".\"window_start\" >= 1\n        and \"analytics_ingest_windows\".\"request_count\" >= 1\n        and \"analytics_ingest_windows\".\"expires_at\" > \"analytics_ingest_windows\".\"window_start\"\n        and \"analytics_ingest_windows\".\"updated_at\" >= \"analytics_ingest_windows\".\"window_start\"\n      "
+        }
+      }
+    },
+    "analytics_journey_events": {
+      "name": "analytics_journey_events",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "consent_version": {
+          "name": "consent_version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "visitor_hash": {
+          "name": "visitor_hash",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "session_hash": {
+          "name": "session_hash",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "network_hash": {
+          "name": "network_hash",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "ip_ciphertext": {
+          "name": "ip_ciphertext",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ip_iv": {
+          "name": "ip_iv",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ip_key_version": {
+          "name": "ip_key_version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "country": {
+          "name": "country",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "device_class": {
+          "name": "device_class",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "browser_family": {
+          "name": "browser_family",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "os_family": {
+          "name": "os_family",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "path": {
+          "name": "path",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "utm_source": {
+          "name": "utm_source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "utm_medium": {
+          "name": "utm_medium",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "utm_campaign": {
+          "name": "utm_campaign",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "event_name": {
+          "name": "event_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "locale": {
+          "name": "locale",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "service": {
+          "name": "service",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "surface": {
+          "name": "surface",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "target_kind": {
+          "name": "target_kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "target_key": {
+          "name": "target_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "occurred_at": {
+          "name": "occurred_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "analytics_journey_events_visitor_time_idx": {
+          "name": "analytics_journey_events_visitor_time_idx",
+          "columns": [
+            "visitor_hash",
+            "occurred_at"
+          ],
+          "isUnique": false
+        },
+        "analytics_journey_events_session_time_idx": {
+          "name": "analytics_journey_events_session_time_idx",
+          "columns": [
+            "session_hash",
+            "occurred_at"
+          ],
+          "isUnique": false
+        },
+        "analytics_journey_events_event_time_idx": {
+          "name": "analytics_journey_events_event_time_idx",
+          "columns": [
+            "event_name",
+            "occurred_at"
+          ],
+          "isUnique": false
+        },
+        "analytics_journey_events_path_time_idx": {
+          "name": "analytics_journey_events_path_time_idx",
+          "columns": [
+            "path",
+            "occurred_at"
+          ],
+          "isUnique": false
+        },
+        "analytics_journey_events_expires_idx": {
+          "name": "analytics_journey_events_expires_idx",
+          "columns": [
+            "expires_at"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "analytics_journey_events_identity_check": {
+          "name": "analytics_journey_events_identity_check",
+          "value": "\n        length(\"analytics_journey_events\".\"id\") between 1 and 64\n        and \"analytics_journey_events\".\"consent_version\" in (1, 2)\n        and length(\"analytics_journey_events\".\"visitor_hash\") = 64\n        and \"analytics_journey_events\".\"visitor_hash\" not glob '*[^0-9a-f]*'\n        and length(\"analytics_journey_events\".\"session_hash\") = 64\n        and \"analytics_journey_events\".\"session_hash\" not glob '*[^0-9a-f]*'\n        and length(\"analytics_journey_events\".\"network_hash\") = 64\n        and \"analytics_journey_events\".\"network_hash\" not glob '*[^0-9a-f]*'\n      "
+        },
+        "analytics_journey_events_encrypted_ip_check": {
+          "name": "analytics_journey_events_encrypted_ip_check",
+          "value": "\n        (\n          \"analytics_journey_events\".\"consent_version\" = 1\n          and \"analytics_journey_events\".\"ip_ciphertext\" is null\n          and \"analytics_journey_events\".\"ip_iv\" is null\n          and \"analytics_journey_events\".\"ip_key_version\" is null\n        ) or (\n          \"analytics_journey_events\".\"consent_version\" = 2\n          and length(\"analytics_journey_events\".\"ip_ciphertext\") between 24 and 84\n          and \"analytics_journey_events\".\"ip_ciphertext\" not glob '*[^A-Za-z0-9_-]*'\n          and length(\"analytics_journey_events\".\"ip_iv\") = 16\n          and \"analytics_journey_events\".\"ip_iv\" not glob '*[^A-Za-z0-9_-]*'\n          and \"analytics_journey_events\".\"ip_key_version\" = 1\n        )\n      "
+        },
+        "analytics_journey_events_country_check": {
+          "name": "analytics_journey_events_country_check",
+          "value": "\n        \"analytics_journey_events\".\"country\" = 'unknown'\n        or (\n          length(\"analytics_journey_events\".\"country\") = 2\n          and \"analytics_journey_events\".\"country\" not glob '*[^A-Z]*'\n        )\n      "
+        },
+        "analytics_journey_events_device_check": {
+          "name": "analytics_journey_events_device_check",
+          "value": "\"analytics_journey_events\".\"device_class\" in ('desktop', 'mobile', 'tablet', 'other', 'unknown')"
+        },
+        "analytics_journey_events_browser_check": {
+          "name": "analytics_journey_events_browser_check",
+          "value": "\"analytics_journey_events\".\"browser_family\" in ('chrome', 'edge', 'firefox', 'safari', 'samsung', 'other', 'unknown')"
+        },
+        "analytics_journey_events_os_check": {
+          "name": "analytics_journey_events_os_check",
+          "value": "\"analytics_journey_events\".\"os_family\" in ('windows', 'macos', 'ios', 'android', 'linux', 'chromeos', 'other', 'unknown')"
+        },
+        "analytics_journey_events_path_check": {
+          "name": "analytics_journey_events_path_check",
+          "value": "\n        length(\"analytics_journey_events\".\"path\") between 1 and 300\n        and substr(\"analytics_journey_events\".\"path\", 1, 1) = '/'\n        and \"analytics_journey_events\".\"path\" not glob '*[?#%\\]*'\n        and \"analytics_journey_events\".\"path\" not glob '*[^/a-z0-9._:-]*'\n      "
+        },
+        "analytics_journey_events_marketing_check": {
+          "name": "analytics_journey_events_marketing_check",
+          "value": "\n        (\"analytics_journey_events\".\"utm_source\" is null or (\n          length(\"analytics_journey_events\".\"utm_source\") between 1 and 80\n          and \"analytics_journey_events\".\"utm_source\" not glob '*[^a-z0-9._-]*'\n        ))\n        and (\"analytics_journey_events\".\"utm_medium\" is null or (\n          length(\"analytics_journey_events\".\"utm_medium\") between 1 and 80\n          and \"analytics_journey_events\".\"utm_medium\" not glob '*[^a-z0-9._-]*'\n        ))\n        and (\"analytics_journey_events\".\"utm_campaign\" is null or (\n          length(\"analytics_journey_events\".\"utm_campaign\") between 1 and 120\n          and \"analytics_journey_events\".\"utm_campaign\" not glob '*[^a-z0-9._-]*'\n        ))\n      "
+        },
+        "analytics_journey_events_event_check": {
+          "name": "analytics_journey_events_event_check",
+          "value": "\n        length(\"analytics_journey_events\".\"event_name\") between 1 and 64\n        and \"analytics_journey_events\".\"event_name\" not glob '*[^a-z0-9_]*'\n      "
+        },
+        "analytics_journey_events_locale_check": {
+          "name": "analytics_journey_events_locale_check",
+          "value": "\"analytics_journey_events\".\"locale\" in ('zh-hans', 'en', 'fr', 'de', 'es', 'ja', 'pt-br', 'ru', 'ko', 'zh-hant', 'unknown')"
+        },
+        "analytics_journey_events_service_check": {
+          "name": "analytics_journey_events_service_check",
+          "value": "\"analytics_journey_events\".\"service\" in ('kr-tw-live', 'global', 'unknown', 'other')"
+        },
+        "analytics_journey_events_surface_check": {
+          "name": "analytics_journey_events_surface_check",
+          "value": "\"analytics_journey_events\".\"surface\" in ('unknown', 'home', 'home-hero', 'home-core-entry', 'home-directory', 'faction-gate', 'content-hub', 'content-detail', 'map-seo', 'interactive-map', 'daily-checklist', 'class-finder', 'material-calculator', 'correction-report', 'not-found')"
+        },
+        "analytics_journey_events_target_check": {
+          "name": "analytics_journey_events_target_check",
+          "value": "\n        \"analytics_journey_events\".\"target_kind\" in ('none', 'content', 'item', 'map', 'tool')\n        and length(\"analytics_journey_events\".\"target_key\") between 1 and 160\n        and \"analytics_journey_events\".\"target_key\" not glob '*[^a-z0-9._:/-]*'\n        and (\n          (\"analytics_journey_events\".\"target_kind\" = 'none' and \"analytics_journey_events\".\"target_key\" = 'none')\n          or (\"analytics_journey_events\".\"target_kind\" <> 'none' and \"analytics_journey_events\".\"target_key\" <> 'none')\n        )\n      "
+        },
+        "analytics_journey_events_expiry_check": {
+          "name": "analytics_journey_events_expiry_check",
+          "value": "\n        \"analytics_journey_events\".\"occurred_at\" >= 1\n        and \"analytics_journey_events\".\"expires_at\" = \"analytics_journey_events\".\"occurred_at\" + 2592000000\n      "
+        }
+      }
+    },
+    "content_reports": {
+      "name": "content_reports",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "target_kind": {
+          "name": "target_kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "target_key": {
+          "name": "target_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "locale": {
+          "name": "locale",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "service": {
+          "name": "service",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "version": {
+          "name": "version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "category": {
+          "name": "category",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "message": {
+          "name": "message",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "evidence_url": {
+          "name": "evidence_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "contact": {
+          "name": "contact",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'new'"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "resolved_at": {
+          "name": "resolved_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "resolution_note": {
+          "name": "resolution_note",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "resolved_by": {
+          "name": "resolved_by",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "requester_hash": {
+          "name": "requester_hash",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "content_reports_requester_window_idx": {
+          "name": "content_reports_requester_window_idx",
+          "columns": [
+            "requester_hash",
+            "created_at"
+          ],
+          "isUnique": false
+        },
+        "content_reports_status_created_idx": {
+          "name": "content_reports_status_created_idx",
+          "columns": [
+            "status",
+            "created_at"
+          ],
+          "isUnique": false
+        },
+        "content_reports_target_created_idx": {
+          "name": "content_reports_target_created_idx",
+          "columns": [
+            "target_kind",
+            "target_key",
+            "created_at"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "content_reports_target_kind_check": {
+          "name": "content_reports_target_kind_check",
+          "value": "\"content_reports\".\"target_kind\" in ('content', 'item', 'map', 'tool')"
+        },
+        "content_reports_locale_check": {
+          "name": "content_reports_locale_check",
+          "value": "\"content_reports\".\"locale\" in ('zh-hans', 'en', 'fr', 'de', 'es', 'ja', 'pt-br', 'ru', 'ko', 'zh-hant')"
+        },
+        "content_reports_service_check": {
+          "name": "content_reports_service_check",
+          "value": "\"content_reports\".\"service\" in ('kr-tw-live', 'global', 'unknown', 'other')"
+        },
+        "content_reports_category_check": {
+          "name": "content_reports_category_check",
+          "value": "\"content_reports\".\"category\" in ('outdated', 'incorrect', 'translation', 'missing', 'broken-link', 'other')"
+        },
+        "content_reports_status_check": {
+          "name": "content_reports_status_check",
+          "value": "\"content_reports\".\"status\" in ('new', 'triaged', 'accepted', 'rejected', 'resolved')"
+        },
+        "content_reports_lengths_check": {
+          "name": "content_reports_lengths_check",
+          "value": "\n        length(\"content_reports\".\"id\") between 1 and 64\n        and length(\"content_reports\".\"target_key\") between 1 and 300\n        and (\"content_reports\".\"version\" is null or length(\"content_reports\".\"version\") between 1 and 80)\n        and length(\"content_reports\".\"message\") between 10 and 2000\n        and (\"content_reports\".\"evidence_url\" is null or length(\"content_reports\".\"evidence_url\") <= 2048)\n        and (\"content_reports\".\"contact\" is null or length(\"content_reports\".\"contact\") <= 254)\n        and (\"content_reports\".\"resolution_note\" is null or length(\"content_reports\".\"resolution_note\") <= 1000)\n        and (\"content_reports\".\"resolved_by\" is null or length(\"content_reports\".\"resolved_by\") <= 254)\n        and length(\"content_reports\".\"requester_hash\") = 64\n      "
+        },
+        "content_reports_resolution_check": {
+          "name": "content_reports_resolution_check",
+          "value": "\"content_reports\".\"resolved_at\" is null or \"content_reports\".\"status\" <> 'new'"
+        }
+      }
+    },
+    "external_link_settings": {
+      "name": "external_link_settings",
+      "columns": {
+        "scope": {
+          "name": "scope",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "scale_percent": {
+          "name": "scale_percent",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 70
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_by": {
+          "name": "updated_by",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "external_link_settings_values_check": {
+          "name": "external_link_settings_values_check",
+          "value": "\n        \"external_link_settings\".\"scope\" = 'footer'\n        and \"external_link_settings\".\"scale_percent\" between 40 and 100\n        and \"external_link_settings\".\"updated_at\" >= 1\n        and length(\"external_link_settings\".\"updated_by\") between 3 and 254\n      "
+        }
+      }
+    },
+    "external_links": {
+      "name": "external_links",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "href": {
+          "name": "href",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "badge_type": {
+          "name": "badge_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'image'"
+        },
+        "image_src": {
+          "name": "image_src",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "alt": {
+          "name": "alt",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "height": {
+          "name": "height",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 54
+        },
+        "active": {
+          "name": "active",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_by": {
+          "name": "created_by",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "external_links_href_unique": {
+          "name": "external_links_href_unique",
+          "columns": [
+            "href"
+          ],
+          "isUnique": true
+        },
+        "external_links_active_created_idx": {
+          "name": "external_links_active_created_idx",
+          "columns": [
+            "active",
+            "created_at"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "external_links_values_check": {
+          "name": "external_links_values_check",
+          "value": "\n        length(\"external_links\".\"id\") = 36\n        and length(\"external_links\".\"href\") between 9 and 2048\n        and substr(\"external_links\".\"href\", 1, 8) = 'https://'\n        and \"external_links\".\"badge_type\" in ('image', 'text')\n        and (\n          (\n            \"external_links\".\"badge_type\" = 'image'\n            and length(\"external_links\".\"image_src\") between 9 and 2048\n            and substr(\"external_links\".\"image_src\", 1, 8) = 'https://'\n          )\n          or (\n            \"external_links\".\"badge_type\" = 'text'\n            and \"external_links\".\"image_src\" is null\n          )\n        )\n        and length(\"external_links\".\"alt\") between 1 and 120\n        and \"external_links\".\"height\" between 20 and 120\n        and \"external_links\".\"active\" in (0, 1)\n        and \"external_links\".\"created_at\" >= 1\n        and length(\"external_links\".\"created_by\") between 3 and 254\n      "
+        }
+      }
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

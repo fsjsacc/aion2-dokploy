@@ -1,17 +1,31 @@
-# AION2-KINA Docker Compose — Dokploy (2.25.206.13)
-# Architecture: CF 橙云 → Traefik (443, websecure) → nginx:80 → app:3001
-# - Two containers: nginx (reverse proxy + sprite headers) + app (wrangler dev)
-# - SSL: Self-signed cert + CF "Full" mode (CF doesn't validate origin cert)
-# - Domains: www.aion2kina.com + aion2kina.com (CF Page Rule: aion2kina.com → www redirect)
-# - Sprite headers: nginx adds cross-origin-resource-policy for MapLibre GL JS markers
+# AION2-KINA Docker Compose — Dokploy 生产 (2.25.206.13)
+# 架构: CF 橙云 → Traefik (443, websecure) → edge(nginx, 唯一 router) → app-a | app-b
+# 目的: 消除部署期抖动。部署只覆盖非 live 槽；切换只改 edge 的 UPSTREAM_HOST 一行。
+#       kina-test 已按同一形状演练通过（09-21：只改 standby 时 live 不重启；翻转中断 397ms/1 请求）。
+#
+# 数据连续性: app-a 沿用**既有卷声明名** wrangler-state-v2 / app-data-v2，
+#   故 Docker 解析到的还是 compose-hack-online-card-jdtjbs_{wrangler-state-v2,app-data-v2}
+#   （2026-09-21 经 docker inspect 实测的当前挂载），生产 D1 数据零迁移。
+#   app-b 用新卷 bg-state-b/bg-data-b，首次启动由 entrypoint 从镜像 init-data 播种。
+#   已知边界：两槽数据独立 ⇒ 回退会连带回退后台数据（external_links / content override）。
+#
+# 注意: 不要写 container_name —— Dokploy 用 `docker compose -p <project>` 管理，
+#   容器名固定 <project>-<service>-1，服务名在同 compose 网络内天然可解析。
+#   canary router 的名字与域名必须和 kina-test 不同（Traefik docker provider 全机共享，重名会串）。
 
 services:
-  nginx:
+  edge:
     build:
-      context: ./nginx
+      context: ./edge
     restart: unless-stopped
     depends_on:
-      - app
+      - app-a
+      - app-b
+    environment:
+      # 只允许 UPSTREAM_* 做 envsubst，保住 nginx 自带的 $host/$remote_addr/$http_upgrade/$scheme
+      NGINX_ENVSUBST_FILTER: "UPSTREAM_"
+      # 切换点：改这一行然后只部署 edge（app 槽不重启）
+      UPSTREAM_HOST: app-a
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.aion2-kina.rule=Host(`www.aion2kina.com`) || Host(`aion2kina.com`)"
@@ -19,28 +33,82 @@ services:
       - "traefik.http.routers.aion2-kina.tls=true"
       - "traefik.http.services.aion2-kina.loadbalancer.server.port=80"
 
-  app:
+  app-a:
     build:
       context: ./app
+      args:
+        SLOT_DIST: dist-a
     restart: unless-stopped
     env_file: .env
     environment:
-      # ️ ASSETS binding directory — wrangler dev resolves assets.directory from project root (/app),
+      # ⚠️ ASSETS binding directory — wrangler dev resolves assets.directory from project root (/app),
       # not from wrangler.json location. "../client" → "/client" (404). Override with absolute path.
       ASSETS: /app/dist/client
     volumes:
       - wrangler-state-v2:/app/dist/server/.wrangler/state/v3
       - app-data-v2:/app/data
-    mem_limit: 3g
-    memswap_limit: 4g
+    mem_limit: 2g
+    memswap_limit: 2560m
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})"]
       interval: 30s
       timeout: 10s
       retries: 3
+      # 冷启动要跑 assertContentRegistryValid + workerd 初始化，缺这行会被 Traefik 提前判不健康摘除
+      start_period: 300s
+    labels:
+      # canary：内部假域名，用于 standby 未接流量时体检（curl --resolve <host>:443:2.25.206.13）
+      - "traefik.enable=true"
+      - "traefik.http.routers.aion2-prod-slot-a.rule=Host(`aion2-prod-slot-a.local`)"
+      - "traefik.http.routers.aion2-prod-slot-a.entrypoints=websecure"
+      - "traefik.http.routers.aion2-prod-slot-a.tls=true"
+      - "traefik.http.services.aion2-prod-slot-a.loadbalancer.server.port=3001"
+
+  app-b:
+    build:
+      context: ./app
+      args:
+        SLOT_DIST: dist-b
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      ASSETS: /app/dist/client
+    volumes:
+      - bg-state-b:/app/dist/server/.wrangler/state/v3
+      - bg-data-b:/app/data
+    mem_limit: 2g
+    memswap_limit: 2560m
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 300s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.aion2-prod-slot-b.rule=Host(`aion2-prod-slot-b.local`)"
+      - "traefik.http.routers.aion2-prod-slot-b.entrypoints=websecure"
+      - "traefik.http.routers.aion2-prod-slot-b.tls=true"
+      - "traefik.http.services.aion2-prod-slot-b.loadbalancer.server.port=3001"
 
 volumes:
+  # 既有生产卷（声明名不可改；改名＝换数据）
   wrangler-state-v2:
     driver: local
   app-data-v2:
+    driver: local
+  # standby 槽卷（首次启动自动播种）
+  bg-state-b:
+    driver: local
+  bg-data-b:
     driver: local

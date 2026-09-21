@@ -1,0 +1,42 @@
+# AION2-KINA edge proxy — 生产唯一切换点
+# 持有真实域名 router，转发到当前 ACTIVE 槽（app-a | app-b）。
+# 头部规则与迁移前的 nginx/default.conf 逐字节一致（已 diff 验证），
+# 故切换只改拓扑，不改响应头行为。
+# ${UPSTREAM_HOST} is rendered by the nginx image entrypoint (envsubst filtered
+# to UPSTREAM_* only, so the $ variables below are untouched).
+
+server {
+    listen 80;
+    server_name _;
+
+    # Static assets — add CORS and security headers for all map-related resources
+    # Covers: /sprites/, /map-assets/, /data/
+    location ~* ^/(sprites|map-assets|data)/ {
+        proxy_pass http://${UPSTREAM_HOST}:3001;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Required for MapLibre GL JS WebGL texture loading (sprites)
+        add_header cross-origin-resource-policy "same-origin" always;
+        add_header x-content-type-options "nosniff" always;
+
+        # Long cache for immutable static assets
+        add_header Cache-Control "public, max-age=86400, stale-while-revalidate=604800" always;
+    }
+
+    # Proxy all other requests to the active slot
+    location / {
+        proxy_pass http://${UPSTREAM_HOST}:3001;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}

@@ -1,0 +1,412 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "42f97514-4a98-4cb0-a87f-b4cdbfd81781",
+  "prevId": "b6d23ccf-d964-4cca-93ed-d97e48cb1375",
+  "tables": {
+    "analytics_daily": {
+      "name": "analytics_daily",
+      "columns": {
+        "day": {
+          "name": "day",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "event_name": {
+          "name": "event_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "locale": {
+          "name": "locale",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "service": {
+          "name": "service",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "surface": {
+          "name": "surface",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "target_kind": {
+          "name": "target_kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "target_key": {
+          "name": "target_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "count": {
+          "name": "count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "analytics_daily_event_day_idx": {
+          "name": "analytics_daily_event_day_idx",
+          "columns": [
+            "event_name",
+            "day"
+          ],
+          "isUnique": false
+        },
+        "analytics_daily_surface_day_idx": {
+          "name": "analytics_daily_surface_day_idx",
+          "columns": [
+            "surface",
+            "day"
+          ],
+          "isUnique": false
+        },
+        "analytics_daily_target_day_idx": {
+          "name": "analytics_daily_target_day_idx",
+          "columns": [
+            "target_kind",
+            "target_key",
+            "day"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "analytics_daily_dimensions_pk": {
+          "columns": [
+            "day",
+            "event_name",
+            "locale",
+            "service",
+            "surface",
+            "target_kind",
+            "target_key"
+          ],
+          "name": "analytics_daily_dimensions_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "analytics_daily_day_check": {
+          "name": "analytics_daily_day_check",
+          "value": "\n        length(\"analytics_daily\".\"day\") = 10\n        and \"analytics_daily\".\"day\" glob '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'\n      "
+        },
+        "analytics_daily_event_name_check": {
+          "name": "analytics_daily_event_name_check",
+          "value": "\n        length(\"analytics_daily\".\"event_name\") between 1 and 64\n        and \"analytics_daily\".\"event_name\" not glob '*[^a-z0-9_]*'\n      "
+        },
+        "analytics_daily_locale_check": {
+          "name": "analytics_daily_locale_check",
+          "value": "\"analytics_daily\".\"locale\" in ('zh-hant', 'en', 'ko', 'unknown')"
+        },
+        "analytics_daily_service_check": {
+          "name": "analytics_daily_service_check",
+          "value": "\"analytics_daily\".\"service\" in ('kr-tw-live', 'global', 'unknown', 'other')"
+        },
+        "analytics_daily_surface_check": {
+          "name": "analytics_daily_surface_check",
+          "value": "\"analytics_daily\".\"surface\" in ('unknown', 'home', 'home-hero', 'home-core-entry', 'home-directory', 'faction-gate', 'content-hub', 'map-seo', 'interactive-map', 'daily-checklist', 'class-finder', 'material-calculator', 'correction-report')"
+        },
+        "analytics_daily_target_kind_check": {
+          "name": "analytics_daily_target_kind_check",
+          "value": "\"analytics_daily\".\"target_kind\" in ('none', 'content', 'item', 'map', 'tool')"
+        },
+        "analytics_daily_target_key_check": {
+          "name": "analytics_daily_target_key_check",
+          "value": "\n        length(\"analytics_daily\".\"target_key\") between 1 and 160\n        and \"analytics_daily\".\"target_key\" not glob '*[^a-z0-9._:/-]*'\n        and (\n          (\"analytics_daily\".\"target_kind\" = 'none' and \"analytics_daily\".\"target_key\" = 'none')\n          or (\"analytics_daily\".\"target_kind\" <> 'none' and \"analytics_daily\".\"target_key\" <> 'none')\n        )\n      "
+        },
+        "analytics_daily_counter_check": {
+          "name": "analytics_daily_counter_check",
+          "value": "\"analytics_daily\".\"count\" >= 1 and \"analytics_daily\".\"updated_at\" >= 1"
+        }
+      }
+    },
+    "analytics_ingest_windows": {
+      "name": "analytics_ingest_windows",
+      "columns": {
+        "bucket_hash": {
+          "name": "bucket_hash",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "window_start": {
+          "name": "window_start",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "request_count": {
+          "name": "request_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "analytics_ingest_windows_expires_idx": {
+          "name": "analytics_ingest_windows_expires_idx",
+          "columns": [
+            "expires_at"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "analytics_ingest_windows_hash_check": {
+          "name": "analytics_ingest_windows_hash_check",
+          "value": "\n        length(\"analytics_ingest_windows\".\"bucket_hash\") = 64\n        and \"analytics_ingest_windows\".\"bucket_hash\" not glob '*[^0-9a-f]*'\n      "
+        },
+        "analytics_ingest_windows_counter_check": {
+          "name": "analytics_ingest_windows_counter_check",
+          "value": "\n        \"analytics_ingest_windows\".\"window_start\" >= 1\n        and \"analytics_ingest_windows\".\"request_count\" >= 1\n        and \"analytics_ingest_windows\".\"expires_at\" > \"analytics_ingest_windows\".\"window_start\"\n        and \"analytics_ingest_windows\".\"updated_at\" >= \"analytics_ingest_windows\".\"window_start\"\n      "
+        }
+      }
+    },
+    "content_reports": {
+      "name": "content_reports",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "target_kind": {
+          "name": "target_kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "target_key": {
+          "name": "target_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "locale": {
+          "name": "locale",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "service": {
+          "name": "service",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "version": {
+          "name": "version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "category": {
+          "name": "category",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "message": {
+          "name": "message",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "evidence_url": {
+          "name": "evidence_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "contact": {
+          "name": "contact",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'new'"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "resolved_at": {
+          "name": "resolved_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "resolution_note": {
+          "name": "resolution_note",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "resolved_by": {
+          "name": "resolved_by",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "requester_hash": {
+          "name": "requester_hash",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "content_reports_requester_window_idx": {
+          "name": "content_reports_requester_window_idx",
+          "columns": [
+            "requester_hash",
+            "created_at"
+          ],
+          "isUnique": false
+        },
+        "content_reports_status_created_idx": {
+          "name": "content_reports_status_created_idx",
+          "columns": [
+            "status",
+            "created_at"
+          ],
+          "isUnique": false
+        },
+        "content_reports_target_created_idx": {
+          "name": "content_reports_target_created_idx",
+          "columns": [
+            "target_kind",
+            "target_key",
+            "created_at"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "content_reports_target_kind_check": {
+          "name": "content_reports_target_kind_check",
+          "value": "\"content_reports\".\"target_kind\" in ('content', 'item', 'map', 'tool')"
+        },
+        "content_reports_locale_check": {
+          "name": "content_reports_locale_check",
+          "value": "\"content_reports\".\"locale\" in ('zh-hant', 'en', 'ko')"
+        },
+        "content_reports_service_check": {
+          "name": "content_reports_service_check",
+          "value": "\"content_reports\".\"service\" in ('kr-tw-live', 'global', 'unknown', 'other')"
+        },
+        "content_reports_category_check": {
+          "name": "content_reports_category_check",
+          "value": "\"content_reports\".\"category\" in ('outdated', 'incorrect', 'translation', 'missing', 'broken-link', 'other')"
+        },
+        "content_reports_status_check": {
+          "name": "content_reports_status_check",
+          "value": "\"content_reports\".\"status\" in ('new', 'triaged', 'accepted', 'rejected', 'resolved')"
+        },
+        "content_reports_lengths_check": {
+          "name": "content_reports_lengths_check",
+          "value": "\n        length(\"content_reports\".\"id\") between 1 and 64\n        and length(\"content_reports\".\"target_key\") between 1 and 300\n        and (\"content_reports\".\"version\" is null or length(\"content_reports\".\"version\") between 1 and 80)\n        and length(\"content_reports\".\"message\") between 10 and 2000\n        and (\"content_reports\".\"evidence_url\" is null or length(\"content_reports\".\"evidence_url\") <= 2048)\n        and (\"content_reports\".\"contact\" is null or length(\"content_reports\".\"contact\") <= 254)\n        and (\"content_reports\".\"resolution_note\" is null or length(\"content_reports\".\"resolution_note\") <= 1000)\n        and (\"content_reports\".\"resolved_by\" is null or length(\"content_reports\".\"resolved_by\") <= 254)\n        and length(\"content_reports\".\"requester_hash\") = 64\n      "
+        },
+        "content_reports_resolution_check": {
+          "name": "content_reports_resolution_check",
+          "value": "\"content_reports\".\"resolved_at\" is null or \"content_reports\".\"status\" <> 'new'"
+        }
+      }
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}
