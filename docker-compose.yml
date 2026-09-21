@@ -12,6 +12,9 @@
 # 注意: 不要写 container_name —— Dokploy 用 `docker compose -p <project>` 管理，
 #   容器名固定 <project>-<service>-1，服务名在同 compose 网络内天然可解析。
 #   canary router 的名字与域名必须和 kina-test 不同（Traefik docker provider 全机共享，重名会串）。
+# 内存: 每槽 3g/4g 是旧生产容器长期验证过的值。2026-09-21 曾按"每槽 2g"下发，
+#   结果 app-b 在自己 2g 的 cgroup 内被 OOMKilled（同刻整机仍有 ≈7.0 GiB 空闲）——
+#   即约束是**容器上限**而非主机余量，别再往 2g 降。
 
 services:
   edge:
@@ -47,8 +50,8 @@ services:
     volumes:
       - wrangler-state-v2:/app/dist/server/.wrangler/state/v3
       - app-data-v2:/app/data
-    mem_limit: 2g
-    memswap_limit: 2560m
+    mem_limit: 3g
+    memswap_limit: 4g
     logging:
       driver: json-file
       options:
@@ -81,8 +84,8 @@ services:
     volumes:
       - bg-state-b:/app/dist/server/.wrangler/state/v3
       - bg-data-b:/app/data
-    mem_limit: 2g
-    memswap_limit: 2560m
+    mem_limit: 3g
+    memswap_limit: 4g
     logging:
       driver: json-file
       options:
