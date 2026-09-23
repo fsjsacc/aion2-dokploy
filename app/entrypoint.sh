@@ -79,5 +79,37 @@ FIXEOF
   rm -f /tmp/fix-wrangler.js
 fi
 
+# ⚠️ 本块与 kina-test 已实跑验证的那版逐字节相同（test 仓库 f638d3b），也和 kina-dev 在用的一致。
+# 上生产前要知道的：entrypoint.sh 是**共享构建文件** ⇒ 带上它的这次发布会连带重建 live 槽
+#   （deploy-dokploy-safe.mjs 默认拒绝，需 --allow-shared-change 或排进切换窗口）。
+#   两槽 healthcheck 均已有 start_period: 300s，与下面 15×20s 宽限对齐，冷启动不会被自己杀掉。
+# 自愈看门狗（2026-09-22 加）。背景：workerd 把自身 cgroup 撑满被内核杀掉后，PID 1 的 wrangler
+# 既不退出也不重启子进程 ⇒ 容器停在 "running 但零服务" 的僵尸态（09-22 在 kina-test 实测：
+# 连续 136 个请求超时、8.5 分钟无任何日志、不自愈；edge 钉死单服务 ⇒ 另一槽也接不了）。
+# 处理：冷启动宽限后连续探测失败到阈值就结束 PID 1，交给 compose 的 restart: unless-stopped 复活。
+# 宽限 300s 与 healthcheck 的 start_period 对齐（冷启动要跑 assertContentRegistryValid + workerd 初始化）。
+(
+  WD_PROBE='fetch("http://localhost:3001/en/", { signal: AbortSignal.timeout(10000) }).then((r) => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))'
+  g=0
+  while [ "$g" -lt 15 ]; do sleep 20; g=$((g + 1)); done
+  fails=0
+  while :; do
+    if node -e "$WD_PROBE" 2>/dev/null; then
+      fails=0
+    else
+      fails=$((fails + 1))
+      echo "[watchdog] /en/ 探测失败 ${fails}/5"
+      if [ "$fails" -ge 5 ]; then
+        echo "[watchdog] 连续 5 次失败 ⇒ 结束 PID 1，由 Docker 重启容器（僵尸态不可自愈）"
+        kill -TERM 1 2>/dev/null
+        sleep 10
+        kill -KILL 1 2>/dev/null
+        exit 0
+      fi
+    fi
+    sleep 20
+  done
+) &
+
 echo "[entrypoint] Starting application..."
 exec "$@"
